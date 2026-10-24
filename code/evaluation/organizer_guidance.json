@@ -1,0 +1,10 @@
+{
+  "recorded_date": "2026-10-24",
+  "source": "Organizer replies relayed by the user in this chat; not independently fetched",
+  "confirmed_excluded_case_ids": ["case_39", "case_55"],
+  "other_invalid_cases": "Will be excluded, but no complete list was provided",
+  "evaluation_evidence": "Only evidence supplied in the repository",
+  "dataset_update": "No dataset change was announced",
+  "submission_rows": "Existing 518-row CSV requirement remains pending explicit clarification about excluded rows",
+  "scope": "Evaluation documentation and reporting only; never prediction inputs"
+}

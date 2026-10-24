@@ -147,3 +147,17 @@ This read-only diagnostic uses genuine offline responses and participant evidenc
 A permitted stable subject reference alone is never exposed PII in a tombstone. A partial reference view also cannot prove that unshown direct identifiers were removed. Archive existence does not establish current restore permission. Date-only retention values use an interval over possible source times and timezones; only comparisons unambiguous across that interval are accepted.
 
 Received model responses rejected by validation remain in ignored `.cache/rejected/`. A genuine response may be recovered only after its original request, response, attempt ledger and current validation all agree; provider content is unchanged. At most one source-only corrective extraction is allowed for specific validation-role errors. Original, rejected and corrective usage remains attributed. Credentials, caches and rejected responses are excluded from the review archive and Git commits.
+
+## Organizer exclusions and evaluation coverage
+
+Organizer replies relayed on October 24 confirm only `case_39` and `case_55` as excluded from evaluation. Other invalid cases have no complete exclusion list. Evaluation uses only repository evidence; no dataset change was announced. The original **518-row CSV requirement remains pending explicit clarification about excluded rows**.
+
+Confirmed exclusions live exclusively under `evaluation/` and are never loaded by the predictor. After the full offline run and investigation, reproduce both coverage views with:
+
+```sh
+python3 code/evaluation/coverage_report.py
+```
+
+The report validates that the predictions and blocker diagnostics describe the same request set, then reports original and adjusted coverage separately. Full-set coverage is not accuracy. Public sample evaluation likewise retains original scores and adds a separate exclusion view; neither confirmed exclusion is among the 32 public samples. Do not treat the remaining blockers as excluded or supply invented predictions for them.
+
+For uploaded customer PDFs, a uniquely quoted continued attachment-properties section can establish that the request body belongs to that file. A printed ticket reference alone does not prove a separate live ticket's current state. Source facts and any deterministic scope correction remain auditable; independent physical objects are not merged without proof.

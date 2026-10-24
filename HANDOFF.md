@@ -1,4 +1,14 @@
-# Latest focused review checkpoint
+# Organizer guidance and attachment correction checkpoint
+
+Organizer replies relayed by the user on October24 confirm evaluation exclusions only for case_39 and case_55. Other invalid cases will be excluded, but no complete list was supplied. Evaluation uses only repository evidence; no dataset change was announced. **Keep the original 518-row CSV requirement pending explicit clarification about excluded rows.** Do not exclude all unresolved cases or hardcode answers. Machine-readable guidance and adjusted reports live only under code/evaluation and are never imported by prediction logic.
+
+186 tests pass; Node syntax passes. Original full run:419/518 returned (80.8880%),99blocked. Excluding only the two confirmed cases:418/516 (81.0078%),98blocked. case_39 has a row; case_55 is a restore-authorization hold. Adjusted blocker groups:69 missing eligible account ownership edges despite negative scopes;25 capture/cutoff gaps;3 missing eligible direct primary/scope proofs;1 tombstone direct-field removal proof gap (case_46). Stable user_id alone remains permitted and is never exposed PII.
+
+The case_07 PDF body now belongs to its explicitly continued customer-upload attachment, with its fully printed technical support key. No separate live-ticket state is inferred from that body. All source facts and scope corrections remain auditable. Three false steps disappear; the separately evidenced storage object and missing account verification remain. Sample coverage23/32, all32 status71.875%, exact sequence8/32(25%); precision97.8873%, recall72.0207%, F1 82.9851%, aligned fields68.7318%. Neither confirmed exclusion is in the 32 samples.
+
+Read code/evaluation/organizer_guidance.md and case_07_attachment_review.md. Reproduce adjusted coverage with `.venv/bin/python code/evaluation/coverage_report.py` after the full run and investigator commands below. This review is entirely offline:zero new API calls, no credential/billing changes, paid budget$0. No final output.csv exists. Refresh code.zip only as a clearly identified review bundle until all required predictions are evidence-backed. The historical checkpoints below are superseded by this section.
+
+# Previous focused review checkpoint
 
 178 tests pass. Sample coverage23/32; all32 status accuracy71.875%; exact sequence8/32 (25%); step precision95.86%, recall72.02%, F1 82.25%; fields67.70%. Full419/518,99blocked unchanged. Finance-register ordinary business references are preserved as retention constraints, not invented privacy-resource categories; case21 still lacks independent account proof. Expected answers remain exclusively in evaluation.
 

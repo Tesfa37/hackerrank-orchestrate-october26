@@ -25,6 +25,28 @@ def row(case_id="example", steps=None, status="COMPLETE"):
 
 
 class EvaluationTests(unittest.TestCase):
+    def test_exclusions_are_separate_from_original_metrics_and_do_not_mutate_predictions(self):
+        expected = [row('a'), row('b'), row('c')]
+        actual = [row('a'), row('b')]
+        before = json.dumps(actual, sort_keys=True)
+        metrics = evaluator.evaluate_views(actual, expected, ['a', 'c'])
+        self.assertEqual(metrics['covered_cases'], 2)
+        self.assertEqual(metrics['expected_cases'], 3)
+        self.assertFalse(metrics['contract_valid'])
+        adjusted = metrics['exclusion_view']['metrics']
+        self.assertEqual(adjusted['covered_cases'], 1)
+        self.assertEqual(adjusted['expected_cases'], 1)
+        self.assertEqual(adjusted['status_accuracy'], 1)
+        self.assertEqual(metrics['exclusion_view']['excluded_prediction_ids'], ['a'])
+        self.assertEqual(json.dumps(actual, sort_keys=True), before)
+
+    def test_exclusions_absent_from_public_samples_do_not_change_denominator(self):
+        metrics = evaluator.evaluate_views([row('a')], [row('a'), row('b')], ['outside_sample'])
+        adjusted = metrics['exclusion_view']['metrics']
+        self.assertEqual(metrics['coverage_rate'], adjusted['coverage_rate'])
+        self.assertEqual(metrics['status_accuracy'], adjusted['status_accuracy'])
+        self.assertEqual(adjusted['expected_cases'], 2)
+
     def write_output(self, path, rows):
         with path.open("w", encoding="utf-8", newline="") as handle:
             writer = csv.DictWriter(handle, fieldnames=evaluator.COLUMNS)

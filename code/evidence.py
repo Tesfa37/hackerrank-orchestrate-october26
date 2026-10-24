@@ -633,6 +633,64 @@ def _review_state(record, category, stored, uncertainties):
     return state
 
 
+def _attachment_document_records(meta, records):
+    """Keep an uploaded document's body in its explicitly described file scope.
+
+    A ticket reference printed in an uploaded PDF is not a read of the live
+    ticket. Require a unique continued attachment-properties section, customer
+    upload provenance, a quoted parent reference and the same document title.
+    Ambiguous/multiple files and independent ticket views are left untouched.
+    The original provider facts remain intact in the reinspection audit trail.
+    """
+    if Path(meta.get('file_path', '')).suffix.casefold() != '.pdf':
+        return records, []
+    attachments = [record for record in records
+                   if record['record_type'] == 'SUPPORT_ATTACHMENT' and record['category'] == 'record']
+    if len(attachments) != 1:
+        return records, []
+    attachment = attachments[0]
+    filename = attachment['literal_reference'] or attachment['resource_id']
+    section = attachment['scope']['source_quote'].casefold()
+    customer_upload = any(_review_field_name(field['field_name']) == 'uploader'
+                          and field['visibility'] == 'VALUE' and field['value'].casefold() == 'customer'
+                          and 'customer' in field['source_quote'].casefold()
+                          for field in attachment['stored_fields'])
+    if not (attachment['state'] == 'PRESENT' and filename.casefold().endswith('.pdf') and 'continued' in section
+            and 'attachment properties' in section and customer_upload):
+        return records, []
+    parents = {ref['literal_reference'] for ref in attachment['related_references']
+               if ref['relationship'] == 'parent_ticket' and ref['literal_reference']
+               and ref['literal_reference'] in ref['source_quote']}
+    bodies = [record for record in records if record['record_type'] == 'SUPPORT_MESSAGE'
+              and record['category'] == 'record' and record['state'] == 'PRESENT'
+              and record['literal_reference'] in parents
+              and record['source_system_label']
+              and record['source_system_label'] == attachment['source_system_label']
+              and record['scope']['label'] == record['source_system_label']]
+    if len(bodies) != 1:
+        return records, []
+    body = bodies[0]
+    # Accept a full, literally quoted technical support key, including a key in
+    # a compound displayed reference. Never derive one from the customer ID.
+    keys = {token for field in body['stored_fields'] if field['visibility'] == 'VALUE'
+            for token in re.findall(r'(?<![\w.-])support_[A-Za-z0-9]+(?![\w.-])', field['value'])
+            if token in field['source_quote']}
+    if len(keys) != 1:
+        return records, []
+    resource = next(iter(keys))
+    correction = {'role': 'uploaded_document_body', 'body_reference': body['literal_reference'],
+                  'attachment_reference': filename, 'resource_id': resource,
+                  'reason': 'The continued customer-upload attachment section scopes the document body; its ticket reference does not establish separate live-ticket state'}
+    merged = {**attachment, 'resource_id': resource, 'state': 'PRESENT',
+              'stored_fields': [*body['stored_fields'], *attachment['stored_fields']],
+              'direct_identifiers_visible': [*body['direct_identifiers_visible'], *attachment['direct_identifiers_visible']],
+              'context_identifiers': [*body['context_identifiers'], *attachment['context_identifiers']],
+              'events': [*body['events'], *attachment['events']],
+              'uncertainties': list(dict.fromkeys([*body['uncertainties'], *attachment['uncertainties']])),
+              '_source_scope_correction': correction, '_document_body_source_fact': body}
+    return [merged if record is attachment else record for record in records if record is not body], [correction]
+
+
 def hydrate_media_reinspection(store: EvidenceStore, meta: dict, result: dict, catalog_context) -> list[Observation]:
     """Hydrate source-fact reviews without converting unshown fields into proof.
 
@@ -646,7 +704,8 @@ def hydrate_media_reinspection(store: EvidenceStore, meta: dict, result: dict, c
     catalog = _review_catalog(catalog_context)
     hydrated, superseded, unresolved, diagnostics = [], [], [], []
     remove_ids = set()
-    for record in result['records']:
+    records, scope_corrections = _attachment_document_records(meta, result['records'])
+    for record in records:
         literal = record['literal_reference'] or record['resource_id']
         if not literal:
             unresolved.append(record)
@@ -705,8 +764,12 @@ def hydrate_media_reinspection(store: EvidenceStore, meta: dict, result: dict, c
             else:
                 # A producing portal/brand is provenance, not a new service.
                 system = resource_kind(resource)[0] or SYSTEM_FOR_CATEGORY.get(category, 'unknown')
+        source_aliases = {literal, resource}
+        if record.get('_source_scope_correction'):
+            source_aliases.add(record['_source_scope_correction']['body_reference'])
         matching = [o for o in store.observations if o.evidence_id == meta['file_id'] and o.data.get('_media') and
-                    (o.resource in {literal, resource} or o.data.get('source_resource_alias') == literal or o.data.get('_source_resource_alias') == literal)]
+                    (o.resource in source_aliases or o.data.get('source_resource_alias') in source_aliases
+                     or o.data.get('_source_resource_alias') in source_aliases)]
         for reference in record['related_references']:
             linked_literal = reference['literal_reference']
             if not linked_literal or linked_literal in {literal, resource} or not reference['source_quote'].strip():
@@ -807,6 +870,7 @@ def hydrate_media_reinspection(store: EvidenceStore, meta: dict, result: dict, c
     store.observations.extend(hydrated)
     store.media_reinspection_facts[meta['file_id']] = {**result, 'superseded_rows': superseded,
                                                     'unmapped_records': unresolved,
+                                                    'source_scope_corrections': scope_corrections,
                                                     'diagnostics': list(dict.fromkeys(diagnostics))}
     store.reinspected_media.add(meta['file_id'])
     store.refresh()

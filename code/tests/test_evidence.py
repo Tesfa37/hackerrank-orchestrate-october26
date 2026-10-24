@@ -39,6 +39,78 @@ CATALOG = [{'activity_id': 'activity_test', 'event_type': 'LINK_RESOURCE_IDENTIT
 
 
 class EvidenceTests(unittest.TestCase):
+    def attachment_document(self):
+        body = reviewed_record(resource_id='TICKET-custom', literal_reference='TICKET-custom',
+                               reference_kind='BUSINESS_ALIAS', category='record', record_type='SUPPORT_MESSAGE',
+                               source_system_label='Address change request',
+                               stored_fields=[{'field_name': 'support_reference', 'value': 'TICKET-custom / support_custom',
+                                               'source_quote': 'Reference TICKET-custom / support_custom',
+                                               'identifier_role': 'STABLE_REFERENCE', 'visibility': 'VALUE'},
+                                              {'field_name': 'email', 'value': 'person@example.test',
+                                               'source_quote': 'person@example.test',
+                                               'identifier_role': 'DIRECT_IDENTIFIER', 'visibility': 'VALUE'}],
+                               direct_identifiers_visible=[{'field_name': 'email', 'value': 'person@example.test',
+                                                            'source_quote': 'person@example.test'}],
+                               scope={'kind': 'SINGLE_RECORD', 'label': 'Address change request', 'completeness': 'PARTIAL',
+                                      'subject_bound': True, 'source_quote': 'Address change request Reference TICKET-custom / support_custom'})
+        file = reviewed_record(resource_id='request_form.pdf', literal_reference='request_form.pdf',
+                               reference_kind='BUSINESS_ALIAS', category='record', record_type='SUPPORT_ATTACHMENT',
+                               source_system_label='Address change request',
+                               stored_fields=[{'field_name': 'uploader', 'value': 'customer', 'source_quote': 'uploader customer',
+                                               'identifier_role': 'OTHER', 'visibility': 'VALUE'}],
+                               related_references=[{'literal_reference': 'TICKET-custom', 'relationship': 'parent_ticket',
+                                                    'system_label': 'ticket', 'source_quote': 'ticket TICKET-custom'}],
+                               scope={'kind': 'SINGLE_RECORD', 'label': 'Address change request - Continued', 'completeness': 'PARTIAL',
+                                      'subject_bound': True, 'source_quote': 'Address change request Continued - Attachment properties and upload history'})
+        return body, file
+
+    def test_uploaded_pdf_body_is_attachment_content_not_separate_live_ticket(self):
+        body, file = self.attachment_document()
+        result = reviewed_result(body, file)
+        original = json.dumps(result, sort_keys=True)
+        store = EvidenceStore()
+        meta = {**META, 'file_path': 'evidence/documents/upload.pdf', 'origin': 'support_platform'}
+        hydrate_media(store, meta, {'records': [{'system_id': 'support_platform', 'resource_id': 'support_custom',
+                      'record_type': 'SUPPORT_MESSAGE', 'state': 'PRESENT', 'identifiers': ['person@example.test'],
+                      'observed_at': META['captured_at'], 'notes': 'First-pass document interpretation'}]})
+        observed = hydrate_media_reinspection(store, meta, result, [])
+        self.assertEqual(len(store.observations), 1)
+        self.assertEqual([(o.resource, o.category, o.state) for o in observed], [('support_custom', 'SUPPORT_ATTACHMENT', 'PRESENT')])
+        self.assertIn('person@example.test', observed[0].identifiers)
+        self.assertEqual(observed[0].evidence_id, META['file_id'])
+        self.assertFalse(observed[0].eligible('2026-09-09T12:00:00Z'))
+        self.assertEqual(json.dumps(result, sort_keys=True), original)
+        self.assertEqual(store.media_reinspection_facts[META['file_id']]['records'], [body, file])
+        self.assertEqual(len(store.media_reinspection_facts[META['file_id']]['source_scope_corrections']), 1)
+        from audit_core import Subject
+        from reasoning import audit_request
+        row = audit_request({'case_id': 'synthetic', 'audit_at': META['captured_at']},
+                            Subject('user_custom', {'person@example.test'}), store,
+                            [{'data_category': 'SUPPORT_ATTACHMENT', 'required_action': 'DELETE'},
+                             {'data_category': 'SUPPORT_MESSAGE', 'required_action': 'REDACT'}], True)
+        self.assertEqual([step['operation'] for step in json.loads(row['steps_json'])],
+                         ['REPORT_REMAINING_RECORD', 'DELETE_RECORD', 'VERIFY_RECORD_ABSENT'])
+
+    def test_document_scope_correction_requires_unique_quoted_key_and_continued_upload(self):
+        meta = {**META, 'file_path': 'evidence/documents/upload.pdf'}
+        body, file = self.attachment_document()
+        body['stored_fields'][0]['source_quote'] = 'Reference TICKET-custom'
+        observed = hydrate_media_reinspection(EvidenceStore(), meta, reviewed_result(body, file), [])
+        self.assertEqual(len(observed), 2)
+        self.assertIn('SUPPORT_MESSAGE', {o.category for o in observed})
+        body, file = self.attachment_document()
+        file['scope']['source_quote'] = 'Live ticket attachment list'
+        self.assertEqual(len(hydrate_media_reinspection(EvidenceStore(), meta, reviewed_result(body, file), [])), 2)
+        body, file = self.attachment_document()
+        another = {**file, 'literal_reference': 'other.pdf', 'resource_id': 'other.pdf'}
+        self.assertEqual(len(hydrate_media_reinspection(EvidenceStore(), meta, reviewed_result(body, file, another), [])), 3)
+        body, file = self.attachment_document()
+        body['scope']['label'] = 'Independent live-ticket state'
+        self.assertEqual(len(hydrate_media_reinspection(EvidenceStore(), meta, reviewed_result(body, file), [])), 2)
+        body, file = self.attachment_document()
+        file['state'] = 'UNKNOWN'
+        self.assertEqual(len(hydrate_media_reinspection(EvidenceStore(), meta, reviewed_result(body, file), [])), 2)
+
     def test_business_retention_reference_is_preserved_without_invented_privacy_type(self):
         record = reviewed_record(resource_id='ORD-custom', literal_reference='ORD-custom',
                                  reference_kind='BUSINESS_ALIAS', category='record', record_type='UNKNOWN',

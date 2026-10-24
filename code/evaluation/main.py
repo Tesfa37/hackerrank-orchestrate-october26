@@ -15,6 +15,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from audit_core import STEP_FIELDS, validate_output
+from evaluation.exclusions import load_guidance
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -234,12 +235,52 @@ def render_report(metrics: dict, predictions: Path, expected: Path) -> str:
         for item in metrics["mismatches"]:
             lines.append(f"| {item['case_id']} | {item['expected_status']} | {item['predicted_status']} | "
                          f"{item['expected_steps']} | {item['predicted_steps']} | {item['matching_steps']} | {item['sequence_match']} |")
+    if 'exclusion_view' in metrics:
+        view = metrics['exclusion_view']
+        adjusted = view['metrics']
+        lines.extend(['', '## Confirmed organizer exclusions (evaluation only)', '',
+                      'Organizer replies relayed by the user on 2026-10-24 confirm case_39 and case_55 are excluded. '
+                      'Other invalid cases will be excluded, but no complete list was provided; no additional case is excluded here. '
+                      'Evaluation uses only repository evidence and no dataset change was announced. '
+                      'The existing 518-row output requirement remains pending explicit clarification. '
+                      'See [organizer_guidance.md](organizer_guidance.md) for full-run coverage and provenance.', '',
+                      f"Excluded IDs present in these expected rows: {', '.join(view['excluded_expected_ids']) or 'none'}. "
+                      'The original metrics above retain every original expected row.', '',
+                      '| View | Coverage | Status accuracy | Exact sequence |', '| --- | ---: | ---: | ---: |',
+                      f"| Original | {metrics['covered_cases']}/{metrics['expected_cases']} | {metrics['status_accuracy']:.2%} | {metrics['sequence_accuracy']:.2%} |",
+                      (f"| Excluding confirmed cases | {adjusted['covered_cases']}/{adjusted['expected_cases']} | {adjusted['status_accuracy']:.2%} | {adjusted['sequence_accuracy']:.2%} |"
+                       if adjusted else '| Excluding confirmed cases | 0/0 | N/A | N/A |')])
     lines.extend(["", "## Independent evaluator regression cases", "",
                   "These fixtures test scoring behavior; reasoning-specific synthetic audits and improvements are documented separately.", "",
                   "1. A missing expected row counts as incorrect in all-request accuracy; an extra prediction separately fails coverage and contributes false-positive steps.",
                   "2. A wrong citation keeps resource alignment but lowers evidence-field accuracy and exact-step precision/recall.",
                   "3. Reordered steps keep content precision/recall but fail sequence accuracy and canonical-order validation.", ""])
+    lines.extend(['## Implementation review and remaining proof gaps', '',
+                  'See [sample_mismatch_review.md](sample_mismatch_review.md) for every missing/extra step across all 32 public samples, '
+                  '[case_07_attachment_review.md](case_07_attachment_review.md) for the uploaded-document versus live-ticket correction, '
+                  '[case_01_mre.md](case_01_mre.md) for the participant-file-only account-key reproduction, '
+                  'and [blocker_report.md](blocker_report.md) for full-run missing proofs.', '',
+                  'Earlier finance-register fixes preserve explicitly retained business records as constraints without inventing privacy-resource categories or active legal holds. '
+                  'Known privacy resources and uncertain primary account state still undergo policy and uncertainty checks. '
+                  'The conservative whole-account completeness guard remains stricter than the literal contract; removing it does not ground missing account keys or their verification evidence.', '',
+                  'Regression fixtures also cover historical identifiers, quoted technical keys, exhaustive negative snapshots, future captures, permitted stable-only tombstones, '
+                  'restore configuration, retention date boundaries, source-scope correction, and separate evaluation exclusions. '
+                  'No expected answers are passed to prediction logic. No final 518-row output.csv is claimed.', ''])
     return "\n".join(lines)
+
+
+def evaluate_views(predictions: list[dict], expected: list[dict], excluded_ids) -> dict:
+    """Preserve original scores and separately score only confirmed exclusions."""
+    metrics = evaluate(predictions, expected)
+    excluded = set(excluded_ids)
+    remaining = [row for row in expected if row['case_id'] not in excluded]
+    metrics['exclusion_view'] = {
+        'confirmed_excluded_ids': sorted(excluded),
+        'excluded_expected_ids': sorted(row['case_id'] for row in expected if row['case_id'] in excluded),
+        'excluded_prediction_ids': sorted(row['case_id'] for row in predictions if row['case_id'] in excluded),
+        'metrics': evaluate([row for row in predictions if row['case_id'] not in excluded], remaining) if remaining else None,
+    }
+    return metrics
 
 
 def validate_destinations(predictions: Path, expected: Path, report: Path, json_path: Path | None) -> None:
@@ -286,7 +327,8 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     try:
         validate_destinations(args.predictions, args.expected, args.report, args.json_path)
-        metrics = evaluate(load_predictions(args.predictions), load_predictions(args.expected))
+        metrics = evaluate_views(load_predictions(args.predictions), load_predictions(args.expected),
+                                 load_guidance()['confirmed_excluded_case_ids'])
         report = render_report(metrics, args.predictions, args.expected)
         args.report.parent.mkdir(parents=True, exist_ok=True)
         args.report.write_text(report, encoding="utf-8")

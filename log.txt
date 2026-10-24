@@ -403,3 +403,35 @@ branch=feat/deletion-audit-baseline
 repo_root=/workspace/hackerrank-orchestrate-october26
 worktree=main
 parent_agent=none
+
+## [2026-10-24T23:49:41.615954+00:00] Organizer exclusions and attachment source scope
+
+User Prompt (verbatim, secrets redacted):
+Organizer replies confirm:
+- case_39 and case_55 are excluded from evaluation.
+- Other invalid cases will be excluded, but no complete list was provided.
+- Evaluation uses only the evidence supplied in the repository.
+- No dataset change was announced.
+
+Record this guidance in the evaluation documentation. Keep confirmed exclusions separate from prediction logic and report both original coverage and coverage excluding those cases. Do not assume all 99 blockers are excluded or hardcode their answers.
+
+Keep the existing 518-row CSV requirement pending explicit clarification about excluded rows. Continue the case_07 attachment-versus-live-ticket correction and other independently demonstrated implementation fixes.
+
+Recompute which blockers remain after accounting for the confirmed exclusions. Preserve the $0 paid API budget.
+
+Agent Response Summary:
+Recorded user-relayed organizer guidance in evaluation-only metadata and documentation, preserving original518-row requirements and all prediction checks. Added separate original/confirmed-exclusion coverage views with run-consistency validation:419/518 with99holds versus418/516 with98holds; neither exclusion appears in the32public samples. Fixed a demonstrated uploaded-PDF body being treated as a separate live ticket, preserving raw source facts and independent physical objects; sample precision improves95.86%to97.89%, coverage23/32 and exactsequence8/32 remain unchanged. All186tests and Node syntax pass; all reruns were offline with zero new API calls and unchanged credentials,$0budget; prepared code,reports,handoff and review bundle for the already authorized feature-branch push.
+
+Actions:
+* Added evaluation-only guidance, coverage reporting and regression fixtures.
+* Corrected source-scoped uploaded document hydration, with ambiguous references and independent ticket views left separate.
+* Reran all32sample evaluation, all518requests and blocker investigation; updated mismatch, usage and handoff documentation.
+* Checked dataset integrity, source diffs and credential/cache exclusions before packaging and push.
+
+Context:
+tool=Codex
+Runtime model metadata: exact coding-model identifier is not exposed by this session; none was fabricated. Application-model usage is reported separately.
+branch=feat/deletion-audit-baseline
+repo_root=/workspace/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none

@@ -10,7 +10,7 @@ Expected answers are confined to evaluation. This report never supplies identity
 | case_04 | unresolved / COMPLETE | 2 / 0 |
 | case_05 | INCOMPLETE / INCOMPLETE | 0 / 0 |
 | case_06 | INCOMPLETE / INCOMPLETE | 1 / 0 |
-| case_07 | INCOMPLETE / INCOMPLETE | 1 / 6 |
+| case_07 | INCOMPLETE / INCOMPLETE | 1 / 3 |
 | case_08 | INCOMPLETE / INCOMPLETE | 1 / 0 |
 | case_09 | INCOMPLETE / INCOMPLETE | 2 / 0 |
 | case_10 | INCOMPLETE / INCOMPLETE | 1 / 0 |
@@ -94,11 +94,8 @@ Audit cutoff: `2026-09-12T08:00:00Z`. A row was returned; review the step-level 
 | --- | --- | --- | --- | --- |
 | missing | VERIFICATION / VERIFY_RECORD_ABSENT | account_service / account_007 | activity_3590: dataset/system_activity.csv (DELETE_RECORD; event 2026-09-01T19:28:39Z; operation claim, not state proof) | Missing eligible subject-to-resource ownership edge; sanitized/absent rows cannot be assigned by suffix or adjacency. |
 | extra | FINDING / REPORT_REMAINING_RECORD | object_storage / object_19 | evidence_46: evidence/images/object_storage_browser_20260213.png; capture 2026-02-13T08:00:00Z; evidence_46: evidence/images/object_storage_browser_20260213.png (SUPPORT_ATTACHMENT/PRESENT; eligible) | Additional source-backed physical object omitted by the reference; its visible filename differs from the support attachment, so a same-object alias is unproven. |
-| extra | FINDING / REPORT_EXPOSED_PII | support_platform / CS-4827 | evidence_58: evidence/documents/delivery_correction_attachment.pdf; capture 2026-09-12T07:30:00Z; evidence_58: evidence/documents/delivery_correction_attachment.pdf (SUPPORT_MESSAGE/PRESENT; eligible) | Unresolved document-body versus live-ticket interpretation: a customer-upload PDF contains a ticket reference, but independent current message state and ticket/attachment identity are not established. |
 | extra | REMEDIATION / DELETE_RECORD | object_storage / object_19 | evidence_46: evidence/images/object_storage_browser_20260213.png (SUPPORT_ATTACHMENT/PRESENT; eligible) | Additional source-backed physical object omitted by the reference; its visible filename differs from the support attachment, so a same-object alias is unproven. |
-| extra | REMEDIATION / REDACT_RECORD | support_platform / CS-4827 | evidence_58: evidence/documents/delivery_correction_attachment.pdf (SUPPORT_MESSAGE/PRESENT; eligible) | Unresolved document-body versus live-ticket interpretation: a customer-upload PDF contains a ticket reference, but independent current message state and ticket/attachment identity are not established. |
 | extra | VERIFICATION / VERIFY_RECORD_ABSENT | object_storage / object_19 | evidence_46: evidence/images/object_storage_browser_20260213.png (SUPPORT_ATTACHMENT/PRESENT; eligible) | Additional source-backed physical object omitted by the reference; its visible filename differs from the support attachment, so a same-object alias is unproven. |
-| extra | VERIFICATION / VERIFY_RECORD_REDACTED | support_platform / CS-4827 | evidence_58: evidence/documents/delivery_correction_attachment.pdf (SUPPORT_MESSAGE/PRESENT; eligible) | Unresolved document-body versus live-ticket interpretation: a customer-upload PDF contains a ticket reference, but independent current message state and ticket/attachment identity are not established. |
 
 ## case_08
 
@@ -328,6 +325,12 @@ Audit cutoff: `2026-09-15T12:00:00Z`. A row was returned; review the step-level 
 | Difference | Phase / operation | System / resource | Citation / participant-visible source | Root cause / proof status |
 | --- | --- | --- | --- | --- |
 | missing | VERIFICATION / VERIFY_RECORD_ABSENT | account_service / account_8858 | activity_3685: dataset/system_activity.csv (DELETE_RECORD; event 2026-09-06T11:05:15Z; operation claim, not state proof) | Missing eligible subject-to-resource ownership edge; sanitized/absent rows cannot be assigned by suffix or adjacency. |
+
+## Uploaded-document source scope
+
+The source-scoped attachment correction removes the separate live-ticket observation previously inferred from an uploaded PDF body. See [case_07_attachment_review.md](case_07_attachment_review.md) for the literal participant proof, generic correction conditions and remaining independent storage-object/account-proof mismatches. The original extraction records remain in the audit trail. Expected answers do not drive this correction.
+
+Confirmed organizer exclusions are recorded separately in [organizer_guidance.md](organizer_guidance.md). Neither confirmed ID is in this 32-sample set; all 32 remain in its coverage and accuracy denominators.
 
 ## Finance-register interpretation
 
