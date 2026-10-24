@@ -12,7 +12,7 @@ The user asked to copy the starter repository to their GitHub account and plan t
 
 - Official starter: https://github.com/interviewstreet/hackerrank-orchestrate-october26
 - Connected GitHub account: `Tesfa37`.
-- Fork created and verified through GitHub under `Tesfa37`: https://github.com/Tesfa37/hackerrank-orchestrate-october26. GitHub shows the correct parent and says `main` is up to date with upstream.
+- Fork created and verified through GitHub under `Tesfa37`: https://github.com/Tesfa37/hackerrank-orchestrate-october26. At creation GitHub showed the correct parent and `main` up to date with upstream; our planning commits are now on the fork.
 - The GitHub connector does not expose repository creation or forking. Both stored CLI logins failed authentication; the user signed in through the browser, which was used to create the fork.
 - Terminal cloning failed because its network request could not resolve GitHub. The public source ZIP was downloaded through GitHub. An exact shallow Git checkout was then reconstructed from the archive and public GitHub Git objects: all 110 tracked blob hashes, all directory trees, and the original signed commit hash match upstream. `git fsck --connectivity-only` completed successfully.
 - Local source: `C:\Users\Tesfa\AppData\Local\Temp\orchestrate-review\hackerrank-orchestrate-october26-main`.
@@ -20,7 +20,9 @@ The user asked to copy the starter repository to their GitHub account and plan t
 
 Authoritative sources inspected: root `AGENTS.md`, `README.md`, `problem_statement.md`, `agent_trace_instructions.md`, dataset CSV schemas and counts, public sample answers, and representative SQL, JSON, log, and text evidence.
 
-The repository explicitly says the October deadline is not configured. An earlier chat mentioned October 25 at 7:30 PM CDT, but that has not been independently verified here. Confirm the official event page before scheduling the final run. Submission URL: https://www.hackerrank.com/contests/hackerrank-orchestrate-october26/challenges/ghost-data-still-exists
+On October 24 the user supplied the complete text from the official HackerRank challenge page. It labels October 25, 2026 at 7:30 PM CDT as the **interview** closing time, says the interview opens after successful submission for the next 12 hours, and requires 30 minutes with the camera on. Results are scheduled for October 27. Treat the stated interview close as a hard finish for the complete submission/interview process. A separate submission cutoff has not been verified; public search did not establish one, and direct navigation required HackerRank sign-in. Do not claim the pasted interview close is independently confirmed as the upload deadline, or assume the personal 12-hour window extends beyond it.
+
+Submission URL: https://www.hackerrank.com/contests/hackerrank-orchestrate-october26/challenges/ghost-data-still-exists
 
 ## Verified input inventory
 
@@ -48,7 +50,18 @@ Use a hybrid Python pipeline. Parse structured evidence directly, use a language
 
 Use Python standard libraries for CSV, JSON, dates, SQLite, hashing, and command-line execution. Select a PDF parser and model SDK only when implementation begins. Do not add a frontend, vector database, orchestration framework, or external data source for this 94-file dataset.
 
-Model provider, exact model, and spending limit remain implementation decisions. Before incurring paid model usage, check available credentials without printing them and obtain a budget if one is not already authorized. Provider abstraction must let us choose the available model without changing the reasoning engine. Development calls and final-run calls must be counted separately.
+Model provider and spending limit have not yet been selected by the user. A presence-only check found no supported provider API key in the current environment and no `.env` or `.env.local` in the challenge checkout. No credentials from the unrelated Aulden project were inspected or reused.
+
+Recommended starting candidate: OpenAI `gpt-6-luna` for multilingual intent and structured visual extraction, with `gpt-6.1-sol` available for difficult cases if sample evaluation justifies escalation. Both support image input and structured outputs according to the current official model comparison. This is an engineering recommendation, not a measured claim that either model is best for the challenge.
+
+| Candidate | Standard input per 1M tokens | Standard output per 1M tokens | Proposed use |
+| --- | ---: | ---: | --- |
+| `gpt-6-luna` | $0.10 | $0.50 | Initial extraction and request interpretation |
+| `gpt-6.1-sol` | $2.00 | $10.00 | Targeted escalation after observed failures |
+
+Sources checked October 24, 2026: https://developers.openai.com/api/docs/pricing and https://developers.openai.com/api/docs/models/compare . Rates above are standard text-token rates; use actual billed token categories, including image and reasoning usage, when calculating costs. Image support does not imply image processing is free. Confirm model availability for the selected account before a full run.
+
+Suggested planning ceiling: $10 total API spend across development and production, subject to the user's choice. This is not a forecast or guarantee of the final bill. Start with a small measured sample, project the full-run cost from actual usage, reserve retry capacity, and stop before the chosen ceiling. Provider abstraction must allow another available model without changing the reasoning engine. Development calls and final-run calls must be counted separately.
 
 ## Proposed investigation pipeline
 
@@ -120,7 +133,7 @@ These boundaries are recommendations. The implementer may combine small modules 
 
 ## Delivery sequence and completion gates
 
-Effort ranges are working estimates, not promises. Reserve a final clean-run and submission buffer once the deadline is confirmed.
+Effort ranges are working estimates, not promises. The stated interview close is October 25 at 7:30 PM CDT. A proposed working target is to have validated artifacts by noon on October 25, upload around 1 PM, and take the interview soon afterward, preferably finishing by 3 PM. These are assistant-proposed targets, not confirmed user availability or a separately verified upload cutoff. If submitting earlier, book the interview within that submission's 12-hour window.
 
 | Stage | Estimate | Concrete completion gate |
 | --- | --- | --- |
@@ -159,17 +172,17 @@ Define the final run as the complete process that generated the submitted CSV. I
 ## Submission checklist
 
 - Root `output.csv`: exact header `case_id,deletion_status,steps_json`; 518 unique requested cases, sorted by ID; valid JSON and consecutive step numbers.
-- `code.zip`: runnable code, prompts, setup/run README, and `code/evaluation/evaluation_report.md` plus `code/evaluation/usage_report.md`. Use the README's current `code/evaluation/` location so both reports are bundled; it clarifies the generic `evaluation/` references elsewhere.
+- `code.zip`: the runnable `code/` directory, including prompts, configuration, dependencies, a README, and `code/evaluation/evaluation_report.md` plus `code/evaluation/usage_report.md` in the repository layout. Place setup/run instructions inside `code/README.md` so zipping `code/` as the user-supplied platform instructions request remains self-contained. Verify the archive's documented invocation against its actual extracted layout.
 - Write complete metrics, custom test cases, failures/improvements, and usage analysis in Markdown. The code judge ignores content stored only in CSV, JSON, SQL, or log files.
 - Root `log.txt`: append-only session and turn history with authoritative harness/model values and no secrets or real personal data.
-- `agent-trace.zip`: the current repository also requests original relevant harness traces separately. Prepare only this challenge's sessions, review/redact before sharing, and keep this archive outside `code.zip`. Verify the official upload slot during submission.
+- The user-supplied platform instructions specify exactly three uploads: `code.zip`, `output.csv`, and `log.txt` in the chat-transcript slot. The repository additionally describes an `agent-trace.zip`, but the platform text supplies no fourth slot. Preserve relevant raw traces locally if available; do not assume another required upload or put a trace archive inside `code.zip`. Check any explicit trace collection instructions if such a slot is actually shown later.
 - Exclude dataset files, caches, virtual environments, credentials, and nested archives from `code.zip`. Verify a clean extraction can run against the provided dataset with documented dependencies.
 - Prepare a concise explanation of evidence extraction, historical identifiers, cutoff handling, policy rules, remediation ordering, evaluation limitations, and cost tradeoffs.
 
 ## Decisions still needed before implementation
 
-1. Confirm the official deadline and available working hours.
-2. Select an available model provider and authorize any paid API budget before billable execution.
+1. Select model API access and a spending ceiling. Proposed default: OpenAI, starting with `gpt-6-luna`, and a $10 ceiling. The provider and budget are not requirements imposed by HackerRank.
+2. Confirm working hours for the proposed noon/1 PM/3 PM targets on October 25. The supplied 7:30 PM interview deadline and 12-hour personal window are now recorded; a separate upload cutoff remains unverified.
 
 Planning can proceed without these answers. Paid model calls and final scheduling depend on the relevant answer or access becoming available.
 
