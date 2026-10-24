@@ -1,3 +1,11 @@
+# Latest focused review checkpoint
+
+178 tests pass. Sample coverage23/32; all32 status accuracy71.875%; exact sequence8/32 (25%); step precision95.86%, recall72.02%, F1 82.25%; fields67.70%. Full419/518,99blocked unchanged. Finance-register ordinary business references are preserved as retention constraints, not invented privacy-resource categories; case21 still lacks independent account proof. Expected answers remain exclusively in evaluation.
+
+Read code/evaluation/sample_mismatch_review.md (every missing/extra step) and case_01_mre.md (no-cache participant-file-only reproduction). Run `.venv/bin/python code/evaluation/review_mismatches.py` or add `--mre-case01 --report /tmp/case01.md`. No new API calls or credential changes in this review. The paid budget remains$0. No final output.csv exists.
+
+The earlier checkpoint below is historical; its metrics are superseded by this section and the evaluation report.
+
 # Deletion-audit handoff
 
 Branch: feat/deletion-audit-baseline, based on 9b3e227757b2b04c949e9dbc95e6fdab3039ddfa. Existing checkout: /workspace/hackerrank-orchestrate-october26. Use it in place; no extra worktree.

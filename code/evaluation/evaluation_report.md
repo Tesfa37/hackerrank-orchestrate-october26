@@ -1,6 +1,6 @@
 # Public sample evaluation
 
-Generated 2026-10-24T21:11:17.151692+00:00 from `sample_predictions_partial.csv` against `sample_output.csv`.
+Generated 2026-10-24T21:30:36.331964+00:00 from `sample_predictions_partial.csv` against `sample_output.csv`.
 
 The public examples are development data. These measurements do not establish hidden evaluation accuracy.
 
@@ -10,9 +10,9 @@ Coverage records which requests received a row; it is separate from agreement wi
 
 | Coverage measure | Result |
 | --- | ---: |
-| Expected / returned cases | 32 / 19 |
-| Expected cases with a prediction | 19/32 (59.38%) |
-| Missing / unexpected case IDs | 13 / 0 |
+| Expected / returned cases | 32 / 23 |
+| Expected cases with a prediction | 23/32 (71.88%) |
+| Missing / unexpected case IDs | 9 / 0 |
 | Exact case-ID coverage | Fail |
 | Output contract | Fail |
 
@@ -22,14 +22,14 @@ All expected requests remain in the primary case-accuracy denominators. A missin
 
 | Accuracy measure | Result |
 | --- | ---: |
-| Deletion-status accuracy | 59.38% (19/32) |
-| Exact case accuracy (status and ordered steps) | 21.88% (7/32) |
-| Exact step-sequence accuracy | 21.88% (7/32) |
-| Step precision / recall / F1 | 94.96% / 58.55% / 72.44% |
-| Exact content-matched / predicted / expected steps | 113 / 119 / 193 |
-| Aligned field accuracy | 54.99% |
+| Deletion-status accuracy | 71.88% (23/32) |
+| Exact case accuracy (status and ordered steps) | 25.00% (8/32) |
+| Exact step-sequence accuracy | 25.00% (8/32) |
+| Step precision / recall / F1 | 95.86% / 72.02% / 82.25% |
+| Exact content-matched / predicted / expected steps | 139 / 145 / 193 |
+| Aligned field accuracy | 67.70% |
 
-Supplementary returned-row status agreement is 19/19 (100.00%). It excludes missing expected rows and must not replace the primary all-request accuracy.
+Supplementary returned-row status agreement is 23/23 (100.00%). It excludes missing expected rows and must not replace the primary all-request accuracy.
 
 ## Metric definitions
 
@@ -37,17 +37,17 @@ Primary case metrics divide by every expected request; missing rows count as inc
 
 | Field | Correct / aligned slots | Accuracy |
 | --- | ---: | ---: |
-| step_no | 88/199 | 44.22% |
-| phase | 113/199 | 56.78% |
-| system_id | 113/199 | 56.78% |
-| resource_id | 113/199 | 56.78% |
-| operation | 113/199 | 56.78% |
-| state | 113/199 | 56.78% |
-| evidence_id | 113/199 | 56.78% |
+| step_no | 109/199 | 54.77% |
+| phase | 139/199 | 69.85% |
+| system_id | 139/199 | 69.85% |
+| resource_id | 139/199 | 69.85% |
+| operation | 139/199 | 69.85% |
+| state | 139/199 | 69.85% |
+| evidence_id | 139/199 | 69.85% |
 
 ## Failures
 
-Missing case IDs: case_01, case_02, case_04, case_08, case_12, case_17, case_21, case_24, case_25, case_26, case_27, case_28, case_29.
+Missing case IDs: case_01, case_02, case_04, case_17, case_21, case_25, case_26, case_27, case_28.
 
 | Case | Expected status | Predicted status | Expected steps | Predicted steps | Content matches | Sequence match |
 | --- | --- | --- | ---: | ---: | ---: | --- |
@@ -57,22 +57,21 @@ Missing case IDs: case_01, case_02, case_04, case_08, case_12, case_17, case_21,
 | case_04 | COMPLETE | None | 2 | 0 | 0 | False |
 | case_06 | INCOMPLETE | INCOMPLETE | 4 | 3 | 3 | False |
 | case_07 | INCOMPLETE | INCOMPLETE | 4 | 9 | 3 | False |
-| case_08 | INCOMPLETE | None | 4 | 0 | 0 | False |
+| case_08 | INCOMPLETE | INCOMPLETE | 4 | 3 | 3 | False |
 | case_09 | INCOMPLETE | INCOMPLETE | 5 | 3 | 3 | False |
 | case_10 | INCOMPLETE | INCOMPLETE | 4 | 3 | 3 | False |
-| case_12 | INCOMPLETE | None | 5 | 0 | 0 | False |
 | case_17 | INCOMPLETE | None | 5 | 0 | 0 | False |
 | case_18 | INCOMPLETE | INCOMPLETE | 14 | 12 | 12 | False |
 | case_20 | INCOMPLETE | INCOMPLETE | 8 | 6 | 6 | False |
 | case_21 | COMPLETE | None | 3 | 0 | 0 | False |
 | case_22 | INCOMPLETE | INCOMPLETE | 8 | 7 | 7 | False |
 | case_23 | INCOMPLETE | INCOMPLETE | 8 | 6 | 6 | False |
-| case_24 | INCOMPLETE | None | 7 | 0 | 0 | False |
+| case_24 | INCOMPLETE | INCOMPLETE | 7 | 6 | 6 | False |
 | case_25 | COMPLETE | None | 3 | 0 | 0 | False |
 | case_26 | COMPLETE | None | 6 | 0 | 0 | False |
 | case_27 | COMPLETE | None | 6 | 0 | 0 | False |
 | case_28 | COMPLETE | None | 6 | 0 | 0 | False |
-| case_29 | INCOMPLETE | None | 14 | 0 | 0 | False |
+| case_29 | INCOMPLETE | INCOMPLETE | 14 | 12 | 12 | False |
 | case_30 | INCOMPLETE | INCOMPLETE | 14 | 12 | 12 | False |
 | case_31 | COMPLETE | COMPLETE | 3 | 2 | 2 | False |
 | case_32 | INCOMPLETE | INCOMPLETE | 5 | 4 | 4 | False |
@@ -85,22 +84,41 @@ These fixtures test scoring behavior; reasoning-specific synthetic audits and im
 2. A wrong citation keeps resource alignment but lowers evidence-field accuracy and exact-step precision/recall.
 3. Reordered steps keep content precision/recall but fail sequence accuracy and canonical-order validation.
 
-## Investigation and validation
+## Focused review of all 32 public samples
 
-All 175 independent regression tests pass, along with Node syntax validation. Participant dataset bytes match the official upstream snapshot; inputs and existing credential bindings were not changed. All 518 identities resolve uniquely, including 100 historical request emails. Independent raw inspection found no missing past identifiers or eligible primary-record parsing misses among the account-proof blockers. All 15 PDFs/images received genuine source-only semantic reinspection.
+See [sample_mismatch_review.md](sample_mismatch_review.md) for every missing/extra content step, its participant-visible source and proof/root-cause classification, and [case_01_mre.md](case_01_mre.md) for a participant-file-only reproduction requiring no model cache. The reference CSV is consumed only inside evaluation; no expected resource IDs or labels are supplied to prediction code.
 
-Coverage is separate from accuracy: primary status and exact-sequence scores use all 32 expected cases; unresolved predictions count incorrect. Returned-row status agreement is supplementary, not a replacement for all-case accuracy. Step precision/recall includes citations; missing expected steps remain in recall and aligned-field denominators. Public samples are development data, not hidden-test accuracy.
+### Change from the previous pushed checkpoint
 
-The strict full run resolves 419/518 requests and deliberately exits 2. The remaining 99 are grouped in [blocker_report.md](blocker_report.md): 69 have negative snapshots without an eligible owned account key, 25 have direct account evidence captured after cutoff, 3 have neither eligible direct primary evidence nor a complete primary scope, and 2 have insufficient media field/access coverage. The original 98 were 69/25/3/1; the additional hold is an archive whose existence was incorrectly treated as current restore permission. No final output.csv is fabricated.
+| Measure | Before | After |
+| --- | ---: | ---: |
+| Sample coverage | 19/32 (59.375%) | 23/32 (71.875%) |
+| Status accuracy on all32 | 59.375% | 71.875% |
+| Exact sequence | 7/32 (21.875%) | 8/32 (25%) |
+| Step precision | 94.96% | 95.86% |
+| Step recall | 58.55% | 72.02% |
+| Step F1 | 72.44% | 82.25% |
+| Aligned field accuracy | 54.99% | 67.70% |
+| Full resolved / blocked | 419 /99 | 419 /99 |
 
-Fixes include known-key absence from a first complete snapshot, unparsed replica-state guards, source/catalog timing, quoted technical keys versus document/ticket aliases, exact textual UTC times, bounded date-only retention, object names versus personal names, stable tombstone references versus direct PII, and archive existence versus restore authorization. Received rejected responses remain quarantined; genuine recovery requires unchanged provider content, original request and attempt provenance, and current validation. Bounded corrective requests carry no expected answers.
+All 178 regression tests and Node syntax checks pass. All reruns in this review were offline, with zero new API requests. The configured paid API budget remains$0, with existing credentials unchanged.
 
-Independent synthetic regressions cover: export-only intent (no deletion), historical-email replica exposure (incomplete), future capture (excluded), active sync (disable first), restore-blocked archives (retain), stable-only partial tombstones (unknown, never PII), explicit full tombstone redaction (compliant), complete scoped negatives for an owned key (absent), unparsed replicas (held), retention-date boundary ambiguity (held), and unsafe output destinations (preserved).
+### Finance-register correction
 
-The sample run still exposes a reasoning gap for five finance-register rows: explicit retention dates are present, but their business order references are not confidently mapped to a supplied deletion-policy category/condition. This is a policy/record interpretation gap, not an absent document. Three sample subjects have no grounded eligible identity/resource association; other missing cases lack deletion proof or full tombstone-field coverage. Existing object-store findings were not dropped merely to match reference labels: the visible object filename differs from the support attachment, so a same-object alias is unproven.
+The five ORD rows are ordinary business references with explicit retention instructions, not source-proven profiles, exports or active legal holds. Treating them as UNKNOWN privacy-resource obligations incorrectly blocked whole cases. They now remain in the full source facts as retained_business_constraint records: no destructive operation or invented privacy category is produced. Known privacy-resource prefixes, visible direct identifiers and uncertain primary references remain subject to normal uncertainty checks. This removes the finance-specific hold from all five samples; case_21 still independently lacks account-deletion proof, so four additional rows are returned. This is not a claim that an active legal hold exists, or that unshown PII was removed.
 
-No hidden accuracy is claimed. Source-fact validation and unit tests do not prove exhaustive discovery. Read blocker_report.md for representative cases, exact missing proofs, capture times and full group membership.
+### Missing verifications and guard
 
-- `.cache/sample_predictions_partial.csv` SHA-256: `93b4af2fdaab0e3ca3e3d6e21c46fa4b110446f256abd34b3c001ebb73e4f19a`
+Many missing verifications refer to absent/sanitized resources with no eligible subject ownership edge. Other cases are held atomically rather than emitting a partial plan. Additional genuinely grounded records are not discarded solely because reference steps omit them. The per-step table distinguishes these from state/citation/policy discrepancies.
 
-- `.cache/full_predictions_partial.csv` SHA-256: `0bba8ac64fcf3eadfcfe1468ef89fd5fcd9dbbad8815e40f3b7445bd767a288a`
+A blanket mandatory primary-account absence/tombstone anchor is stricter than the literal contract. The contract requires proof that every relevant copy has its required treatment, rather than naming one mandatory resource category. The guard remains a conservative check for the current whole-account workflow: an audit-record-only match does not establish full deletion, and removing it would not recover the missing resource keys or verification evidence. Scoped engine fixtures do not impose that anchor. No guard was disabled merely to emit a row.
+
+### Minimal source-consistency example
+
+For case_01, expected account_001 occurs zero times in the cited SQL snapshot. The only eligible activity naming that key has no subject identifier and reports an operation claim rather than observed state. Identity/history supplies user_01/email/phone/hash but no account key. Required proof is an eligible subject-to-account association or keyed readback; deriving account_001 from user_01 would be a forbidden suffix assumption. The executable MRE records those counts rather than injecting a mapping.
+
+### Remaining work and limits
+
+The full run still holds69 account ownership gaps despite negative snapshots,25 future-capture exclusions,3 missing eligible primary/scope proofs,1 tombstone field-coverage gap, and1 archive restore-authorization gap. No final output.csv is manufactured. Public samples remain development data; no hidden accuracy is claimed.
+
+Independent fixtures exercise finance/reference retention without invented category, quoted keys, historical-email replicas, future captures, complete negative snapshots with known owned keys, missing replica state, stable-only tombstones, restore access, date boundaries, and report/input protection. The new mismatch-counter regressions distinguish citation changes from numbering/order differences.

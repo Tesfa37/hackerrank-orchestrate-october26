@@ -39,6 +39,17 @@ CATALOG = [{'activity_id': 'activity_test', 'event_type': 'LINK_RESOURCE_IDENTIT
 
 
 class EvidenceTests(unittest.TestCase):
+    def test_business_retention_reference_is_preserved_without_invented_privacy_type(self):
+        record = reviewed_record(resource_id='ORD-custom', literal_reference='ORD-custom',
+                                 reference_kind='BUSINESS_ALIAS', category='record', record_type='UNKNOWN',
+                                 stored_fields=[{'field_name': 'Retain until', 'value': '04 May 2033',
+                                                 'source_quote': 'Retain until 04 May 2033',
+                                                 'identifier_role': 'OTHER', 'visibility': 'VALUE'}])
+        store = EvidenceStore()
+        self.assertEqual(hydrate_media_reinspection(store, META, reviewed_result(record), []), [])
+        self.assertEqual(store.media_reinspection_facts[META['file_id']]['unmapped_records'][0]['_role'], 'retained_business_constraint')
+        record.update(resource_id='account_custom', literal_reference='account_custom')
+        self.assertEqual(len(hydrate_media_reinspection(EvidenceStore(), META, reviewed_result(record), [])), 1)
     def test_quoted_technical_record_key_binds_business_view_alias(self):
         record = reviewed_record(resource_id='CS-99', literal_reference='CS-99', reference_kind='BUSINESS_ALIAS',
                                  category='record', record_type='SUPPORT_MESSAGE',

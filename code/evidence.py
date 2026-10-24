@@ -661,6 +661,19 @@ def hydrate_media_reinspection(store: EvidenceStore, meta: dict, result: dict, c
                      resource_kind(value)[1] == record['record_type'] and record['record_type'] != 'UNKNOWN'}
         primary_reference = next(iter(technical)) if len(technical) == 1 else ''
         source_key = primary_reference or record['resource_id'] or literal
+        # A quoted retention instruction for an ordinary business reference is
+        # a planning constraint, not evidence of a new privacy-resource type.
+        # Preserve it without inventing a legal hold, export, or profile.
+        retention_fields = [field for field in record['stored_fields']
+                            if _review_field_name(field['field_name']) in {'retainuntil', 'retentionuntil'}
+                            and field['visibility'] == 'VALUE' and field['source_quote'].strip()]
+        if (record['record_type'] == 'UNKNOWN' and record['category'] == 'record'
+                and record['reference_kind'] in {'BUSINESS_ALIAS', 'RESOURCE_ID'}
+                and not resource_kind(source_key)[1] and retention_fields
+                and not record['direct_identifiers_visible']):
+            unresolved.append({**record, '_role': 'retained_business_constraint',
+                               '_reason': 'Retain the supplied business record; no supplied privacy-resource category or destructive operation is established'})
+            continue
         candidates = []
         for event, aliases in catalog:
             if literal not in aliases and source_key not in aliases:

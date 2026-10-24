@@ -369,3 +369,37 @@ branch=feat/deletion-audit-baseline
 repo_root=/workspace/hackerrank-orchestrate-october26
 worktree=main
 parent_agent=none
+
+## [2026-10-24T21:33:33.709861+00:00] Focused public-sample mismatch review
+
+User Prompt (verbatim, secrets redacted):
+Continue with a focused review of all 32 public-sample mismatches.
+
+Produce a mismatch table showing each missing/extra step, its participant-visible source, and its root cause. Keep expected answers confined to evaluation.
+
+Prioritize:
+1. The five finance-register interpretation gaps.
+2. Missing verification steps in otherwise resolved cases.
+3. Whether the completeness guard requires proof beyond the stated contract.
+
+For suspected dataset gaps, prepare minimal reproducible examples, starting with case_01: explain how the expected account resource could be grounded without inferring it from a user-ID suffix.
+
+Fix demonstrated implementation errors with regression tests. Preserve cutoff rules, required retention, and the $0 paid API budget. Do not manufacture resource IDs or disable safeguards simply to emit 518 rows.
+
+Rerun evaluation and report changes in sample coverage, exact sequence accuracy, and full-run blockers. Push the analysis and fixes.
+
+Agent Response Summary:
+Added evaluation-only per-step mismatch/source/root-cause tables for all32samples and a participant-file-only case01 MRE. Fixed finance-register business references being treated as unknown privacy-resource obligations while preserving their retention instructions and all primary-resource uncertainty checks. All178 tests pass; coverage improves19to23/32 and exactsequence7to8/32;full419/518 and99blockers remain. No new API calls, credential changes, guessed IDs or safeguard bypasses occurred; code/reports/handoff prepared for the authorized push.
+
+Actions:
+* Updated evidence hydration and regression tests.
+* Added evaluation-only mismatch review and no-cache minimal reproduction.
+* Reran all32evaluation and518requests offline; updated reports and handoff.
+
+Context:
+tool=Codex
+Runtime model metadata: exact coding-model identifier is not exposed; none was fabricated.
+branch=feat/deletion-audit-baseline
+repo_root=/workspace/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none

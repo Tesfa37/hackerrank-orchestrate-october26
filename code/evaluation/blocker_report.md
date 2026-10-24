@@ -127,9 +127,3 @@ python3 code/investigate.py --reinspect-media
 ```
 
 The JSON companion contains every blocked case, provenance, scope timestamps, and history checks. This report records a development investigation, not final prediction accuracy or a completed submission.
-
-## Changes from the initial 98 blockers
-
-Initial groups were 69 negative snapshots without owned keys, 25 capture exclusions, 3 missing primary-scope proofs and 1 registry interpretation error. The registry category error is corrected: rule 15 permits its stable user_id and it is not counted as exposed PII. Required name/email/phone/hash removal remains unverified. One newly held archive case needs current restore authorization, increasing the final total to 99.
-
-Software fixes were kept separate from genuine missing proof: exact UTC text parsing, date-only retention intervals, printed internal record IDs versus external ticket/report aliases, blank UI markers, object names, known-key negative snapshots, and replica-state coverage. None of those repairs authorizes using future captures or inventing an unknown resource ID. Some candidate lines above are intentionally ineligible and are listed only to explain exclusion; they were not used as audit proof.
