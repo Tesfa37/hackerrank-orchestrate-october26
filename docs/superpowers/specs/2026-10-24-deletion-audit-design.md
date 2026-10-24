@@ -50,7 +50,7 @@ Use a hybrid Python pipeline. Parse structured evidence directly, use a language
 
 Use Python standard libraries for CSV, JSON, dates, SQLite, hashing, and command-line execution. Select a PDF parser and model SDK only when implementation begins. Do not add a frontend, vector database, orchestration framework, or external data source for this 94-file dataset.
 
-The user has no model API access set up and prefers no paid API usage. Treat that choice as a **$0 billed API budget**, with no automatic paid fallback. This supersedes the earlier OpenAI/$10 proposal. No supported provider key is configured in the challenge environment. No credentials from the unrelated Aulden project were inspected or reused.
+The user prefers no paid API usage. Treat that choice as a **$0 billed API budget**, with no automatic paid fallback. This supersedes the earlier OpenAI/$10 proposal. The user has now configured a local Gemini key; authenticated model access and one minimal generation were verified on October 24 without displaying the key. No credentials from the unrelated Aulden project were inspected or reused.
 
 Recommended no-charge candidate: the **Gemini Developer API Free Tier**, initially `gemini-3.5-flash-lite`, through a project with billing disabled. The official pricing page lists free input and output for this model, including image input. Use its structured outputs for multilingual request interpretation and image evidence extraction; keep the Python decision engine unchanged. This is a proposed model choice, not a measured claim that it will achieve sufficient challenge accuracy.
 
@@ -186,10 +186,10 @@ Define the final run as the complete process that generated the submitted CSV. I
 
 ## Decisions still needed before implementation
 
-1. Set up a Gemini API key on a Free Tier project with billing disabled, store it locally as `GEMINI_API_KEY`, and verify model access and quota. The user has selected no paid API usage; no further paid-budget choice is needed. See `docs/free-api-setup.md`. Do not request or print a key in chat.
+1. Model setup is complete: the local `GEMINI_API_KEY` is ignored by Git, model metadata lookup succeeded, and one generation smoke test succeeded with 7 total tokens. No further credential setup is currently needed. Check account-specific quota and throughput during the first sample batch. The user has selected no paid API usage; no further paid-budget choice is needed. See `docs/free-api-setup.md`. Do not request or print a key in chat.
 2. Confirm working hours for the proposed noon/1 PM/3 PM targets on October 25. The supplied 7:30 PM interview deadline and 12-hour personal window are now recorded; a separate upload cutoff remains unverified.
 
-Structured parsing and evaluation preparation can proceed without a key. Model-backed intent and visual extraction require the free credential and a successful access/quota check. Final scheduling also depends on the user's availability.
+Structured parsing and evaluation preparation can proceed. Model-backed intent and visual extraction can use the verified local key; account-specific remaining quota and full-run throughput still need measurement. The restricted terminal could not resolve Google's API host, while the available Node runtime reached the API successfully. Keep the submitted program runnable through ordinary documented Gemini requests, independent of coding-agent tools. Final scheduling also depends on the user's availability.
 
 ## Design review
 

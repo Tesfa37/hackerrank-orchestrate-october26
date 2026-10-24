@@ -8,7 +8,9 @@ The selected budget is $0 in billed API usage. The proposed provider is the Gemi
 4. Save the key only on your computer. For this checkout, create a root `.env` file with a line in the form `GEMINI_API_KEY=YOUR_KEY`. The root `.gitignore` excludes this file. The planned agent will load the value without printing it. It can instead read an existing `GEMINI_API_KEY` environment variable.
 5. Tell the coding agent that the key is configured; do not send the key in chat. Before requests are run, confirm the project is still on the Free Tier and check the model's quota.
 
-No key, account, project, or billing setting was created or changed by the coding agent during planning. No model calls have been made. The runtime implementation is still pending, so access and throughput have not been tested.
+The user configured the local key. On October 24 the coding agent verified that `.env` exists, contains the required variable, and is ignored by Git, without displaying the key. The authenticated model lookup returned HTTP 200 for `gemini-3.5-flash-lite`. One minimal generation smoke test returned the expected `READY` response and used 6 input tokens plus 1 output token, 7 tokens total. Record this as development usage, separate from the eventual full-dataset run.
+
+The restricted terminal could not resolve Google's API host, but the available Node runtime reached the API successfully. The submitted program must use ordinary documented Gemini API requests and must not depend on the coding-agent runtime. Model access and one generation are verified; account-specific remaining quota and end-to-end throughput are not yet measured. No key, account, project, or billing setting was created or changed by the coding agent.
 
 The implementation will group short requests into ordinary synchronous calls, extract image evidence once, cache repeat work, and record real token usage. Free-tier exhaustion pauses the affected stage; it does not enable billing or switch to a paid model.
 
