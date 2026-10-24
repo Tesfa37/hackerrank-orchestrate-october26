@@ -50,18 +50,23 @@ Use a hybrid Python pipeline. Parse structured evidence directly, use a language
 
 Use Python standard libraries for CSV, JSON, dates, SQLite, hashing, and command-line execution. Select a PDF parser and model SDK only when implementation begins. Do not add a frontend, vector database, orchestration framework, or external data source for this 94-file dataset.
 
-Model provider and spending limit have not yet been selected by the user. A presence-only check found no supported provider API key in the current environment and no `.env` or `.env.local` in the challenge checkout. No credentials from the unrelated Aulden project were inspected or reused.
+The user has no model API access set up and prefers no paid API usage. Treat that choice as a **$0 billed API budget**, with no automatic paid fallback. This supersedes the earlier OpenAI/$10 proposal. No supported provider key is configured in the challenge environment. No credentials from the unrelated Aulden project were inspected or reused.
 
-Recommended starting candidate: OpenAI `gpt-6-luna` for multilingual intent and structured visual extraction, with `gpt-6.1-sol` available for difficult cases if sample evaluation justifies escalation. Both support image input and structured outputs according to the current official model comparison. This is an engineering recommendation, not a measured claim that either model is best for the challenge.
+Recommended no-charge candidate: the **Gemini Developer API Free Tier**, initially `gemini-3.5-flash-lite`, through a project with billing disabled. The official pricing page lists free input and output for this model, including image input. Use its structured outputs for multilingual request interpretation and image evidence extraction; keep the Python decision engine unchanged. This is a proposed model choice, not a measured claim that it will achieve sufficient challenge accuracy.
 
-| Candidate | Standard input per 1M tokens | Standard output per 1M tokens | Proposed use |
-| --- | ---: | ---: | --- |
-| `gpt-6-luna` | $0.10 | $0.50 | Initial extraction and request interpretation |
-| `gpt-6.1-sol` | $2.00 | $10.00 | Targeted escalation after observed failures |
+Sources checked October 24, 2026:
 
-Sources checked October 24, 2026: https://developers.openai.com/api/docs/pricing and https://developers.openai.com/api/docs/models/compare . Rates above are standard text-token rates; use actual billed token categories, including image and reasoning usage, when calculating costs. Image support does not imply image processing is free. Confirm model availability for the selected account before a full run.
+- https://ai.google.dev/gemini-api/docs/pricing
+- https://ai.google.dev/gemini-api/docs/billing
+- https://ai.google.dev/gemini-api/docs/models/gemini-3.5-flash-lite
+- https://ai.google.dev/gemini-api/docs/structured-output
+- https://ai.google.dev/gemini-api/docs/rate-limits
 
-Suggested planning ceiling: $10 total API spend across development and production, subject to the user's choice. This is not a forecast or guarantee of the final bill. Start with a small measured sample, project the full-run cost from actual usage, reserve retry capacity, and stop before the chosen ceiling. Provider abstraction must allow another available model without changing the reasoning engine. Development calls and final-run calls must be counted separately.
+Free quotas and model access must be checked on the actual account; do not assume a universal requests-per-day limit or guarantee that a full run fits. Group multiple short request classifications into each ordinary synchronous API call, validating that every input case is returned exactly once. Extract shared visual files once and reuse the grounded observations. This application-level grouping does not require the provider's asynchronous Batch API, whose completion time would add deadline risk. Cache extraction by content/model/prompt version and preserve a reproducible cold-run path.
+
+Use bounded retries and wait only when the documented quota reset fits the deadline. If access or quota is insufficient, pause the affected stage and report it. Never switch to paid billing, hide missing observations, invent outputs, or substitute case-specific cached answers. Track actual model calls and input/output/thinking tokens even when billed API cost is $0. If model rates are included for comparison, clearly separate hypothetical paid list-price cost from actual free-tier cost.
+
+Local alternative investigated: no Ollama/LM Studio command, running process, known default executable, or Python LLM inference package was found. The host reports about 15.8 GB RAM with roughly 0.8 GB available at the time of inspection; GPU details could not be established through the available system interface. Local inference might be possible after setup and freeing memory, but speed and accuracy are untested. Given the deadline, prefer the hosted free tier before spending time downloading a multi-GB model. PDF-reading libraries PyMuPDF and pypdf are already available; no OCR package or Tesseract command was detected. No model runtime was installed or downloaded.
 
 ## Proposed investigation pipeline
 
@@ -123,7 +128,7 @@ Number steps consecutively after sorting. Findings and complete-case verificatio
 | `code/identity.py` | Identifier history, normalization, temporal joins |
 | `code/ingest/` | CSV, JSON, SQL, logs, PDF, image adapters |
 | `code/models.py` | Observations, decisions, exact output types |
-| `code/model_client.py` | Structured model calls, retries, usage metering |
+| `code/model_client.py` | Free-tier Gemini structured calls, bounded retries, usage metering; no paid fallback |
 | `code/reasoning.py` | Retrieval, cutoff state, policy decisions |
 | `code/planner.py` | Findings, remediation, verification, ordering |
 | `code/validate.py` | Schema, evidence eligibility, coverage checks |
@@ -139,7 +144,7 @@ Effort ranges are working estimates, not promises. The stated interview close is
 | --- | --- | --- |
 | Account setup and contract | Completed | Fork and shallow checkout verified; log active; schemas and precedence recorded |
 | Structured baseline | 2-3 h | Identity, JSON, text, SQL, and logs produce grounded observations and valid sample output |
-| Intent and visual evidence | 1-2 h | All 94 files ingested; multilingual requests classified; ambiguous extraction reviewed |
+| Intent and visual evidence | 1-2 h, quota dependent | Free model access tested; all 94 files ingested; multilingual requests classified; ambiguous extraction reviewed |
 | Reasoning and planning | 2-3 h | Policy and temporal edge cases pass; public sample errors diagnosed |
 | Evaluation and full run | 1-2 h | Public metrics recorded; custom cases pass; all 518 cases processed with usage captured |
 | Clean run, packaging, interview preparation | 1 h | Reproducible artifacts validated and architecture explainable |
@@ -165,7 +170,7 @@ Also test that adding unrelated decoys, renaming evidence paths while updating t
 
 ## Usage and cost reporting
 
-Record provider, exact model, calls, input/output tokens, cached-token categories when available, retry usage, and prices/source date. Compute per-model and overall totals, total tokens divided by 518, and total cost divided by 518. Include failed calls with usage if billed. Report unavailable usage explicitly rather than estimating it as measured.
+Record provider, exact model, calls, input/output/thinking tokens, cached-token categories when available, retry usage, and prices/source date. Compute per-model and overall totals, total tokens divided by 518, and total cost divided by 518. For the chosen free-tier plan, actual billed API cost is $0 only when the run remains entirely in that free tier. Include failed calls with usage if available. Report unavailable usage explicitly rather than estimating it as measured. Do not interpret free usage as zero tokens or omit the required usage report.
 
 Define the final run as the complete process that generated the submitted CSV. If extraction caches are reused, disclose cache state and attribute the model work used to create them; report both incremental final-run and end-to-end production cost. Do not make reused extraction appear free.
 
@@ -181,10 +186,10 @@ Define the final run as the complete process that generated the submitted CSV. I
 
 ## Decisions still needed before implementation
 
-1. Select model API access and a spending ceiling. Proposed default: OpenAI, starting with `gpt-6-luna`, and a $10 ceiling. The provider and budget are not requirements imposed by HackerRank.
+1. Set up a Gemini API key on a Free Tier project with billing disabled, store it locally as `GEMINI_API_KEY`, and verify model access and quota. The user has selected no paid API usage; no further paid-budget choice is needed. See `docs/free-api-setup.md`. Do not request or print a key in chat.
 2. Confirm working hours for the proposed noon/1 PM/3 PM targets on October 25. The supplied 7:30 PM interview deadline and 12-hour personal window are now recorded; a separate upload cutoff remains unverified.
 
-Planning can proceed without these answers. Paid model calls and final scheduling depend on the relevant answer or access becoming available.
+Structured parsing and evaluation preparation can proceed without a key. Model-backed intent and visual extraction require the free credential and a successful access/quota check. Final scheduling also depends on the user's availability.
 
 ## Design review
 
