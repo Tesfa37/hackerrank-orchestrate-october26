@@ -1,0 +1,2 @@
+# Runtime is Python 3.11+. Gemini REST and structured adapters use stdlib.
+pypdf==6.10.0
