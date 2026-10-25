@@ -1,5 +1,11 @@
 # Fresh environment and genuine response regeneration
 
+This guide describes the strict baseline and genuine extraction workflow.
+After valid interpretation caches exist, the optional decision-policy comparison
+commands in README.md can publish a separate518-row prediction candidate and
+assumptions sidecar. That candidate does not resolve the strict evidence gaps;
+`evaluation/approach_comparison.md` reports its measured tradeoffs.
+
 The archive contains code, prompts (in source), requirements, and evaluation/interview documentation. It deliberately contains no dataset, response caches, virtual environment, API credentials or final predictions. Preserved partial predictions are separate review artifacts, not bootstrap inputs to the predictor.
 
 ## Extract and install

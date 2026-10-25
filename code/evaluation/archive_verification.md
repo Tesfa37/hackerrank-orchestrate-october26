@@ -1,5 +1,17 @@
 # Extracted-archive verification
 
+## Current decision-policy version
+
+The optional prediction-policy comparison adds196-test coverage and a separately
+published518-row prediction candidate with99 explicitly recorded assumptions.
+The default strict pipeline and its419 supported rows remain unchanged. The
+archive is re-extracted and checked with the same installation/replay procedure
+after these additions; updated command records are preserved as
+review_artifacts/approach_comparison/archive_verification.json. This code archive
+still contains neither root output.csv nor model caches. The candidate and its
+assumptions are separate deliverables, not a claim that the strict blockers were
+resolved. The186-test verification below is the historical initial checkpoint.
+
 Verified October 24, 2026 (America/Chicago). The runtime source was extracted from the b242f64 review archive into an empty temporary directory. The finalization archive adds documentation; its extracted runtime is checked again before publication. A machine-readable command/exit-code record and exact archive checksum are preserved separately in review_artifacts/archive_verification.json.
 
 ## Actually tested

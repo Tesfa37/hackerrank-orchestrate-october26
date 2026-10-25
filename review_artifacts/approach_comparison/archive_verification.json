@@ -1,0 +1,393 @@
+{
+  "work_dir": "/tmp/deletion-archive-install-p0e6xwcd",
+  "archive_sha256": "d43d8b55a176eb4edf4837b0753793b6bc3b6c5c6f1e1399c5b9ac22444bec59",
+  "commands": [
+    {
+      "name": "create_fresh_virtualenv",
+      "command": [
+        "/workspace/hackerrank-orchestrate-october26/.venv/bin/python",
+        "-m",
+        "venv",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.venv"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd/bundle",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 2.163
+    },
+    {
+      "name": "install_pinned_dependency",
+      "command": [
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--no-cache-dir",
+        "--disable-pip-version-check",
+        "--index-url",
+        "https://pypi.org/simple",
+        "-r",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/code/requirements.txt"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd/bundle",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 1.671
+    },
+    {
+      "name": "dependency_consistency",
+      "command": [
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.venv/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd/bundle",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.389
+    },
+    {
+      "name": "runtime_versions",
+      "command": [
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.venv/bin/python",
+        "-c",
+        "import sys,pypdf;print(sys.version);print(pypdf.__version__)"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd/bundle",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.1
+    },
+    {
+      "name": "unit_tests",
+      "command": [
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "code/tests",
+        "-v"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd/bundle",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 1.171
+    },
+    {
+      "name": "node_syntax",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/code/process_model_jobs.mjs"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd/bundle",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.084
+    },
+    {
+      "name": "help_main.py",
+      "command": [
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/code/main.py",
+        "--help"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.191
+    },
+    {
+      "name": "help_evaluation/main.py",
+      "command": [
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/code/evaluation/main.py",
+        "--help"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.055
+    },
+    {
+      "name": "help_investigate.py",
+      "command": [
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/code/investigate.py",
+        "--help"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.091
+    },
+    {
+      "name": "help_evaluation/review_mismatches.py",
+      "command": [
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/code/evaluation/review_mismatches.py",
+        "--help"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.117
+    },
+    {
+      "name": "help_evaluation/coverage_report.py",
+      "command": [
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/code/evaluation/coverage_report.py",
+        "--help"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.069
+    },
+    {
+      "name": "fresh_full_prepare",
+      "command": [
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/code/main.py",
+        "--prepare"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.888
+    },
+    {
+      "name": "fresh_offline_no_output",
+      "command": [
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/code/main.py",
+        "--offline"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "seconds": 0.46
+    },
+    {
+      "name": "fresh_online_missing_key",
+      "command": [
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/code/main.py"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "seconds": 0.46
+    },
+    {
+      "name": "replay_sample_partial",
+      "command": [
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/code/main.py",
+        "--samples",
+        "--offline",
+        "--partial",
+        "--output",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.cache/sample_predictions_partial.csv"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "seconds": 1.385
+    },
+    {
+      "name": "replay_full_partial",
+      "command": [
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/code/main.py",
+        "--offline",
+        "--partial",
+        "--output",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.cache/full_predictions_partial.csv"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "seconds": 6.441
+    },
+    {
+      "name": "replay_sample_evaluation",
+      "command": [
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/code/evaluation/main.py",
+        "--predictions",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.cache/sample_predictions_partial.csv",
+        "--report",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.cache/evaluation_summary.md",
+        "--json",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.cache/sample_metrics.json"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "seconds": 0.07
+    },
+    {
+      "name": "replay_blocker_diagnostics",
+      "command": [
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/code/investigate.py",
+        "--reinspect-media",
+        "--report",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.cache/blocker_report.md",
+        "--json",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.cache/blocker_report.json"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 15.904
+    },
+    {
+      "name": "replay_exclusion_coverage",
+      "command": [
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/code/evaluation/coverage_report.py",
+        "--report",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.cache/organizer_guidance.md"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.059
+    },
+    {
+      "name": "replay_mismatch_review",
+      "command": [
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/code/evaluation/review_mismatches.py",
+        "--report",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.cache/sample_mismatch_review.md"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 1.088
+    },
+    {
+      "name": "case01_no_network_mre",
+      "command": [
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/code/evaluation/review_mismatches.py",
+        "--mre-case01",
+        "--report",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.cache/case01_mre.md"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.105
+    },
+    {
+      "name": "replay_partial_usage",
+      "command": [
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/code/main.py",
+        "--offline",
+        "--partial",
+        "--output",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.cache/full_predictions_partial.csv",
+        "--usage-report",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.cache/full_usage.md"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "seconds": 6.355
+    },
+    {
+      "name": "comparison_samples",
+      "command": [
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/code/compare_approaches.py",
+        "--samples",
+        "--output-dir",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.cache/approach_comparison/samples"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 2.452
+    },
+    {
+      "name": "comparison_full_candidate",
+      "command": [
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/code/compare_approaches.py",
+        "--output-dir",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.cache/approach_comparison/full",
+        "--write-prediction-candidate",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/output.csv"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 26.718
+    },
+    {
+      "name": "comparison_evaluation",
+      "command": [
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/code/evaluation/compare_approaches.py",
+        "--report",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.cache/approach_comparison.md",
+        "--json",
+        "/tmp/deletion-archive-install-p0e6xwcd/bundle/.cache/approach_metrics.json"
+      ],
+      "cwd": "/tmp/deletion-archive-install-p0e6xwcd",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 12.834
+    }
+  ],
+  "python_and_pypdf_versions": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]\n6.10.0",
+  "suite_tests_passed": 196,
+  "fresh_jobs": 43,
+  "fresh_job_tasks": {
+    "request-intent": 13,
+    "business-artifact-extraction": 15,
+    "business-artifact-semantic-reinspection-v1": 15
+  },
+  "fresh_offline": {
+    "completed": 0,
+    "requests": 518,
+    "new_calls": 0
+  },
+  "missing_key": {
+    "completed": 0,
+    "new_calls": 0
+  },
+  "samples": {
+    "requests": 32,
+    "completed": 23,
+    "errors": 9,
+    "new_calls": 0,
+    "known_tokens": 104410
+  },
+  "full": {
+    "requests": 518,
+    "completed": 419,
+    "errors": 99,
+    "new_calls": 0,
+    "known_tokens": 145605
+  },
+  "predictions_byte_identical": true,
+  "strict_mode_produced_final_csv": false,
+  "prediction_candidate_exists": true,
+  "prediction_candidate": {
+    "rows": 518,
+    "assumption_cases": 99,
+    "byte_identical": true,
+    "new_calls": 0,
+    "unsupported_factual_step_claims": 1
+  },
+  "dataset_byte_identical": true
+}

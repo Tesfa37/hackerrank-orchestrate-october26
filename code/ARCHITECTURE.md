@@ -1,5 +1,13 @@
 # Architecture and boundaries
 
+The default strict pipeline below is preserved. `decision_policies.py` and
+`compare_approaches.py` additionally compare conservative and evidence-based
+prediction policies over the same original observations. The latter can publish
+a full-schema prediction candidate with an external assumptions ledger, including
+an explicitly inferred archive-risk forecast. Original states and provider
+responses are unchanged. Read `evaluation/approach_comparison.md` before treating
+that candidate as an audited fact or a guarantee of deletion completeness.
+
 This is a bounded AI-assisted audit pipeline. AI interprets deletion intent and business media; deterministic Python reconstructs evidence, applies the supplied policy, and orders the plan. It writes proposed actions and checks, not changes to customer systems. It is not an open-ended autonomous tool loop.
 
 The organizer screenshot supplied by the user recommends building an agent and considering scalability and robustness. It does not state a mandatory API requirement. This implementation uses Gemini because semantic request/media interpretation is useful here; the screenshot is not treated as an additional API rule.

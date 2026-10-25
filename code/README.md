@@ -1,5 +1,30 @@
 # Deletion audit baseline
 
+## Decision-policy comparison and submission candidate
+
+The strict auditor remains the default. An explicit evidence-based prediction
+policy is now available for a competitive candidate; its assumptions are not
+source facts. See [evaluation/approach_comparison.md](evaluation/approach_comparison.md)
+for full/sample coverage, valid/invalid rows, label distributions, phase checks,
+unsupported claims and all affected case IDs.
+
+```sh
+python3 code/compare_approaches.py --samples --output-dir .cache/approach_comparison/samples
+python3 code/compare_approaches.py --output-dir .cache/approach_comparison/full --write-prediction-candidate output.csv
+python3 code/evaluation/compare_approaches.py
+```
+
+These commands require genuine cached interpretations and make no API calls.
+The comparison always includes the rejected conservative fallback with invalid
+empty INCOMPLETE plans; that file is not a submission option. Candidate publication
+is only for the evidence-prediction approach and still validates full coverage,
+schema, phases and citation availability. It writes `output.assumptions.json` with
+source facts, unresolved records and explicit forecast assumptions. It does not
+claim that uncertainty has become proof. No sample answers or exclusion list
+enter prediction logic. Root `output.csv`, when published this way, is a prediction
+candidate rather than a completed strict audit. Keep the sidecar and comparison
+report with it; preserve all518 rows pending organizer clarification.
+
 This Python CLI joins current and historical identities to participant evidence,
 selects eligible observations at `audit_at`, applies the supplied policies, and
 serializes the required findings, remediation, and verification steps. It never
@@ -87,8 +112,9 @@ python3 code/main.py
 python3 code/main.py --offline --usage-report code/evaluation/usage_report.md
 ```
 
-Those success paths are conditional. Current participant evidence leaves
-unresolved cases, so a complete final output has not been produced.
+Those strict-auditor success paths are conditional. Current participant evidence
+leaves unresolved cases. A separately published prediction candidate can have
+518 rows while retaining assumptions; it is not a completed strict audit.
 
 The full dataset requires 518 unique rows sorted by case ID. If any requested case
 cannot be grounded, the program exits 2 and preserves any existing output.

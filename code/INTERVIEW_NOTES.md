@@ -1,5 +1,22 @@
 # Interview notes
 
+## Latest prediction-policy experiment
+
+The strict results below remain the evidence-certification baseline. The optional
+evidence-based prediction policy produces518 structurally valid rows, compared
+with419 strict rows;99 cases depend on additional assumptions. It does not infer
+failure from every missing confirmation. One restore-risk finding is a forecast
+from known archive existence rather than proven current authorization; its case
+is among the two confirmed exclusions, but prediction logic never reads that list.
+On all32 public samples the prediction policy covers29 and gets29 statuses right
+(90.625%), with step F1 89.01% and exact sequence8/32 unchanged. Three requests still
+lack any eligible owned key for an evidence-backed plan and remain absent from
+the sample candidate. These are development measurements, not hidden accuracy.
+The blanket conservative fallback returns518 labels but99 invalid plans and is
+rejected. See evaluation/approach_comparison.md for every count and assumption.
+There are196 regression tests after the comparison additions. Say "schema-valid
+prediction candidate" rather than "all deletions proved" when discussing output.csv.
+
 ## Opening explanation
 
 I built an AI-assisted deletion-audit pipeline. The model interprets multilingual request intent and extracts facts from business screenshots and PDFs. Deterministic code reconstructs identities and resource state at each audit cutoff, applies the supplied deletion rules, and emits an ordered remediation and verification plan. It never performs the proposed deletion actions. The model is not asked to manufacture final answers.

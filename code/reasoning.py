@@ -383,7 +383,16 @@ def audit_request(request: dict, subject: Subject | None, store, rules: list[dic
     if subject is None:
         raise InsufficientEvidence("An authorized request requires a resolved subject")
     observations = select_states(subject, store, request["audit_at"])
+    return plan_observations(request, subject, observations, rules, full_subject_audit=full_subject_audit)
+
+
+def plan_observations(request, subject, observations, rules, *, full_subject_audit=False):
+    """Plan only supplied eligible states; discovery/uncertainty is the caller's responsibility."""
+    if not observations:
+        raise InsufficientEvidence('No eligible resource states support a nonempty plan')
     for observation in observations:
+        if not observation.eligible(request['audit_at']):
+            raise InsufficientEvidence('An observation is available after the audit cutoff')
         if observation.state == "UNKNOWN":
             raise InsufficientEvidence(observation.data.get("_uncertainty", "Record treatment is not established by the visible evidence"))
         if observation.data.get("_category_reclassified"):

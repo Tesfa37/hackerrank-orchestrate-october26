@@ -1,0 +1,2711 @@
+{
+  "full": {
+    "strict_auditor": {
+      "coverage": {
+        "requested_cases": 518,
+        "covered_cases": 419,
+        "coverage_rate": 0.8088803088803089,
+        "blocked_case_ids": [
+          "case_103",
+          "case_107",
+          "case_108",
+          "case_111",
+          "case_112",
+          "case_126",
+          "case_127",
+          "case_150",
+          "case_151",
+          "case_152",
+          "case_155",
+          "case_157",
+          "case_162",
+          "case_175",
+          "case_178",
+          "case_183",
+          "case_190",
+          "case_191",
+          "case_204",
+          "case_206",
+          "case_213",
+          "case_215",
+          "case_218",
+          "case_219",
+          "case_221",
+          "case_225",
+          "case_226",
+          "case_231",
+          "case_243",
+          "case_244",
+          "case_253",
+          "case_257",
+          "case_260",
+          "case_274",
+          "case_276",
+          "case_277",
+          "case_294",
+          "case_295",
+          "case_297",
+          "case_299",
+          "case_304",
+          "case_308",
+          "case_309",
+          "case_313",
+          "case_314",
+          "case_319",
+          "case_322",
+          "case_335",
+          "case_336",
+          "case_339",
+          "case_343",
+          "case_345",
+          "case_346",
+          "case_351",
+          "case_354",
+          "case_362",
+          "case_393",
+          "case_395",
+          "case_398",
+          "case_403",
+          "case_408",
+          "case_409",
+          "case_411",
+          "case_412",
+          "case_423",
+          "case_424",
+          "case_427",
+          "case_430",
+          "case_448",
+          "case_45",
+          "case_452",
+          "case_456",
+          "case_457",
+          "case_458",
+          "case_46",
+          "case_462",
+          "case_463",
+          "case_464",
+          "case_467",
+          "case_470",
+          "case_480",
+          "case_493",
+          "case_494",
+          "case_497",
+          "case_502",
+          "case_506",
+          "case_512",
+          "case_524",
+          "case_530",
+          "case_532",
+          "case_55",
+          "case_57",
+          "case_58",
+          "case_59",
+          "case_60",
+          "case_64",
+          "case_69",
+          "case_70",
+          "case_97"
+        ],
+        "excluded_request_ids": [],
+        "excluded_returned_ids": [],
+        "unexpected_prediction_ids": []
+      },
+      "excluding_confirmed": {
+        "requested_cases": 516,
+        "covered_cases": 418,
+        "coverage_rate": 0.810077519379845,
+        "blocked_case_ids": [
+          "case_103",
+          "case_107",
+          "case_108",
+          "case_111",
+          "case_112",
+          "case_126",
+          "case_127",
+          "case_150",
+          "case_151",
+          "case_152",
+          "case_155",
+          "case_157",
+          "case_162",
+          "case_175",
+          "case_178",
+          "case_183",
+          "case_190",
+          "case_191",
+          "case_204",
+          "case_206",
+          "case_213",
+          "case_215",
+          "case_218",
+          "case_219",
+          "case_221",
+          "case_225",
+          "case_226",
+          "case_231",
+          "case_243",
+          "case_244",
+          "case_253",
+          "case_257",
+          "case_260",
+          "case_274",
+          "case_276",
+          "case_277",
+          "case_294",
+          "case_295",
+          "case_297",
+          "case_299",
+          "case_304",
+          "case_308",
+          "case_309",
+          "case_313",
+          "case_314",
+          "case_319",
+          "case_322",
+          "case_335",
+          "case_336",
+          "case_339",
+          "case_343",
+          "case_345",
+          "case_346",
+          "case_351",
+          "case_354",
+          "case_362",
+          "case_393",
+          "case_395",
+          "case_398",
+          "case_403",
+          "case_408",
+          "case_409",
+          "case_411",
+          "case_412",
+          "case_423",
+          "case_424",
+          "case_427",
+          "case_430",
+          "case_448",
+          "case_45",
+          "case_452",
+          "case_456",
+          "case_457",
+          "case_458",
+          "case_46",
+          "case_462",
+          "case_463",
+          "case_464",
+          "case_467",
+          "case_470",
+          "case_480",
+          "case_493",
+          "case_494",
+          "case_497",
+          "case_502",
+          "case_506",
+          "case_512",
+          "case_524",
+          "case_530",
+          "case_532",
+          "case_57",
+          "case_58",
+          "case_59",
+          "case_60",
+          "case_64",
+          "case_69",
+          "case_70",
+          "case_97"
+        ],
+        "excluded_request_ids": [
+          "case_39",
+          "case_55"
+        ],
+        "excluded_returned_ids": [
+          "case_39"
+        ],
+        "unexpected_prediction_ids": []
+      },
+      "excluding_confirmed_valid_rows": 418,
+      "excluding_confirmed_invalid_rows": 0,
+      "excluding_confirmed_unsupported_steps": 0,
+      "excluding_confirmed_assumption_cases": 0,
+      "without_forecast_rows": {
+        "requested_cases": 518,
+        "covered_cases": 419,
+        "coverage_rate": 0.8088803088803089,
+        "blocked_case_ids": [
+          "case_103",
+          "case_107",
+          "case_108",
+          "case_111",
+          "case_112",
+          "case_126",
+          "case_127",
+          "case_150",
+          "case_151",
+          "case_152",
+          "case_155",
+          "case_157",
+          "case_162",
+          "case_175",
+          "case_178",
+          "case_183",
+          "case_190",
+          "case_191",
+          "case_204",
+          "case_206",
+          "case_213",
+          "case_215",
+          "case_218",
+          "case_219",
+          "case_221",
+          "case_225",
+          "case_226",
+          "case_231",
+          "case_243",
+          "case_244",
+          "case_253",
+          "case_257",
+          "case_260",
+          "case_274",
+          "case_276",
+          "case_277",
+          "case_294",
+          "case_295",
+          "case_297",
+          "case_299",
+          "case_304",
+          "case_308",
+          "case_309",
+          "case_313",
+          "case_314",
+          "case_319",
+          "case_322",
+          "case_335",
+          "case_336",
+          "case_339",
+          "case_343",
+          "case_345",
+          "case_346",
+          "case_351",
+          "case_354",
+          "case_362",
+          "case_393",
+          "case_395",
+          "case_398",
+          "case_403",
+          "case_408",
+          "case_409",
+          "case_411",
+          "case_412",
+          "case_423",
+          "case_424",
+          "case_427",
+          "case_430",
+          "case_448",
+          "case_45",
+          "case_452",
+          "case_456",
+          "case_457",
+          "case_458",
+          "case_46",
+          "case_462",
+          "case_463",
+          "case_464",
+          "case_467",
+          "case_470",
+          "case_480",
+          "case_493",
+          "case_494",
+          "case_497",
+          "case_502",
+          "case_506",
+          "case_512",
+          "case_524",
+          "case_530",
+          "case_532",
+          "case_55",
+          "case_57",
+          "case_58",
+          "case_59",
+          "case_60",
+          "case_64",
+          "case_69",
+          "case_70",
+          "case_97"
+        ],
+        "excluded_request_ids": [],
+        "excluded_returned_ids": [],
+        "unexpected_prediction_ids": []
+      },
+      "without_forecast_rows_excluding_confirmed": {
+        "requested_cases": 516,
+        "covered_cases": 418,
+        "coverage_rate": 0.810077519379845,
+        "blocked_case_ids": [
+          "case_103",
+          "case_107",
+          "case_108",
+          "case_111",
+          "case_112",
+          "case_126",
+          "case_127",
+          "case_150",
+          "case_151",
+          "case_152",
+          "case_155",
+          "case_157",
+          "case_162",
+          "case_175",
+          "case_178",
+          "case_183",
+          "case_190",
+          "case_191",
+          "case_204",
+          "case_206",
+          "case_213",
+          "case_215",
+          "case_218",
+          "case_219",
+          "case_221",
+          "case_225",
+          "case_226",
+          "case_231",
+          "case_243",
+          "case_244",
+          "case_253",
+          "case_257",
+          "case_260",
+          "case_274",
+          "case_276",
+          "case_277",
+          "case_294",
+          "case_295",
+          "case_297",
+          "case_299",
+          "case_304",
+          "case_308",
+          "case_309",
+          "case_313",
+          "case_314",
+          "case_319",
+          "case_322",
+          "case_335",
+          "case_336",
+          "case_339",
+          "case_343",
+          "case_345",
+          "case_346",
+          "case_351",
+          "case_354",
+          "case_362",
+          "case_393",
+          "case_395",
+          "case_398",
+          "case_403",
+          "case_408",
+          "case_409",
+          "case_411",
+          "case_412",
+          "case_423",
+          "case_424",
+          "case_427",
+          "case_430",
+          "case_448",
+          "case_45",
+          "case_452",
+          "case_456",
+          "case_457",
+          "case_458",
+          "case_46",
+          "case_462",
+          "case_463",
+          "case_464",
+          "case_467",
+          "case_470",
+          "case_480",
+          "case_493",
+          "case_494",
+          "case_497",
+          "case_502",
+          "case_506",
+          "case_512",
+          "case_524",
+          "case_530",
+          "case_532",
+          "case_57",
+          "case_58",
+          "case_59",
+          "case_60",
+          "case_64",
+          "case_69",
+          "case_70",
+          "case_97"
+        ],
+        "excluded_request_ids": [
+          "case_39",
+          "case_55"
+        ],
+        "excluded_returned_ids": [
+          "case_39"
+        ],
+        "unexpected_prediction_ids": []
+      },
+      "valid_rows": 419,
+      "invalid_rows": 0,
+      "row_errors": [],
+      "file_contract_valid": false,
+      "file_contract_error": "Output must contain each requested case exactly once in sorted order",
+      "labels": {
+        "INCOMPLETE": 354,
+        "COMPLETE": 55,
+        "NOT_APPLICABLE": 10
+      },
+      "phase_compliance": {
+        "compliant": 419,
+        "incomplete_three_phase_compliant": 354
+      },
+      "unsupported_factual_step_claims": [],
+      "unsupported_record_references": [],
+      "citation_errors": [],
+      "assumption_cases": 0,
+      "incomplete_labels_without_observed_violation": [],
+      "assumption_case_ids": [],
+      "assumption_kinds": {},
+      "inferred_state_cases": [],
+      "unresolved_case_ids": [
+        "case_103",
+        "case_107",
+        "case_108",
+        "case_111",
+        "case_112",
+        "case_126",
+        "case_127",
+        "case_150",
+        "case_151",
+        "case_152",
+        "case_155",
+        "case_157",
+        "case_162",
+        "case_175",
+        "case_178",
+        "case_183",
+        "case_190",
+        "case_191",
+        "case_204",
+        "case_206",
+        "case_213",
+        "case_215",
+        "case_218",
+        "case_219",
+        "case_221",
+        "case_225",
+        "case_226",
+        "case_231",
+        "case_243",
+        "case_244",
+        "case_253",
+        "case_257",
+        "case_260",
+        "case_274",
+        "case_276",
+        "case_277",
+        "case_294",
+        "case_295",
+        "case_297",
+        "case_299",
+        "case_304",
+        "case_308",
+        "case_309",
+        "case_313",
+        "case_314",
+        "case_319",
+        "case_322",
+        "case_335",
+        "case_336",
+        "case_339",
+        "case_343",
+        "case_345",
+        "case_346",
+        "case_351",
+        "case_354",
+        "case_362",
+        "case_393",
+        "case_395",
+        "case_398",
+        "case_403",
+        "case_408",
+        "case_409",
+        "case_411",
+        "case_412",
+        "case_423",
+        "case_424",
+        "case_427",
+        "case_430",
+        "case_448",
+        "case_45",
+        "case_452",
+        "case_456",
+        "case_457",
+        "case_458",
+        "case_46",
+        "case_462",
+        "case_463",
+        "case_464",
+        "case_467",
+        "case_470",
+        "case_480",
+        "case_493",
+        "case_494",
+        "case_497",
+        "case_502",
+        "case_506",
+        "case_512",
+        "case_524",
+        "case_530",
+        "case_532",
+        "case_55",
+        "case_57",
+        "case_58",
+        "case_59",
+        "case_60",
+        "case_64",
+        "case_69",
+        "case_70",
+        "case_97"
+      ]
+    },
+    "conservative_fallback": {
+      "coverage": {
+        "requested_cases": 518,
+        "covered_cases": 518,
+        "coverage_rate": 1.0,
+        "blocked_case_ids": [],
+        "excluded_request_ids": [],
+        "excluded_returned_ids": [],
+        "unexpected_prediction_ids": []
+      },
+      "excluding_confirmed": {
+        "requested_cases": 516,
+        "covered_cases": 516,
+        "coverage_rate": 1.0,
+        "blocked_case_ids": [],
+        "excluded_request_ids": [
+          "case_39",
+          "case_55"
+        ],
+        "excluded_returned_ids": [
+          "case_39",
+          "case_55"
+        ],
+        "unexpected_prediction_ids": []
+      },
+      "excluding_confirmed_valid_rows": 418,
+      "excluding_confirmed_invalid_rows": 98,
+      "excluding_confirmed_unsupported_steps": 0,
+      "excluding_confirmed_assumption_cases": 98,
+      "without_forecast_rows": {
+        "requested_cases": 518,
+        "covered_cases": 518,
+        "coverage_rate": 1.0,
+        "blocked_case_ids": [],
+        "excluded_request_ids": [],
+        "excluded_returned_ids": [],
+        "unexpected_prediction_ids": []
+      },
+      "without_forecast_rows_excluding_confirmed": {
+        "requested_cases": 516,
+        "covered_cases": 516,
+        "coverage_rate": 1.0,
+        "blocked_case_ids": [],
+        "excluded_request_ids": [
+          "case_39",
+          "case_55"
+        ],
+        "excluded_returned_ids": [
+          "case_39",
+          "case_55"
+        ],
+        "unexpected_prediction_ids": []
+      },
+      "valid_rows": 419,
+      "invalid_rows": 99,
+      "row_errors": [
+        {
+          "case_id": "case_103",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_107",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_108",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_111",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_112",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_126",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_127",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_150",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_151",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_152",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_155",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_157",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_162",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_175",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_178",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_183",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_190",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_191",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_204",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_206",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_213",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_215",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_218",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_219",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_221",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_225",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_226",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_231",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_243",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_244",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_253",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_257",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_260",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_274",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_276",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_277",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_294",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_295",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_297",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_299",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_304",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_308",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_309",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_313",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_314",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_319",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_322",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_335",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_336",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_339",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_343",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_345",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_346",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_351",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_354",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_362",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_393",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_395",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_398",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_403",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_408",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_409",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_411",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_412",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_423",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_424",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_427",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_430",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_448",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_45",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_452",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_456",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_457",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_458",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_46",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_462",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_463",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_464",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_467",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_470",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_480",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_493",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_494",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_497",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_502",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_506",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_512",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_524",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_530",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_532",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_55",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_57",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_58",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_59",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_60",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_64",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_69",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_70",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_97",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        }
+      ],
+      "file_contract_valid": false,
+      "file_contract_error": "Deletion decisions require a nonempty evidence-backed plan",
+      "labels": {
+        "INCOMPLETE": 453,
+        "COMPLETE": 55,
+        "NOT_APPLICABLE": 10
+      },
+      "phase_compliance": {
+        "compliant": 419,
+        "incomplete_three_phase_compliant": 354,
+        "noncompliant": 99
+      },
+      "unsupported_factual_step_claims": [],
+      "unsupported_record_references": [],
+      "citation_errors": [],
+      "assumption_cases": 99,
+      "incomplete_labels_without_observed_violation": [
+        "case_103",
+        "case_107",
+        "case_108",
+        "case_111",
+        "case_112",
+        "case_126",
+        "case_127",
+        "case_150",
+        "case_151",
+        "case_152",
+        "case_155",
+        "case_157",
+        "case_162",
+        "case_175",
+        "case_178",
+        "case_183",
+        "case_190",
+        "case_191",
+        "case_204",
+        "case_206",
+        "case_213",
+        "case_215",
+        "case_218",
+        "case_219",
+        "case_221",
+        "case_225",
+        "case_226",
+        "case_231",
+        "case_243",
+        "case_244",
+        "case_253",
+        "case_257",
+        "case_260",
+        "case_274",
+        "case_276",
+        "case_277",
+        "case_294",
+        "case_295",
+        "case_297",
+        "case_299",
+        "case_304",
+        "case_308",
+        "case_309",
+        "case_313",
+        "case_314",
+        "case_319",
+        "case_322",
+        "case_335",
+        "case_336",
+        "case_339",
+        "case_343",
+        "case_345",
+        "case_346",
+        "case_351",
+        "case_354",
+        "case_362",
+        "case_393",
+        "case_395",
+        "case_398",
+        "case_403",
+        "case_408",
+        "case_409",
+        "case_411",
+        "case_412",
+        "case_423",
+        "case_424",
+        "case_427",
+        "case_430",
+        "case_448",
+        "case_45",
+        "case_452",
+        "case_456",
+        "case_457",
+        "case_458",
+        "case_46",
+        "case_462",
+        "case_463",
+        "case_464",
+        "case_467",
+        "case_470",
+        "case_480",
+        "case_493",
+        "case_494",
+        "case_497",
+        "case_502",
+        "case_506",
+        "case_512",
+        "case_524",
+        "case_530",
+        "case_532",
+        "case_55",
+        "case_57",
+        "case_58",
+        "case_59",
+        "case_60",
+        "case_64",
+        "case_69",
+        "case_70",
+        "case_97"
+      ],
+      "assumption_case_ids": [
+        "case_103",
+        "case_107",
+        "case_108",
+        "case_111",
+        "case_112",
+        "case_126",
+        "case_127",
+        "case_150",
+        "case_151",
+        "case_152",
+        "case_155",
+        "case_157",
+        "case_162",
+        "case_175",
+        "case_178",
+        "case_183",
+        "case_190",
+        "case_191",
+        "case_204",
+        "case_206",
+        "case_213",
+        "case_215",
+        "case_218",
+        "case_219",
+        "case_221",
+        "case_225",
+        "case_226",
+        "case_231",
+        "case_243",
+        "case_244",
+        "case_253",
+        "case_257",
+        "case_260",
+        "case_274",
+        "case_276",
+        "case_277",
+        "case_294",
+        "case_295",
+        "case_297",
+        "case_299",
+        "case_304",
+        "case_308",
+        "case_309",
+        "case_313",
+        "case_314",
+        "case_319",
+        "case_322",
+        "case_335",
+        "case_336",
+        "case_339",
+        "case_343",
+        "case_345",
+        "case_346",
+        "case_351",
+        "case_354",
+        "case_362",
+        "case_393",
+        "case_395",
+        "case_398",
+        "case_403",
+        "case_408",
+        "case_409",
+        "case_411",
+        "case_412",
+        "case_423",
+        "case_424",
+        "case_427",
+        "case_430",
+        "case_448",
+        "case_45",
+        "case_452",
+        "case_456",
+        "case_457",
+        "case_458",
+        "case_46",
+        "case_462",
+        "case_463",
+        "case_464",
+        "case_467",
+        "case_470",
+        "case_480",
+        "case_493",
+        "case_494",
+        "case_497",
+        "case_502",
+        "case_506",
+        "case_512",
+        "case_524",
+        "case_530",
+        "case_532",
+        "case_55",
+        "case_57",
+        "case_58",
+        "case_59",
+        "case_60",
+        "case_64",
+        "case_69",
+        "case_70",
+        "case_97"
+      ],
+      "assumption_kinds": {
+        "missing_confirmation_implies_failure": 99
+      },
+      "inferred_state_cases": [],
+      "unresolved_case_ids": []
+    },
+    "evidence_prediction": {
+      "coverage": {
+        "requested_cases": 518,
+        "covered_cases": 518,
+        "coverage_rate": 1.0,
+        "blocked_case_ids": [],
+        "excluded_request_ids": [],
+        "excluded_returned_ids": [],
+        "unexpected_prediction_ids": []
+      },
+      "excluding_confirmed": {
+        "requested_cases": 516,
+        "covered_cases": 516,
+        "coverage_rate": 1.0,
+        "blocked_case_ids": [],
+        "excluded_request_ids": [
+          "case_39",
+          "case_55"
+        ],
+        "excluded_returned_ids": [
+          "case_39",
+          "case_55"
+        ],
+        "unexpected_prediction_ids": []
+      },
+      "excluding_confirmed_valid_rows": 516,
+      "excluding_confirmed_invalid_rows": 0,
+      "excluding_confirmed_unsupported_steps": 0,
+      "excluding_confirmed_assumption_cases": 98,
+      "without_forecast_rows": {
+        "requested_cases": 518,
+        "covered_cases": 517,
+        "coverage_rate": 0.9980694980694981,
+        "blocked_case_ids": [
+          "case_55"
+        ],
+        "excluded_request_ids": [],
+        "excluded_returned_ids": [],
+        "unexpected_prediction_ids": []
+      },
+      "without_forecast_rows_excluding_confirmed": {
+        "requested_cases": 516,
+        "covered_cases": 516,
+        "coverage_rate": 1.0,
+        "blocked_case_ids": [],
+        "excluded_request_ids": [
+          "case_39",
+          "case_55"
+        ],
+        "excluded_returned_ids": [
+          "case_39"
+        ],
+        "unexpected_prediction_ids": []
+      },
+      "valid_rows": 518,
+      "invalid_rows": 0,
+      "row_errors": [],
+      "file_contract_valid": true,
+      "file_contract_error": null,
+      "labels": {
+        "INCOMPLETE": 355,
+        "COMPLETE": 153,
+        "NOT_APPLICABLE": 10
+      },
+      "phase_compliance": {
+        "compliant": 518,
+        "incomplete_three_phase_compliant": 355
+      },
+      "unsupported_factual_step_claims": [
+        {
+          "case_id": "case_55",
+          "step": {
+            "step_no": 1,
+            "phase": "FINDING",
+            "system_id": "backup_service",
+            "resource_id": "backup_9287",
+            "operation": "REPORT_RESTORE_RISK",
+            "state": "ACTIVE",
+            "evidence_id": "evidence_32"
+          }
+        }
+      ],
+      "unsupported_record_references": [],
+      "citation_errors": [],
+      "assumption_cases": 99,
+      "incomplete_labels_without_observed_violation": [
+        "case_55"
+      ],
+      "assumption_case_ids": [
+        "case_103",
+        "case_107",
+        "case_108",
+        "case_111",
+        "case_112",
+        "case_126",
+        "case_127",
+        "case_150",
+        "case_151",
+        "case_152",
+        "case_155",
+        "case_157",
+        "case_162",
+        "case_175",
+        "case_178",
+        "case_183",
+        "case_190",
+        "case_191",
+        "case_204",
+        "case_206",
+        "case_213",
+        "case_215",
+        "case_218",
+        "case_219",
+        "case_221",
+        "case_225",
+        "case_226",
+        "case_231",
+        "case_243",
+        "case_244",
+        "case_253",
+        "case_257",
+        "case_260",
+        "case_274",
+        "case_276",
+        "case_277",
+        "case_294",
+        "case_295",
+        "case_297",
+        "case_299",
+        "case_304",
+        "case_308",
+        "case_309",
+        "case_313",
+        "case_314",
+        "case_319",
+        "case_322",
+        "case_335",
+        "case_336",
+        "case_339",
+        "case_343",
+        "case_345",
+        "case_346",
+        "case_351",
+        "case_354",
+        "case_362",
+        "case_393",
+        "case_395",
+        "case_398",
+        "case_403",
+        "case_408",
+        "case_409",
+        "case_411",
+        "case_412",
+        "case_423",
+        "case_424",
+        "case_427",
+        "case_430",
+        "case_448",
+        "case_45",
+        "case_452",
+        "case_456",
+        "case_457",
+        "case_458",
+        "case_46",
+        "case_462",
+        "case_463",
+        "case_464",
+        "case_467",
+        "case_470",
+        "case_480",
+        "case_493",
+        "case_494",
+        "case_497",
+        "case_502",
+        "case_506",
+        "case_512",
+        "case_524",
+        "case_530",
+        "case_532",
+        "case_55",
+        "case_57",
+        "case_58",
+        "case_59",
+        "case_60",
+        "case_64",
+        "case_69",
+        "case_70",
+        "case_97"
+      ],
+      "assumption_kinds": {
+        "discovered_evidence_bounds_resource_inventory": 99,
+        "unknown_treatment_not_assumed_a_violation": 1,
+        "existing_archive_may_restore_without_confirmed_block": 1
+      },
+      "inferred_state_cases": [
+        "case_55"
+      ],
+      "unresolved_case_ids": []
+    }
+  },
+  "samples": {
+    "strict_auditor": {
+      "coverage": {
+        "requested_cases": 32,
+        "covered_cases": 23,
+        "coverage_rate": 0.71875,
+        "blocked_case_ids": [
+          "case_01",
+          "case_02",
+          "case_04",
+          "case_17",
+          "case_21",
+          "case_25",
+          "case_26",
+          "case_27",
+          "case_28"
+        ],
+        "excluded_request_ids": [],
+        "excluded_returned_ids": [],
+        "unexpected_prediction_ids": []
+      },
+      "excluding_confirmed": {
+        "requested_cases": 32,
+        "covered_cases": 23,
+        "coverage_rate": 0.71875,
+        "blocked_case_ids": [
+          "case_01",
+          "case_02",
+          "case_04",
+          "case_17",
+          "case_21",
+          "case_25",
+          "case_26",
+          "case_27",
+          "case_28"
+        ],
+        "excluded_request_ids": [],
+        "excluded_returned_ids": [],
+        "unexpected_prediction_ids": []
+      },
+      "excluding_confirmed_valid_rows": 23,
+      "excluding_confirmed_invalid_rows": 0,
+      "excluding_confirmed_unsupported_steps": 0,
+      "excluding_confirmed_assumption_cases": 0,
+      "without_forecast_rows": {
+        "requested_cases": 32,
+        "covered_cases": 23,
+        "coverage_rate": 0.71875,
+        "blocked_case_ids": [
+          "case_01",
+          "case_02",
+          "case_04",
+          "case_17",
+          "case_21",
+          "case_25",
+          "case_26",
+          "case_27",
+          "case_28"
+        ],
+        "excluded_request_ids": [],
+        "excluded_returned_ids": [],
+        "unexpected_prediction_ids": []
+      },
+      "without_forecast_rows_excluding_confirmed": {
+        "requested_cases": 32,
+        "covered_cases": 23,
+        "coverage_rate": 0.71875,
+        "blocked_case_ids": [
+          "case_01",
+          "case_02",
+          "case_04",
+          "case_17",
+          "case_21",
+          "case_25",
+          "case_26",
+          "case_27",
+          "case_28"
+        ],
+        "excluded_request_ids": [],
+        "excluded_returned_ids": [],
+        "unexpected_prediction_ids": []
+      },
+      "valid_rows": 23,
+      "invalid_rows": 0,
+      "row_errors": [],
+      "file_contract_valid": false,
+      "file_contract_error": "Output must contain each requested case exactly once in sorted order",
+      "labels": {
+        "COMPLETE": 2,
+        "INCOMPLETE": 21
+      },
+      "phase_compliance": {
+        "compliant": 23,
+        "incomplete_three_phase_compliant": 21
+      },
+      "unsupported_factual_step_claims": [],
+      "unsupported_record_references": [],
+      "citation_errors": [],
+      "assumption_cases": 0,
+      "incomplete_labels_without_observed_violation": [],
+      "assumption_case_ids": [],
+      "assumption_kinds": {},
+      "inferred_state_cases": [],
+      "unresolved_case_ids": [
+        "case_01",
+        "case_02",
+        "case_04",
+        "case_17",
+        "case_21",
+        "case_25",
+        "case_26",
+        "case_27",
+        "case_28"
+      ],
+      "accuracy": {
+        "expected_cases": 32,
+        "predicted_cases": 23,
+        "scored_cases": 32,
+        "case_id_union": 32,
+        "covered_cases": 23,
+        "coverage_rate": 0.71875,
+        "missing_cases": 9,
+        "extra_cases": 0,
+        "missing_case_ids": [
+          "case_01",
+          "case_02",
+          "case_04",
+          "case_17",
+          "case_21",
+          "case_25",
+          "case_26",
+          "case_27",
+          "case_28"
+        ],
+        "extra_case_ids": [],
+        "coverage_complete": false,
+        "contract_valid": false,
+        "contract_errors": [],
+        "status_correct": 23,
+        "status_accuracy": 0.71875,
+        "expected_case_status_accuracy": 0.71875,
+        "returned_case_status_accuracy": 1.0,
+        "exact_case_correct": 8,
+        "exact_case_accuracy": 0.25,
+        "sequence_correct": 8,
+        "sequence_accuracy": 0.25,
+        "expected_steps": 193,
+        "predicted_steps": 142,
+        "matching_steps": 139,
+        "step_precision": 0.9788732394366197,
+        "step_recall": 0.7202072538860104,
+        "step_f1": 0.8298507462686566,
+        "aligned_step_slots": 196,
+        "field_accuracy": 0.6873177842565598,
+        "field_accuracy_by_name": {
+          "step_no": 0.5561224489795918,
+          "phase": 0.7091836734693877,
+          "system_id": 0.7091836734693877,
+          "resource_id": 0.7091836734693877,
+          "operation": 0.7091836734693877,
+          "state": 0.7091836734693877,
+          "evidence_id": 0.7091836734693877
+        },
+        "field_correct_by_name": {
+          "step_no": 109,
+          "phase": 139,
+          "system_id": 139,
+          "resource_id": 139,
+          "operation": 139,
+          "state": 139,
+          "evidence_id": 139
+        },
+        "mismatches": [
+          {
+            "case_id": "case_01",
+            "expected_status": "COMPLETE",
+            "predicted_status": null,
+            "expected_steps": 1,
+            "predicted_steps": 0,
+            "matching_steps": 0,
+            "status_match": false,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_02",
+            "expected_status": "COMPLETE",
+            "predicted_status": null,
+            "expected_steps": 1,
+            "predicted_steps": 0,
+            "matching_steps": 0,
+            "status_match": false,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_03",
+            "expected_status": "COMPLETE",
+            "predicted_status": "COMPLETE",
+            "expected_steps": 3,
+            "predicted_steps": 2,
+            "matching_steps": 2,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_04",
+            "expected_status": "COMPLETE",
+            "predicted_status": null,
+            "expected_steps": 2,
+            "predicted_steps": 0,
+            "matching_steps": 0,
+            "status_match": false,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_06",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 4,
+            "predicted_steps": 3,
+            "matching_steps": 3,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_07",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 4,
+            "predicted_steps": 6,
+            "matching_steps": 3,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_08",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 4,
+            "predicted_steps": 3,
+            "matching_steps": 3,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_09",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 5,
+            "predicted_steps": 3,
+            "matching_steps": 3,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_10",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 4,
+            "predicted_steps": 3,
+            "matching_steps": 3,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_17",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": null,
+            "expected_steps": 5,
+            "predicted_steps": 0,
+            "matching_steps": 0,
+            "status_match": false,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_18",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 14,
+            "predicted_steps": 12,
+            "matching_steps": 12,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_20",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 8,
+            "predicted_steps": 6,
+            "matching_steps": 6,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_21",
+            "expected_status": "COMPLETE",
+            "predicted_status": null,
+            "expected_steps": 3,
+            "predicted_steps": 0,
+            "matching_steps": 0,
+            "status_match": false,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_22",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 8,
+            "predicted_steps": 7,
+            "matching_steps": 7,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_23",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 8,
+            "predicted_steps": 6,
+            "matching_steps": 6,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_24",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 7,
+            "predicted_steps": 6,
+            "matching_steps": 6,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_25",
+            "expected_status": "COMPLETE",
+            "predicted_status": null,
+            "expected_steps": 3,
+            "predicted_steps": 0,
+            "matching_steps": 0,
+            "status_match": false,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_26",
+            "expected_status": "COMPLETE",
+            "predicted_status": null,
+            "expected_steps": 6,
+            "predicted_steps": 0,
+            "matching_steps": 0,
+            "status_match": false,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_27",
+            "expected_status": "COMPLETE",
+            "predicted_status": null,
+            "expected_steps": 6,
+            "predicted_steps": 0,
+            "matching_steps": 0,
+            "status_match": false,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_28",
+            "expected_status": "COMPLETE",
+            "predicted_status": null,
+            "expected_steps": 6,
+            "predicted_steps": 0,
+            "matching_steps": 0,
+            "status_match": false,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_29",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 14,
+            "predicted_steps": 12,
+            "matching_steps": 12,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_30",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 14,
+            "predicted_steps": 12,
+            "matching_steps": 12,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_31",
+            "expected_status": "COMPLETE",
+            "predicted_status": "COMPLETE",
+            "expected_steps": 3,
+            "predicted_steps": 2,
+            "matching_steps": 2,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_32",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 5,
+            "predicted_steps": 4,
+            "matching_steps": 4,
+            "status_match": true,
+            "sequence_match": false
+          }
+        ]
+      }
+    },
+    "conservative_fallback": {
+      "coverage": {
+        "requested_cases": 32,
+        "covered_cases": 32,
+        "coverage_rate": 1.0,
+        "blocked_case_ids": [],
+        "excluded_request_ids": [],
+        "excluded_returned_ids": [],
+        "unexpected_prediction_ids": []
+      },
+      "excluding_confirmed": {
+        "requested_cases": 32,
+        "covered_cases": 32,
+        "coverage_rate": 1.0,
+        "blocked_case_ids": [],
+        "excluded_request_ids": [],
+        "excluded_returned_ids": [],
+        "unexpected_prediction_ids": []
+      },
+      "excluding_confirmed_valid_rows": 23,
+      "excluding_confirmed_invalid_rows": 9,
+      "excluding_confirmed_unsupported_steps": 0,
+      "excluding_confirmed_assumption_cases": 9,
+      "without_forecast_rows": {
+        "requested_cases": 32,
+        "covered_cases": 32,
+        "coverage_rate": 1.0,
+        "blocked_case_ids": [],
+        "excluded_request_ids": [],
+        "excluded_returned_ids": [],
+        "unexpected_prediction_ids": []
+      },
+      "without_forecast_rows_excluding_confirmed": {
+        "requested_cases": 32,
+        "covered_cases": 32,
+        "coverage_rate": 1.0,
+        "blocked_case_ids": [],
+        "excluded_request_ids": [],
+        "excluded_returned_ids": [],
+        "unexpected_prediction_ids": []
+      },
+      "valid_rows": 23,
+      "invalid_rows": 9,
+      "row_errors": [
+        {
+          "case_id": "case_01",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_02",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_04",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_17",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_21",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_25",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_26",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_27",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        },
+        {
+          "case_id": "case_28",
+          "error": "Deletion decisions require a nonempty evidence-backed plan"
+        }
+      ],
+      "file_contract_valid": false,
+      "file_contract_error": "Deletion decisions require a nonempty evidence-backed plan",
+      "labels": {
+        "INCOMPLETE": 30,
+        "COMPLETE": 2
+      },
+      "phase_compliance": {
+        "noncompliant": 9,
+        "compliant": 23,
+        "incomplete_three_phase_compliant": 21
+      },
+      "unsupported_factual_step_claims": [],
+      "unsupported_record_references": [],
+      "citation_errors": [],
+      "assumption_cases": 9,
+      "incomplete_labels_without_observed_violation": [
+        "case_01",
+        "case_02",
+        "case_04",
+        "case_17",
+        "case_21",
+        "case_25",
+        "case_26",
+        "case_27",
+        "case_28"
+      ],
+      "assumption_case_ids": [
+        "case_01",
+        "case_02",
+        "case_04",
+        "case_17",
+        "case_21",
+        "case_25",
+        "case_26",
+        "case_27",
+        "case_28"
+      ],
+      "assumption_kinds": {
+        "missing_confirmation_implies_failure": 9
+      },
+      "inferred_state_cases": [],
+      "unresolved_case_ids": [],
+      "accuracy": {
+        "expected_cases": 32,
+        "predicted_cases": 32,
+        "scored_cases": 32,
+        "case_id_union": 32,
+        "covered_cases": 32,
+        "coverage_rate": 1.0,
+        "missing_cases": 0,
+        "extra_cases": 0,
+        "missing_case_ids": [],
+        "extra_case_ids": [],
+        "coverage_complete": true,
+        "contract_valid": false,
+        "contract_errors": [
+          {
+            "case_id": "case_01",
+            "error": "Deletion decisions require a nonempty evidence-backed plan"
+          },
+          {
+            "case_id": "case_02",
+            "error": "Deletion decisions require a nonempty evidence-backed plan"
+          },
+          {
+            "case_id": "case_04",
+            "error": "Deletion decisions require a nonempty evidence-backed plan"
+          },
+          {
+            "case_id": "case_17",
+            "error": "Deletion decisions require a nonempty evidence-backed plan"
+          },
+          {
+            "case_id": "case_21",
+            "error": "Deletion decisions require a nonempty evidence-backed plan"
+          },
+          {
+            "case_id": "case_25",
+            "error": "Deletion decisions require a nonempty evidence-backed plan"
+          },
+          {
+            "case_id": "case_26",
+            "error": "Deletion decisions require a nonempty evidence-backed plan"
+          },
+          {
+            "case_id": "case_27",
+            "error": "Deletion decisions require a nonempty evidence-backed plan"
+          },
+          {
+            "case_id": "case_28",
+            "error": "Deletion decisions require a nonempty evidence-backed plan"
+          }
+        ],
+        "status_correct": 24,
+        "status_accuracy": 0.75,
+        "expected_case_status_accuracy": 0.75,
+        "returned_case_status_accuracy": 0.75,
+        "exact_case_correct": 8,
+        "exact_case_accuracy": 0.25,
+        "sequence_correct": 8,
+        "sequence_accuracy": 0.25,
+        "expected_steps": 193,
+        "predicted_steps": 142,
+        "matching_steps": 139,
+        "step_precision": 0.9788732394366197,
+        "step_recall": 0.7202072538860104,
+        "step_f1": 0.8298507462686566,
+        "aligned_step_slots": 196,
+        "field_accuracy": 0.6873177842565598,
+        "field_accuracy_by_name": {
+          "step_no": 0.5561224489795918,
+          "phase": 0.7091836734693877,
+          "system_id": 0.7091836734693877,
+          "resource_id": 0.7091836734693877,
+          "operation": 0.7091836734693877,
+          "state": 0.7091836734693877,
+          "evidence_id": 0.7091836734693877
+        },
+        "field_correct_by_name": {
+          "step_no": 109,
+          "phase": 139,
+          "system_id": 139,
+          "resource_id": 139,
+          "operation": 139,
+          "state": 139,
+          "evidence_id": 139
+        },
+        "mismatches": [
+          {
+            "case_id": "case_01",
+            "expected_status": "COMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 1,
+            "predicted_steps": 0,
+            "matching_steps": 0,
+            "status_match": false,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_02",
+            "expected_status": "COMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 1,
+            "predicted_steps": 0,
+            "matching_steps": 0,
+            "status_match": false,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_03",
+            "expected_status": "COMPLETE",
+            "predicted_status": "COMPLETE",
+            "expected_steps": 3,
+            "predicted_steps": 2,
+            "matching_steps": 2,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_04",
+            "expected_status": "COMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 2,
+            "predicted_steps": 0,
+            "matching_steps": 0,
+            "status_match": false,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_06",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 4,
+            "predicted_steps": 3,
+            "matching_steps": 3,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_07",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 4,
+            "predicted_steps": 6,
+            "matching_steps": 3,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_08",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 4,
+            "predicted_steps": 3,
+            "matching_steps": 3,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_09",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 5,
+            "predicted_steps": 3,
+            "matching_steps": 3,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_10",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 4,
+            "predicted_steps": 3,
+            "matching_steps": 3,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_17",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 5,
+            "predicted_steps": 0,
+            "matching_steps": 0,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_18",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 14,
+            "predicted_steps": 12,
+            "matching_steps": 12,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_20",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 8,
+            "predicted_steps": 6,
+            "matching_steps": 6,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_21",
+            "expected_status": "COMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 3,
+            "predicted_steps": 0,
+            "matching_steps": 0,
+            "status_match": false,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_22",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 8,
+            "predicted_steps": 7,
+            "matching_steps": 7,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_23",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 8,
+            "predicted_steps": 6,
+            "matching_steps": 6,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_24",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 7,
+            "predicted_steps": 6,
+            "matching_steps": 6,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_25",
+            "expected_status": "COMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 3,
+            "predicted_steps": 0,
+            "matching_steps": 0,
+            "status_match": false,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_26",
+            "expected_status": "COMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 6,
+            "predicted_steps": 0,
+            "matching_steps": 0,
+            "status_match": false,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_27",
+            "expected_status": "COMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 6,
+            "predicted_steps": 0,
+            "matching_steps": 0,
+            "status_match": false,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_28",
+            "expected_status": "COMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 6,
+            "predicted_steps": 0,
+            "matching_steps": 0,
+            "status_match": false,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_29",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 14,
+            "predicted_steps": 12,
+            "matching_steps": 12,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_30",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 14,
+            "predicted_steps": 12,
+            "matching_steps": 12,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_31",
+            "expected_status": "COMPLETE",
+            "predicted_status": "COMPLETE",
+            "expected_steps": 3,
+            "predicted_steps": 2,
+            "matching_steps": 2,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_32",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 5,
+            "predicted_steps": 4,
+            "matching_steps": 4,
+            "status_match": true,
+            "sequence_match": false
+          }
+        ]
+      }
+    },
+    "evidence_prediction": {
+      "coverage": {
+        "requested_cases": 32,
+        "covered_cases": 29,
+        "coverage_rate": 0.90625,
+        "blocked_case_ids": [
+          "case_01",
+          "case_02",
+          "case_04"
+        ],
+        "excluded_request_ids": [],
+        "excluded_returned_ids": [],
+        "unexpected_prediction_ids": []
+      },
+      "excluding_confirmed": {
+        "requested_cases": 32,
+        "covered_cases": 29,
+        "coverage_rate": 0.90625,
+        "blocked_case_ids": [
+          "case_01",
+          "case_02",
+          "case_04"
+        ],
+        "excluded_request_ids": [],
+        "excluded_returned_ids": [],
+        "unexpected_prediction_ids": []
+      },
+      "excluding_confirmed_valid_rows": 29,
+      "excluding_confirmed_invalid_rows": 0,
+      "excluding_confirmed_unsupported_steps": 0,
+      "excluding_confirmed_assumption_cases": 6,
+      "without_forecast_rows": {
+        "requested_cases": 32,
+        "covered_cases": 29,
+        "coverage_rate": 0.90625,
+        "blocked_case_ids": [
+          "case_01",
+          "case_02",
+          "case_04"
+        ],
+        "excluded_request_ids": [],
+        "excluded_returned_ids": [],
+        "unexpected_prediction_ids": []
+      },
+      "without_forecast_rows_excluding_confirmed": {
+        "requested_cases": 32,
+        "covered_cases": 29,
+        "coverage_rate": 0.90625,
+        "blocked_case_ids": [
+          "case_01",
+          "case_02",
+          "case_04"
+        ],
+        "excluded_request_ids": [],
+        "excluded_returned_ids": [],
+        "unexpected_prediction_ids": []
+      },
+      "valid_rows": 29,
+      "invalid_rows": 0,
+      "row_errors": [],
+      "file_contract_valid": false,
+      "file_contract_error": "Output must contain each requested case exactly once in sorted order",
+      "labels": {
+        "COMPLETE": 7,
+        "INCOMPLETE": 22
+      },
+      "phase_compliance": {
+        "compliant": 29,
+        "incomplete_three_phase_compliant": 22
+      },
+      "unsupported_factual_step_claims": [],
+      "unsupported_record_references": [],
+      "citation_errors": [],
+      "assumption_cases": 6,
+      "incomplete_labels_without_observed_violation": [],
+      "assumption_case_ids": [
+        "case_17",
+        "case_21",
+        "case_25",
+        "case_26",
+        "case_27",
+        "case_28"
+      ],
+      "assumption_kinds": {
+        "discovered_evidence_bounds_resource_inventory": 6,
+        "unknown_treatment_not_assumed_a_violation": 1
+      },
+      "inferred_state_cases": [],
+      "unresolved_case_ids": [
+        "case_01",
+        "case_02",
+        "case_04"
+      ],
+      "accuracy": {
+        "expected_cases": 32,
+        "predicted_cases": 29,
+        "scored_cases": 32,
+        "case_id_union": 32,
+        "covered_cases": 29,
+        "coverage_rate": 0.90625,
+        "missing_cases": 3,
+        "extra_cases": 0,
+        "missing_case_ids": [
+          "case_01",
+          "case_02",
+          "case_04"
+        ],
+        "extra_case_ids": [],
+        "coverage_complete": false,
+        "contract_valid": false,
+        "contract_errors": [],
+        "status_correct": 29,
+        "status_accuracy": 0.90625,
+        "expected_case_status_accuracy": 0.90625,
+        "returned_case_status_accuracy": 1.0,
+        "exact_case_correct": 8,
+        "exact_case_accuracy": 0.25,
+        "sequence_correct": 8,
+        "sequence_accuracy": 0.25,
+        "expected_steps": 193,
+        "predicted_steps": 162,
+        "matching_steps": 158,
+        "step_precision": 0.9753086419753086,
+        "step_recall": 0.8186528497409327,
+        "step_f1": 0.8901408450704226,
+        "aligned_step_slots": 197,
+        "field_accuracy": 0.7686729514140682,
+        "field_accuracy_by_name": {
+          "step_no": 0.5685279187817259,
+          "phase": 0.8020304568527918,
+          "system_id": 0.8020304568527918,
+          "resource_id": 0.8020304568527918,
+          "operation": 0.8020304568527918,
+          "state": 0.8020304568527918,
+          "evidence_id": 0.8020304568527918
+        },
+        "field_correct_by_name": {
+          "step_no": 112,
+          "phase": 158,
+          "system_id": 158,
+          "resource_id": 158,
+          "operation": 158,
+          "state": 158,
+          "evidence_id": 158
+        },
+        "mismatches": [
+          {
+            "case_id": "case_01",
+            "expected_status": "COMPLETE",
+            "predicted_status": null,
+            "expected_steps": 1,
+            "predicted_steps": 0,
+            "matching_steps": 0,
+            "status_match": false,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_02",
+            "expected_status": "COMPLETE",
+            "predicted_status": null,
+            "expected_steps": 1,
+            "predicted_steps": 0,
+            "matching_steps": 0,
+            "status_match": false,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_03",
+            "expected_status": "COMPLETE",
+            "predicted_status": "COMPLETE",
+            "expected_steps": 3,
+            "predicted_steps": 2,
+            "matching_steps": 2,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_04",
+            "expected_status": "COMPLETE",
+            "predicted_status": null,
+            "expected_steps": 2,
+            "predicted_steps": 0,
+            "matching_steps": 0,
+            "status_match": false,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_06",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 4,
+            "predicted_steps": 3,
+            "matching_steps": 3,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_07",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 4,
+            "predicted_steps": 6,
+            "matching_steps": 3,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_08",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 4,
+            "predicted_steps": 3,
+            "matching_steps": 3,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_09",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 5,
+            "predicted_steps": 3,
+            "matching_steps": 3,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_10",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 4,
+            "predicted_steps": 3,
+            "matching_steps": 3,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_17",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 5,
+            "predicted_steps": 6,
+            "matching_steps": 5,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_18",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 14,
+            "predicted_steps": 12,
+            "matching_steps": 12,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_20",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 8,
+            "predicted_steps": 6,
+            "matching_steps": 6,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_21",
+            "expected_status": "COMPLETE",
+            "predicted_status": "COMPLETE",
+            "expected_steps": 3,
+            "predicted_steps": 1,
+            "matching_steps": 1,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_22",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 8,
+            "predicted_steps": 7,
+            "matching_steps": 7,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_23",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 8,
+            "predicted_steps": 6,
+            "matching_steps": 6,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_24",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 7,
+            "predicted_steps": 6,
+            "matching_steps": 6,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_25",
+            "expected_status": "COMPLETE",
+            "predicted_status": "COMPLETE",
+            "expected_steps": 3,
+            "predicted_steps": 1,
+            "matching_steps": 1,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_26",
+            "expected_status": "COMPLETE",
+            "predicted_status": "COMPLETE",
+            "expected_steps": 6,
+            "predicted_steps": 4,
+            "matching_steps": 4,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_27",
+            "expected_status": "COMPLETE",
+            "predicted_status": "COMPLETE",
+            "expected_steps": 6,
+            "predicted_steps": 4,
+            "matching_steps": 4,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_28",
+            "expected_status": "COMPLETE",
+            "predicted_status": "COMPLETE",
+            "expected_steps": 6,
+            "predicted_steps": 4,
+            "matching_steps": 4,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_29",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 14,
+            "predicted_steps": 12,
+            "matching_steps": 12,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_30",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 14,
+            "predicted_steps": 12,
+            "matching_steps": 12,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_31",
+            "expected_status": "COMPLETE",
+            "predicted_status": "COMPLETE",
+            "expected_steps": 3,
+            "predicted_steps": 2,
+            "matching_steps": 2,
+            "status_match": true,
+            "sequence_match": false
+          },
+          {
+            "case_id": "case_32",
+            "expected_status": "INCOMPLETE",
+            "predicted_status": "INCOMPLETE",
+            "expected_steps": 5,
+            "predicted_steps": 4,
+            "matching_steps": 4,
+            "status_match": true,
+            "sequence_match": false
+          }
+        ]
+      }
+    }
+  }
+}

@@ -37,7 +37,7 @@ LABELS = {
 }
 
 
-def load_context(root: Path, dataset: Path, samples: bool = False, reinspect: bool = False):
+def load_context(root: Path, dataset: Path, samples: bool = False, reinspect: bool = False, with_usage: bool = False):
     """Use exactly the CLI's genuine intent/media cache requests, offline only."""
     store = load_evidence(dataset)
     snapshots = read_csv(dataset / "user_identities.csv")
@@ -63,7 +63,8 @@ def load_context(root: Path, dataset: Path, samples: bool = False, reinspect: bo
             # them to the model can prime IDs not actually printed in a source.
             reviewed = reinspect_media(client, path, meta, [])
             hydrate_media_reinspection(store, meta, reviewed, catalog_context)
-    return requests, store, IdentityIndex(snapshots, history), history, read_csv(dataset / "deletion_rules.csv"), intents
+    context = (requests, store, IdentityIndex(snapshots, history), history, read_csv(dataset / "deletion_rules.csv"), intents)
+    return (*context, client.usage()) if with_usage else context
 
 
 def _raw_values(record):

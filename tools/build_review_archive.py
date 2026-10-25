@@ -25,7 +25,7 @@ def main():
         readme = readme.replace(f']({target})', f'](code/{target})')
     checkpoint = ('# Development review bundle\n\n'
                   'This archive contains runnable code and review documentation, not a completed submission. '
-                  'No final output.csv is included or claimed. The original518-row requirement and unsupported/excluded-row format remain pending organizer clarification.\n\n'
+                  'No output.csv is included inside the code archive. A separately supplied output.csv may be an explicitly assumption-dependent prediction candidate; it is not a completed strict audit. Read code/evaluation/approach_comparison.md and its assumptions ledger. The original518-row requirement and excluded-row format remain pending organizer clarification.\n\n'
                   'Supply the original participant dataset alongside code/. Start with README.md and code/FRESH_ENVIRONMENT.md. '
                   'Read evaluation/archive_verification.md for actually tested versus documented behavior. '
                   'Partial predictions, detailed diagnostics and the transcript are preserved separately as review artifacts. '

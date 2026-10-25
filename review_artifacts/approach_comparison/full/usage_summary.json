@@ -1,0 +1,15 @@
+{
+  "provider": "Google Gemini Developer API",
+  "model": "gemini-3.5-flash-lite",
+  "referenced_calls": 44,
+  "new_calls_this_process": 0,
+  "cached_results_reused": 44,
+  "production_attempts": 51,
+  "attempts_with_unavailable_usage": 5,
+  "input_tokens": 77429,
+  "output_tokens": 68176,
+  "thinking_tokens": 0,
+  "total_tokens": 145605,
+  "cost_mode": "Free Tier project, billing disabled as configured by participant; provider billing not independently inspected",
+  "billed_cost_usd": 0
+}

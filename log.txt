@@ -492,3 +492,42 @@ branch=feat/deletion-audit-baseline
 repo_root=/workspace/hackerrank-orchestrate-october26
 worktree=main
 parent_agent=none
+
+## [2026-10-25T01:18:04.115852+00:00] Compare strict and explicit prediction decision policies
+
+User Prompt (verbatim, secrets redacted):
+I want us to prioritize a valid, competitive HackerRank submission while preserving evidence integrity.
+
+First, distinguish facts established by the evidence from predictions inferred under uncertainty.
+
+Implement and compare the strict auditor, conservative fallback, and evidence-based prediction approaches.
+
+For each approach, report:
+
+- Coverage across the expected cases
+- Valid and invalid CSV rows
+- Label distributions
+- Three-phase plan compliance
+- Unsupported records or claims
+- Cases affected by assumptions
+
+Do not fabricate evidence or historical events. However, do not treat every missing confirmation as proof of failure unless the challenge specification supports that interpretation.
+
+Recommend the strongest submission approach based on measurable results and explicitly document its limitations.
+
+Agent Response Summary:
+Implemented three explicit offline decision policies over unchanged source observations, with provenance separating structured/media facts, scoped deductions, unknown obligations and inferred claims. Strict returns419supported rows; blanket conservative fallback returns518labels but99invalidplans; evidence prediction returns518schema/citation-valid rows with99assumption cases and1unconfirmedarchive-risk forecast, without novel resource IDs or historical events. On all32public samples prediction covers29/status29correct(90.625%),stepF1 89.01%,exactsequence8/32 unchanged; strictcovers23/status23correct,F1 82.99%. Published an explicitly labeled output.csv prediction candidate and checksum-bound output.assumptions.json, preserved the original strict blockers and all comparison artifacts, and recommended prediction for competitive use with its limitations rather than claiming evidence certification.
+
+Actions:
+* Added decision_policies.py, offline comparison generation, independent factual-support/phase/schema checks and evaluation-only public scoring.
+* Added meaningful regressions for missing confirmation, unknown tombstones, explicit archive forecasts, future captures, retention failures, and source-support checking;all196tests pass.
+* Re-extracted refreshed code.zip into a fresh virtual environment;25command checks passed, including byte-identical prediction publication and strict baseline replay, with no new model calls.
+* Preserved per-policy rows/ledgers, full metrics, current measured usage and updated architecture/fresh-environment/interview/handoff documentation for the authorized feature-branch push.
+
+Context:
+tool=Codex
+Runtime model metadata: exact coding-model identifier is not exposed by this session; none was fabricated. Application model gemini-3.5-flash-lite is recorded separately.
+branch=feat/deletion-audit-baseline
+repo_root=/workspace/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none

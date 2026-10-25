@@ -1,5 +1,13 @@
 # Preserved review results
 
+The baseline snapshots below remain preserved. The newer `approach_comparison/`
+directory compares strict, conservative fallback and evidence-based prediction.
+Root `output.csv` is now a separately validated518-row **prediction candidate**,
+with assumptions in `output.assumptions.json`; it is not a completed strict audit.
+Do not confuse complete CSV coverage with evidence confirmation. The candidate
+and updated comparison report identify99 assumption-dependent cases and one
+unconfirmed archive-risk forecast. See code/evaluation/approach_comparison.md.
+
 These are incomplete development artifacts. None is the required root output.csv. Do not submit a partial file as a completed 518-row prediction or use it as a source of evidence/model facts.
 
 - `full_predictions_partial.csv`: 419 supported rows from the original 518-request run, including case_39. The other99 requests remain in diagnostics; no excluded/unsupported row is assigned a fabricated verdict.
