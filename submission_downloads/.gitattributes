@@ -1,0 +1,4 @@
+# Download copies must keep the exact frozen submission bytes on every platform.
+output.csv -text whitespace=cr-at-eol
+log.txt -text
+*.zip -text
