@@ -1,0 +1,419 @@
+{
+  "work_dir": "/tmp/deletion-archive-install-vyk1091n",
+  "archive_sha256": "aa8878c2d050fc2e62b1061a7fe156d3875968a85e14d6809b8430770fca4bb7",
+  "commands": [
+    {
+      "name": "create_fresh_virtualenv",
+      "command": [
+        "/workspace/hackerrank-orchestrate-october26/.venv/bin/python",
+        "-m",
+        "venv",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n/bundle",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 2.124
+    },
+    {
+      "name": "install_pinned_dependency",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--no-cache-dir",
+        "--disable-pip-version-check",
+        "--index-url",
+        "https://pypi.org/simple",
+        "-r",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/code/requirements.txt"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n/bundle",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 1.01
+    },
+    {
+      "name": "dependency_consistency",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n/bundle",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.224
+    },
+    {
+      "name": "runtime_versions",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "-c",
+        "import sys,pypdf;print(sys.version);print(pypdf.__version__)"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n/bundle",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.1
+    },
+    {
+      "name": "unit_tests",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "code/tests",
+        "-v"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n/bundle",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.845
+    },
+    {
+      "name": "node_syntax",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/code/process_model_jobs.mjs"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n/bundle",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.031
+    },
+    {
+      "name": "help_main.py",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/code/main.py",
+        "--help"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.077
+    },
+    {
+      "name": "help_evaluation/main.py",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/code/evaluation/main.py",
+        "--help"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.051
+    },
+    {
+      "name": "help_investigate.py",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/code/investigate.py",
+        "--help"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.076
+    },
+    {
+      "name": "help_evaluation/review_mismatches.py",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/code/evaluation/review_mismatches.py",
+        "--help"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.073
+    },
+    {
+      "name": "help_evaluation/coverage_report.py",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/code/evaluation/coverage_report.py",
+        "--help"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.052
+    },
+    {
+      "name": "fresh_full_prepare",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/code/main.py",
+        "--prepare"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.598
+    },
+    {
+      "name": "fresh_offline_no_output",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/code/main.py",
+        "--offline"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "seconds": 0.429
+    },
+    {
+      "name": "fresh_online_missing_key",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/code/main.py"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "seconds": 0.326
+    },
+    {
+      "name": "replay_sample_partial",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/code/main.py",
+        "--samples",
+        "--offline",
+        "--partial",
+        "--output",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.cache/sample_predictions_partial.csv"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "seconds": 1.109
+    },
+    {
+      "name": "replay_full_partial",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/code/main.py",
+        "--offline",
+        "--partial",
+        "--output",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.cache/full_predictions_partial.csv"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "seconds": 6.197
+    },
+    {
+      "name": "replay_sample_evaluation",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/code/evaluation/main.py",
+        "--predictions",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.cache/sample_predictions_partial.csv",
+        "--report",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.cache/evaluation_summary.md",
+        "--json",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.cache/sample_metrics.json"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "seconds": 0.059
+    },
+    {
+      "name": "replay_blocker_diagnostics",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/code/investigate.py",
+        "--reinspect-media",
+        "--report",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.cache/blocker_report.md",
+        "--json",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.cache/blocker_report.json"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 15.986
+    },
+    {
+      "name": "replay_exclusion_coverage",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/code/evaluation/coverage_report.py",
+        "--report",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.cache/organizer_guidance.md"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.058
+    },
+    {
+      "name": "replay_mismatch_review",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/code/evaluation/review_mismatches.py",
+        "--report",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.cache/sample_mismatch_review.md"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 1.053
+    },
+    {
+      "name": "case01_no_network_mre",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/code/evaluation/review_mismatches.py",
+        "--mre-case01",
+        "--report",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.cache/case01_mre.md"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.112
+    },
+    {
+      "name": "replay_partial_usage",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/code/main.py",
+        "--offline",
+        "--partial",
+        "--output",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.cache/full_predictions_partial.csv",
+        "--usage-report",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.cache/full_usage.md"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "seconds": 6.895
+    },
+    {
+      "name": "comparison_samples",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/code/compare_approaches.py",
+        "--samples",
+        "--output-dir",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.cache/approach_comparison/samples"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 2.459
+    },
+    {
+      "name": "comparison_full_candidate",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/code/compare_approaches.py",
+        "--output-dir",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.cache/approach_comparison/full",
+        "--write-prediction-candidate",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/output.csv"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 27.446
+    },
+    {
+      "name": "comparison_evaluation",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/code/evaluation/compare_approaches.py",
+        "--report",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.cache/approach_comparison.md",
+        "--json",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.cache/approach_comparison/metrics.json"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 11.289
+    },
+    {
+      "name": "selected_mandatory_reports",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/code/evaluation/finalize_reports.py"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.132
+    },
+    {
+      "name": "selected_source_validation",
+      "command": [
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/code/evaluation/validate_submission.py",
+        "--with-context",
+        "--report",
+        "/tmp/deletion-archive-install-vyk1091n/bundle/.cache/final_validation.json"
+      ],
+      "cwd": "/tmp/deletion-archive-install-vyk1091n",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 7.875
+    }
+  ],
+  "python_and_pypdf_versions": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]\n6.10.0",
+  "suite_tests_passed": 201,
+  "fresh_jobs": 43,
+  "fresh_job_tasks": {
+    "request-intent": 13,
+    "business-artifact-extraction": 15,
+    "business-artifact-semantic-reinspection-v1": 15
+  },
+  "fresh_offline": {
+    "completed": 0,
+    "requests": 518,
+    "new_calls": 0
+  },
+  "missing_key": {
+    "completed": 0,
+    "new_calls": 0
+  },
+  "samples": {
+    "requests": 32,
+    "completed": 23,
+    "errors": 9,
+    "new_calls": 0,
+    "known_tokens": 104410
+  },
+  "full": {
+    "requests": 518,
+    "completed": 419,
+    "errors": 99,
+    "new_calls": 0,
+    "known_tokens": 145605
+  },
+  "predictions_byte_identical": true,
+  "strict_mode_produced_final_csv": false,
+  "mandatory_reports_byte_identical": true,
+  "prediction_candidate_exists": true,
+  "prediction_candidate": {
+    "rows": 518,
+    "assumption_cases": 99,
+    "byte_identical": true,
+    "new_calls": 0,
+    "unsupported_factual_step_claims": 1
+  },
+  "dataset_byte_identical": true
+}

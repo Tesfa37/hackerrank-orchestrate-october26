@@ -1,5 +1,19 @@
 # Extracted-archive verification
 
+## Selected submission finalization
+
+The selected evidence-based candidate is retained byte for byte from07aa568.
+Mandatory evaluation/usage reports now describe518/518 predictions, the153/355/10
+labels,99assumption cases and the disclosed case_55 forecast; older strict
+measurements below are historical. The final source includes201passing regression
+tests, checksum/ledger validation and protected selected-report generation.
+Current extracted-archive installation, replay, candidate publication, report
+regeneration and source-validation command records are preserved in
+review_artifacts/finalization/archive_verification.json. The two mandatory reports
+are reproduced from the extracted copy and checked against the packaged originals.
+Root output.csv and log.txt remain separate upload artifacts. No live generation,
+billing verification or paid API changes are claimed by these offline checks.
+
 ## Current decision-policy version
 
 The optional prediction-policy comparison adds196-test coverage and a separately

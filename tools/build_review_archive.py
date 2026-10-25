@@ -1,4 +1,4 @@
-"""Build the incomplete review bundle from tracked code, excluding private state."""
+"""Build selected-submission code from tracked sources, excluding private state."""
 from pathlib import Path
 import os
 import subprocess
@@ -23,8 +23,8 @@ def main():
     readme = (ROOT/'code/README.md').read_text(encoding='utf-8')
     for target in ('ARCHITECTURE.md', 'INTERVIEW_NOTES.md', 'FRESH_ENVIRONMENT.md', 'evaluation/archive_verification.md'):
         readme = readme.replace(f']({target})', f'](code/{target})')
-    checkpoint = ('# Development review bundle\n\n'
-                  'This archive contains runnable code and review documentation, not a completed submission. '
+    checkpoint = ('# Selected evidence-based prediction submission\n\n'
+                  'This archive contains the selected runnable implementation, mandatory reports and supporting documentation. '
                   'No output.csv is included inside the code archive. A separately supplied output.csv may be an explicitly assumption-dependent prediction candidate; it is not a completed strict audit. Read code/evaluation/approach_comparison.md and its assumptions ledger. The original518-row requirement and excluded-row format remain pending organizer clarification.\n\n'
                   'Supply the original participant dataset alongside code/. Start with README.md and code/FRESH_ENVIRONMENT.md. '
                   'Read evaluation/archive_verification.md for actually tested versus documented behavior. '
@@ -46,7 +46,7 @@ def main():
         if archive.testzip() is not None:
             raise ValueError('Archive integrity check failed')
     temporary.replace(target)
-    print(f'Built review archive: {target.stat().st_size} bytes')
+    print(f'Built submission code archive: {target.stat().st_size} bytes')
 
 
 if __name__ == '__main__':

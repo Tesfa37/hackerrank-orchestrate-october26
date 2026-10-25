@@ -1,0 +1,111 @@
+{
+  "snapshot_at": "2026-10-24T21:24:56.791745-05:00",
+  "branch": "feat/deletion-audit-baseline",
+  "prediction_baseline_commit": "07aa568bd50d64aef8db3f029af6405bfbe49d84",
+  "recommendation": "GO for the selected evidence-based prediction strategy; not conclusive deletion certification",
+  "prediction_logic_unchanged_from_baseline": true,
+  "tests_passed": 201,
+  "extracted_archive_commands_passed": 27,
+  "blocking_artifact_format_or_replay_errors": [],
+  "traceability_qualification": "Exact coding-assistant runtime model ID is not exposed; recorded truthfully in log.txt; full local AGENTS metadata conformance is not certified.",
+  "uploads": {
+    "code.zip": {
+      "path": "/workspace/hackerrank-orchestrate-october26/code.zip",
+      "bytes": 215422,
+      "sha256": "aa8878c2d050fc2e62b1061a7fe156d3875968a85e14d6809b8430770fca4bb7",
+      "ready": true
+    },
+    "output.csv": {
+      "path": "/workspace/hackerrank-orchestrate-october26/output.csv",
+      "bytes": 539544,
+      "sha256": "dab79bc63c7a8d5357c3b865e091f34f2cc9a7c49a940aec3e326e85669f64d1",
+      "ready": true
+    },
+    "log.txt": {
+      "path": "/workspace/hackerrank-orchestrate-october26/log.txt",
+      "bytes": 41456,
+      "sha256": "cd50dee0d3211854baf4999e502d44b9de8b8cb1858103f96a633c162fb0aa62",
+      "ready": true
+    },
+    "output.assumptions.json": {
+      "path": "/workspace/hackerrank-orchestrate-october26/output.assumptions.json",
+      "bytes": 215095,
+      "sha256": "8ff86ceecc53fde3193a01ab556953ed9afb77c51c7338e0ec54f796f3f50ed3",
+      "ready": true
+    }
+  },
+  "finalization_files": {
+    "README.md": {
+      "bytes": 4614,
+      "sha256": "7985bd082f7924aef9cb1d3737c4dce22802dc172aab4fc4768d23fcae048930"
+    },
+    "archive_verification.json": {
+      "bytes": 13571,
+      "sha256": "5e6c6b157074857ea5b09133b221a010297225caa27a3323d4df608f0103be04"
+    },
+    "investigation_summary.json": {
+      "bytes": 13586,
+      "sha256": "c3a8067c62fec5532f304a5db583a1cdff362f9914ec8bb08b75743c108b2583"
+    },
+    "preserved_candidate.json": {
+      "bytes": 332,
+      "sha256": "bcd9d5f7cfca0a62ccaf09e68620f6b6b69eac9e75448e48efd67e45fc453109"
+    },
+    "sample_metrics.json": {
+      "bytes": 1317,
+      "sha256": "e721943fa68222c5c14aa9ec8d6fd97978d736565c3417048216a80ba3d3da7f"
+    },
+    "validation.json": {
+      "bytes": 2013,
+      "sha256": "3fc57bee58bf2cd63497ca4352a6f031004a9ed98f92b7caaf9c170741a292f9"
+    }
+  },
+  "source_files": {
+    "code/ARCHITECTURE.md": "632c129ba11fd2a3cb380b0c17aadaf30dd3d7cd301de24a1a18bd61fcea2d00",
+    "code/FRESH_ENVIRONMENT.md": "31b0202517181fae18f0ab9482cb8ed4bb29a976e566f6f91bfe0f970b71c4bb",
+    "code/INTERVIEW_NOTES.md": "16dbb02ac7fe2109393322a63277737e9f457aa9b5d3bc5bfb5a134ebeeb9b57",
+    "code/README.md": "32b37fbb9b43e0c0615f485e9fe065d2d6b880e0cb08781fdbfbcc51653f5022",
+    "code/audit_core.py": "fd9a836706d0e1400767f2a904193d25e438cc16f463245aeb81d34ec9823d1a",
+    "code/compare_approaches.py": "6db923693e8e6dd316382a89f0a9ad49d227b0fadab3841cb26a64237a59a290",
+    "code/decision_policies.py": "f53a03c946025fbc1bfa8b183e71bbed29830697f3f09ab8ac8edfc75595b97f",
+    "code/evaluation/approach_comparison.md": "f01467ca0e0cf788243eb23d0daf6900cb20fef47c19e075aae605ee6dbfb45d",
+    "code/evaluation/approach_comparison_metrics.json": "fb00bf9bdcbb3d69e3e83e29610e43a9304b546041236b2453388ecff7ea71e4",
+    "code/evaluation/archive_verification.md": "996e778ffe89abcd5c0b3f52fd39cd0526ee31e40135a55f57a53dcbc0809841",
+    "code/evaluation/blocker_report.md": "b63524b750590031307fb2b691645936df3d45f5d3c74559b2f3d93dc2704c99",
+    "code/evaluation/case_01_mre.md": "4503fd42c25be91268adc25341220cdcdc4c1ffdc0af9c1d8577055e18025905",
+    "code/evaluation/case_07_attachment_review.md": "ec2a72b17c063ff47d8fafcdb568a5b85f06109b35ccd64985a76a9f1f41fdf5",
+    "code/evaluation/compare_approaches.py": "7754ed0dec2e9b4c0a894f09bebefb2ba7e932e6a0e3414ded8d08d0a75c3432",
+    "code/evaluation/coverage_report.py": "46e1d16293130e71b537c3d1c5c17883807149048da87f901df0cb0a0c83cb41",
+    "code/evaluation/evaluation_report.md": "02271755405ad37fc55623b3c100b5908a3a205d09cd9f7a9c49ccfc1d883ac4",
+    "code/evaluation/exclusions.py": "7fb96d831cba5584289c773dbc61b03275f4da9f4359ba353cacf59730308abe",
+    "code/evaluation/finalization_investigation.md": "b16fe03ebd333bfe2983082ff416ed57562c6575c82da78d0510c7d920041bb4",
+    "code/evaluation/finalization_investigation.py": "fd1c1aee137025a30a832220e9dad286c7d13ada3bf131096a79c7f6c072e595",
+    "code/evaluation/finalize_reports.py": "bfd99cd8a1373816f6d2d9022c530aecf6dd2d0431c51c8691a10d5d409c91b1",
+    "code/evaluation/main.py": "cef4e5e54bf0b52adf97019bfbecc02f004b644d72791812cf9f904fc5e47290",
+    "code/evaluation/organizer_guidance.json": "1459b01d1429d04b57d574da06907c237babbe55a68f52180788028462ff36d7",
+    "code/evaluation/organizer_guidance.md": "6d0905b8cb9dbac01d2adf8dc4fd86177179ca3eab3dc1baabb40bfa474d12ba",
+    "code/evaluation/review_mismatches.py": "45c4c9c9661bb90f66b2d086d34e61d5de9c24f11fb9667ef7b140c0f781244c",
+    "code/evaluation/sample_mismatch_review.md": "c5346708e82d850f1234d8cb93c6033b88992e158f0ae0d068f1595ecd2f4ea0",
+    "code/evaluation/usage_report.md": "9bd3f54353fd6ea8b19fe680c5a449d6d2d7accffbd196e0c9fd347dd29018fb",
+    "code/evaluation/validate_submission.py": "aa1ea6828b06a48c8858f7f5a7e6fe8981b24fb4cb80a7a70397341aa4f9ce65",
+    "code/evidence.py": "42b80116d1ea6ef4b4ca5f5a1a380cb0d0e6a2307104c0bacc1964f71edaae34",
+    "code/investigate.py": "25deedc1b47b4c4346579d776165cf1d4595900b825074c255194f578148e565",
+    "code/main.py": "79bbaf11cbbdf35efe0df52f151ae3c3339c79587fd1b2b8ca6d8ee96161ee95",
+    "code/model_client.py": "6e608e3695e7335bd39dfa49e6c20cbf17a94ca370978d3b853831bf5fbad309",
+    "code/process_model_jobs.mjs": "06ec602d61ff3e2b8240a6a5cc01565ecd4399d3be3fbc2845202a5ae52b37e1",
+    "code/reasoning.py": "67617222636454fa7a522410b4785880291ad931473520f645dd244ecfa544dc",
+    "code/requirements.txt": "dfb022ec56c6863345ec8c7e7904d79b56bc543ba66cb37617fc27ec6f0949b6",
+    "code/tests/test_approach_evaluation.py": "7405ad4a0cda79b263a4a5166ce6e0c307b85fc177fbcf8ddede22f56f75d87c",
+    "code/tests/test_core.py": "647cd600d999826626dddbad490d1ce1d8583f1a35e8017e20502e3c252a5e70",
+    "code/tests/test_decision_policies.py": "36d05c982bb11c49465f69ed3ac453b3c1955807be460a541e92f7cad97fa1e3",
+    "code/tests/test_evaluation.py": "cadbf8229d07025fd80d4e6fb0d7e7f096972c2c11d8b1fc313c5a800c0eea2f",
+    "code/tests/test_evidence.py": "17224a0a4c5fe08e24b02552cd262e1c8f9e064f5beee85f0526da2c1e79e16d",
+    "code/tests/test_exclusion_coverage.py": "9985349f1da924466a03a208f849a1632dd0d0f0bd26d9ff4cf17a8061d7e2c0",
+    "code/tests/test_final_reports.py": "c3fafd5c5cb6360d9ed17f338592fd07ce557adccefa175b1b570202224301ba",
+    "code/tests/test_investigate.py": "afc913518c50783788e4e6d120856db935e68d3e3ab14e86370fc9eb012a69f5",
+    "code/tests/test_main.py": "7f20fcf55f4ca4818aca6664bd386b516ae53b5963d883bf2bcec31fa0e636d8",
+    "code/tests/test_mismatch_review.py": "cb7d1f364102d81954fefc7166c5e988e047358e9dea8c28d23bf6e7288aecec",
+    "code/tests/test_model_client.py": "9f024d87efc1ab7ec11a891712558a4f960d066161ac01bc2f25ec73f5d6da4f",
+    "code/tests/test_reasoning.py": "69a88b25717e15d831c6037c4a43abc7af76438b2d870272e28e7c096f1f0d13"
+  }
+}

@@ -531,3 +531,118 @@ branch=feat/deletion-audit-baseline
 repo_root=/workspace/hackerrank-orchestrate-october26
 worktree=main
 parent_agent=none
+
+## [2026-10-25T02:23:21.489358+00:00] Selected prediction submission finalization
+
+User Prompt (verbatim, secrets redacted):
+Codex, let's move toward finalizing our HackerRank Orchestrate submission.
+
+After reviewing your results with two independent ChatGPT conversations, we've agreed that **evidence-based prediction is our selected submission strategy**.
+
+Your comparison at commit `07aa568` supports this decision. Preserve the strict auditor as the evidence-certification baseline and reject the blanket `INCOMPLETE` fallback.
+
+**Please complete the following tasks in priority order.**
+
+### 1. Correct the mandatory evaluation reports — highest priority
+
+Update `code/evaluation/evaluation_report.md` and `code/evaluation/usage_report.md` so they clearly describe our selected 518-row evidence-based prediction candidate.
+
+The reports should include:
+
+- 518/518 predictions, with zero reported structural validation failures.
+- 153 COMPLETE, 355 INCOMPLETE, and 10 NOT_APPLICABLE.
+- Public sample status accuracy: 29/32 (90.625%).
+- Step F1: 89.01%.
+- Exact-sequence accuracy: 8/32 (25%).
+- The 99 assumption-dependent cases, including 98 conditional COMPLETE predictions.
+- The single inferred archive-risk finding in excluded `case_55`.
+- Actual attributed model calls and token usage, distinguishing reused responses from new calls.
+- The $0 paid API budget and any unverified billing or usage information.
+
+Keep earlier strict-auditor results as historical baseline measurements, clearly separated from the final candidate.
+
+Do not claim hidden-test accuracy or that uncertain deletions have been conclusively certified.
+
+### 2. Conduct one bounded accuracy investigation
+
+Our independent review of the public sample comparison found 35 missing expected verification steps:
+
+- 21 VERIFY_RECORD_ABSENT
+- 7 VERIFY_RECORD_PRESENT
+- 7 VERIFY_RECORD_ANONYMIZED
+
+There were also four extra steps.
+
+Investigate whether these discrepancies reveal a generalizable issue in evidence retrieval, resource ownership, identity linking, or verification-plan construction.
+
+Also spot-check representative cases among the 98 conditional COMPLETE predictions, especially those supported by only one qualifying observation.
+
+**Time-box this investigation to approximately 30–45 minutes.**
+
+Only implement improvements supported by participant-visible evidence and confirmed by regression testing.
+
+Do not:
+
+- Hardcode sample answers or case-specific resource IDs.
+- Infer identifiers from case-number suffixes.
+- Invent historical events, citations, or deletion evidence.
+- Make changes solely to improve the public sample score.
+- Replace the working candidate with an unvalidated alternative.
+
+If no defensible improvement is found within the time limit, retain the current candidate and document the limitation.
+
+### 3. Finalize and validate the submission
+
+After any corrections:
+
+1. Run the complete regression test suite.
+2. Recalculate the sample evaluation metrics.
+3. Verify all 518 output rows, case IDs, ordering, JSON schemas, evidence references, and phase requirements.
+4. Confirm the assumptions ledger corresponds to the final CSV.
+5. Rebuild `code.zip` from the latest implementation on `feat/deletion-audit-baseline`.
+6. Inspect the rebuilt archive to confirm the latest code, README, evaluation report, usage report, prompts, and required dependencies are included.
+7. Confirm no API keys, credentials, caches, virtual environments, or dataset files are packaged.
+8. Ensure the final `log.txt` accurately records the development decisions, tests, limitations, and finalization work.
+
+Keep `output.csv` separate from `code.zip`, as the competition requires.
+
+Verify that the code, predictions, evaluation reports, and transcript all describe the same final version.
+
+### 4. Give me a final submission-readiness report
+
+When finished, report:
+
+- Final Git commit SHA and branch.
+- Exact paths to `code.zip`, `output.csv`, and `log.txt`.
+- Whether each file is ready for upload.
+- Final test results.
+- Final coverage and sample accuracy.
+- Any improvements or regressions compared with commit `07aa568`.
+- Remaining assumptions and known limitations.
+- Reproducibility and archive verification results.
+- Any blocking submission issues.
+
+Give me an explicit **GO / NO-GO recommendation** with reasons.
+
+**Important:** Preserve our existing valid 518-row candidate before making further changes. Prioritize final submission readiness over speculative optimization. Do not submit anything to HackerRank or change paid API/billing settings without my authorization.
+
+Our goal is a complete, reproducible, honestly documented, competitive submission that we can confidently explain during the AI interview.
+
+Agent Response Summary:
+Preserved the selected07aa568CSV/ledger/archive/transcript before editing, corrected both mandatory reports to lead with518selected predictions,C153/I355/N10,99assumption cases(98conditional COMPLETE) and actual44reused responses/51attempts/145605known tokens with5unknown-usage attempts. A40-minute-cap investigation classified all35missing steps and4extras, examined sixconditional representatives and completed its recorded pass in16.58minutes; no defensible prediction fix was found, so CSV/ledger bytes and all sample metrics are unchanged. All201regression tests and27fresh extracted-archive commands pass; full518-row schema/citation/phase checks, checksum correspondence and the sole disclosed case_55source-support forecast are verified. Rebuilt/inspected code.zip, reproduced the candidate and mandatory reports byte for byte, preserved limitations and added regression-protected report generation; recommendation is GO under the user-selected prediction strategy, with disclosed uncertainty and unavailable coding-model metadata, not conclusive deletion certification.
+
+Actions:
+* Backed up selected artifacts under ignored .cache/finalization_07aa568_backup/ before changes.
+* Added selected mandatory-report generation, protected generic evaluator default output, ledger integrity regressions and final CSV/source validation.
+* Investigated27ownership-link gaps,6cutoff exclusions and2missing retained-record proofs; no eligible-owned missing-step construction error or raw-primary parser miss was found.
+* Recalculated all32sample metrics:29/32statuses(90.625%),F1 89.01%,exactsequence8/32(25%); no hidden accuracy is claimed.
+* Verified fresh install,pip check,201tests,Node syntax,all518rows,archive contents/relative links,private-state exclusions and reproduced report/CSV bytes.
+* Prepared final hashes/readiness documentation and authorized feature-branch push; no HackerRank upload,billing change,credential edit or new model call occurred.
+
+Context:
+tool=Codex
+Runtime model metadata: exact coding-model identifier remains unavailable after checking exposed environment fields and authoritative harness configuration; no identifier was fabricated. Exact application model gemini-3.5-flash-lite is reported separately. Full local AGENTS model-metadata conformance cannot be certified.
+branch=feat/deletion-audit-baseline
+repo_root=/workspace/hackerrank-orchestrate-october26
+worktree=main
+parent_agent=none

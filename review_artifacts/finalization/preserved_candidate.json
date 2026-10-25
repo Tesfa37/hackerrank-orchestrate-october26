@@ -1,0 +1,7 @@
+{
+  "source_commit": "07aa568bd50d64aef8db3f029af6405bfbe49d84",
+  "original_candidate_sha256": "dab79bc63c7a8d5357c3b865e091f34f2cc9a7c49a940aec3e326e85669f64d1",
+  "original_ledger_sha256": "8ff86ceecc53fde3193a01ab556953ed9afb77c51c7338e0ec54f796f3f50ed3",
+  "candidate_bytes_unchanged": true,
+  "ledger_bytes_unchanged": true
+}

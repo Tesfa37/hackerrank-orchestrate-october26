@@ -322,7 +322,8 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--predictions", type=Path, default=ROOT / "sample_predictions.csv")
     parser.add_argument("--expected", type=Path, default=ROOT / "dataset" / "sample_output.csv")
-    parser.add_argument("--report", type=Path, default=ROOT / "code" / "evaluation" / "evaluation_report.md")
+    parser.add_argument("--report", type=Path, default=ROOT / ".cache" / "evaluation_summary.md",
+                        help="Generic evaluation output; selected submission reports use finalize_reports.py")
     parser.add_argument("--json", type=Path, dest="json_path", help="Optional machine-readable metrics destination")
     args = parser.parse_args(argv)
     try:

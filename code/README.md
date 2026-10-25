@@ -1,10 +1,13 @@
-# Deletion audit baseline
+# Deletion audit submission: evidence-based prediction
 
-## Decision-policy comparison and submission candidate
+## Selected submission workflow
 
-The strict auditor remains the default. An explicit evidence-based prediction
-policy is now available for a competitive candidate; its assumptions are not
-source facts. See [evaluation/approach_comparison.md](evaluation/approach_comparison.md)
+Evidence-based prediction is the selected submission strategy. Its assumptions
+are not source facts. The low-level `main.py` entry point retains the strict
+auditor as a baseline; use the explicit commands below to regenerate the selected
+518-row submission candidate. See [evaluation/evaluation_report.md](evaluation/evaluation_report.md)
+for the mandatory selected-candidate report and
+[evaluation/approach_comparison.md](evaluation/approach_comparison.md)
 for full/sample coverage, valid/invalid rows, label distributions, phase checks,
 unsupported claims and all affected case IDs.
 
@@ -12,6 +15,7 @@ unsupported claims and all affected case IDs.
 python3 code/compare_approaches.py --samples --output-dir .cache/approach_comparison/samples
 python3 code/compare_approaches.py --output-dir .cache/approach_comparison/full --write-prediction-candidate output.csv
 python3 code/evaluation/compare_approaches.py
+python3 code/evaluation/finalize_reports.py
 ```
 
 These commands require genuine cached interpretations and make no API calls.
@@ -24,6 +28,12 @@ claim that uncertainty has become proof. No sample answers or exclusion list
 enter prediction logic. Root `output.csv`, when published this way, is a prediction
 candidate rather than a completed strict audit. Keep the sidecar and comparison
 report with it; preserve all518 rows pending organizer clarification.
+
+The generic evaluator writes `.cache/evaluation_summary.md` by default; it does
+not overwrite the mandatory selected-candidate reports. `finalize_reports.py`
+validates the CSV/ledger checksum and uses the current evaluated comparison to
+refresh both mandatory reports. The final bounded discrepancy investigation is
+in [evaluation/finalization_investigation.md](evaluation/finalization_investigation.md).
 
 This Python CLI joins current and historical identities to participant evidence,
 selects eligible observations at `audit_at`, applies the supplied policies, and
@@ -39,8 +49,7 @@ for the current results and interview preparation. The organizer screenshot
 recommends an agent and scalability/robustness; it does not establish a mandatory
 API requirement.
 
-This is a development baseline. Source-fact reinspection is enabled by default for every PDF and image; it separates stored identifiers, stable references, visible field coverage, and observation versus lifecycle times. Missing ownership or state evidence produces a
-diagnostic error, not a guessed verdict. Public-sample results and remaining gaps
+Source-fact reinspection is enabled by default for every PDF and image; it separates stored identifiers, stable references, visible field coverage, and observation versus lifecycle times. The strict baseline retains missing ownership/state evidence as diagnostics; the selected prediction policy records its assumptions separately. Public-sample results and remaining gaps
 are recorded in `evaluation/evaluation_report.md`.
 
 ## Install
@@ -177,7 +186,7 @@ claimed.
 
 ## Submission layout
 
-When the full run and review are complete, package `code/` with this README,
+The submission archive packages `code/` with this README,
 `requirements.txt`, prompts, and both `evaluation/` Markdown reports. Do not include
 the dataset, `.env`, caches, virtual environments, nested archives, or credentials.
 Keep root `output.csv` and root `log.txt` separate from `code.zip`.

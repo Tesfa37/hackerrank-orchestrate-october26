@@ -1,10 +1,17 @@
 # Fresh environment and genuine response regeneration
 
 This guide describes the strict baseline and genuine extraction workflow.
-After valid interpretation caches exist, the optional decision-policy comparison
-commands in README.md can publish a separate518-row prediction candidate and
+After valid interpretation caches exist, the selected evidence-prediction
+commands in README.md publish the518-row prediction candidate and
 assumptions sidecar. That candidate does not resolve the strict evidence gaps;
 `evaluation/approach_comparison.md` reports its measured tradeoffs.
+
+The selected finalization sequence is the README comparison/publication commands,
+then `python3 code/evaluation/finalize_reports.py` and
+`python3 code/evaluation/validate_submission.py --with-context`. The latter
+requires genuine caches for source checks; without `--with-context` it checks
+structure, citation availability and the ledger without model inference. Mandatory
+reports describe the selected candidate; generic evaluations default to `.cache`.
 
 The archive contains code, prompts (in source), requirements, and evaluation/interview documentation. It deliberately contains no dataset, response caches, virtual environment, API credentials or final predictions. Preserved partial predictions are separate review artifacts, not bootstrap inputs to the predictor.
 

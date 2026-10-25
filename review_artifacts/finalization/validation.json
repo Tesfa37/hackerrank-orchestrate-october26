@@ -1,0 +1,61 @@
+{
+  "created_at": "2026-10-25T02:17:05.135437+00:00",
+  "strategy": "selected evidence-based prediction; not conclusive deletion certification",
+  "prediction_count": 518,
+  "expected_count": 518,
+  "labels": {
+    "INCOMPLETE": 355,
+    "COMPLETE": 153,
+    "NOT_APPLICABLE": 10
+  },
+  "structural_validation_failures": 0,
+  "citation_id_or_capture_errors": 0,
+  "exact_case_id_set": true,
+  "sorted_unique_case_ids": true,
+  "csv_json_and_phase_requirements_valid": true,
+  "csv_sha256": "dab79bc63c7a8d5357c3b865e091f34f2cc9a7c49a940aec3e326e85669f64d1",
+  "ledger_sha256": "8ff86ceecc53fde3193a01ab556953ed9afb77c51c7338e0ec54f796f3f50ed3",
+  "ledger_matches_all_affected_rows": true,
+  "assumption_cases": 99,
+  "assumption_label_distribution": {
+    "COMPLETE": 98,
+    "INCOMPLETE": 1
+  },
+  "inferred_state_cases": [
+    "case_55"
+  ],
+  "source_audit": {
+    "new_model_calls": 0,
+    "unsupported_factual_step_claims": [
+      {
+        "case_id": "case_55",
+        "step": {
+          "step_no": 1,
+          "phase": "FINDING",
+          "system_id": "backup_service",
+          "resource_id": "backup_9287",
+          "operation": "REPORT_RESTORE_RISK",
+          "state": "ACTIVE",
+          "evidence_id": "evidence_32"
+        }
+      }
+    ],
+    "novel_resource_references": [],
+    "usage_summary": {
+      "provider": "Google Gemini Developer API",
+      "model": "gemini-3.5-flash-lite",
+      "referenced_calls": 44,
+      "new_calls_this_process": 0,
+      "cached_results_reused": 44,
+      "production_attempts": 51,
+      "attempts_with_unavailable_usage": 5,
+      "input_tokens": 77429,
+      "output_tokens": 68176,
+      "thinking_tokens": 0,
+      "total_tokens": 145605,
+      "cost_mode": "Free Tier project, billing disabled as configured by participant; provider billing not independently inspected",
+      "billed_cost_usd": 0
+    },
+    "note": "Source support is relative to validated interpretations; it does not establish inventory completeness or hidden accuracy."
+  }
+}

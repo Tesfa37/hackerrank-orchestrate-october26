@@ -1,5 +1,18 @@
 # Interview notes
 
+## Final selected submission
+
+The user selected evidence-based prediction. The unchanged518-row candidate is
+153 COMPLETE,355 INCOMPLETE,10 NOT_APPLICABLE, with99assumption-dependent cases:
+98conditional COMPLETE and one archive-risk forecast in excluded case_55.
+Mandatory evaluation_report.md and usage_report.md now lead with this candidate;
+strict audit results are historical baseline measurements. A bounded review of
+all35missing sample verifications and4extras found no evidence-supported accuracy
+fix, so predictions and metrics are unchanged from07aa568. Fifty conditional
+COMPLETE cases have one qualifying observation, and78have audit-retention-only
+facts. Explain this limitation candidly; retained records do not certify global
+deletion. The final report/ledger regression suite has201tests.
+
 ## Latest prediction-policy experiment
 
 The strict results below remain the evidence-certification baseline. The optional

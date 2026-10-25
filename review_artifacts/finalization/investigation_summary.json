@@ -1,0 +1,358 @@
+{
+  "started_at": "2026-10-25T01:58:15.566844+00:00",
+  "recorded_at": "2026-10-25T02:14:50.383674+00:00",
+  "elapsed_minutes": 16.58,
+  "budget_minutes": 40,
+  "missing_steps": 35,
+  "extra_steps": 4,
+  "missing_operations": {
+    "VERIFY_RECORD_ABSENT": 21,
+    "VERIFY_RECORD_ANONYMIZED": 7,
+    "VERIFY_RECORD_PRESENT": 7
+  },
+  "missing_root_causes": {
+    "absent_resource_key_without_subject_ownership": 15,
+    "sanitized_state_without_subject_ownership": 12,
+    "capture_after_cutoff": 6,
+    "required_retained_record_proof_missing": 2
+  },
+  "eligible_raw_primary_parser_misses": 0,
+  "conditional_complete_cases": 98,
+  "single_qualifying_observation_cases": 50,
+  "single_observation_categories": {
+    "SECURITY_AUDIT_LOG": 49,
+    "USER_PROFILE": 1
+  },
+  "conditional_fact_count_distribution": {
+    "2": 19,
+    "8": 4,
+    "1": 50,
+    "4": 14,
+    "3": 9,
+    "12": 1,
+    "6": 1
+  },
+  "conditional_logical_resource_count_distribution": {
+    "1": 78,
+    "4": 19,
+    "6": 1
+  },
+  "audit_retention_only_cases": 78,
+  "spot_checks": [
+    {
+      "case_id": "case_103",
+      "cutoff": "2026-08-27T12:00:00Z",
+      "fact_count": 2,
+      "facts": [
+        {
+          "system_id": "security_service",
+          "resource_id": "audit_record_9522",
+          "category": "SECURITY_AUDIT_LOG",
+          "state": "PRESENT",
+          "evidence_id": "evidence_10",
+          "captured_at": "2026-08-27T12:00:00Z",
+          "observed_at": "2026-08-27T12:00:00Z",
+          "available_at": "2026-08-27T12:00:00+00:00",
+          "scope": "customer_data_primary",
+          "basis": "structured_source_state"
+        },
+        {
+          "system_id": "security_service",
+          "resource_id": "audit_record_9522",
+          "category": "SECURITY_AUDIT_LOG",
+          "state": "PRESENT",
+          "evidence_id": "evidence_10",
+          "captured_at": "2026-08-27T12:00:00Z",
+          "observed_at": "2026-08-27T12:00:00Z",
+          "available_at": "2026-08-27T12:00:00+00:00",
+          "scope": "customer_data_read_replica",
+          "basis": "structured_source_state"
+        }
+      ],
+      "unknowns": [],
+      "strict_group": "negative_scope_without_owned_resource",
+      "missing_proof": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone",
+      "eligible_post_request_primary_scope_count": 2,
+      "source_paths": {
+        "evidence_10": "evidence/databases/customer_data_read_replica_20260827.sql"
+      }
+    },
+    {
+      "case_id": "case_126",
+      "cutoff": "2026-08-17T10:00:00Z",
+      "fact_count": 1,
+      "facts": [
+        {
+          "system_id": "security_service",
+          "resource_id": "audit_record_6884",
+          "category": "SECURITY_AUDIT_LOG",
+          "state": "PRESENT",
+          "evidence_id": "evidence_87",
+          "captured_at": "2026-08-17T09:42:50Z",
+          "observed_at": "2026-08-17T09:42:50Z",
+          "available_at": "2026-08-17T09:42:50+00:00",
+          "scope": "security_audit_records",
+          "basis": "structured_source_state"
+        }
+      ],
+      "unknowns": [],
+      "strict_group": "primary_evidence_after_cutoff",
+      "missing_proof": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone",
+      "eligible_post_request_primary_scope_count": 1,
+      "source_paths": {
+        "evidence_87": "evidence/databases/customer_data_inventory_20260817.sql"
+      }
+    },
+    {
+      "case_id": "case_308",
+      "cutoff": "2026-05-19T06:00:00Z",
+      "fact_count": 12,
+      "facts": [
+        {
+          "system_id": "backup_service",
+          "resource_id": "backup_4917",
+          "category": "BACKUP_ARCHIVE",
+          "state": "BLOCKED",
+          "evidence_id": "evidence_29",
+          "captured_at": "2026-05-19T06:00:00Z",
+          "observed_at": "2026-05-19T06:00:00Z",
+          "available_at": "2026-05-19T06:00:00+00:00",
+          "scope": "customer_data_primary",
+          "basis": "structured_source_state"
+        },
+        {
+          "system_id": "backup_service",
+          "resource_id": "backup_4917",
+          "category": "BACKUP_ARCHIVE",
+          "state": "BLOCKED",
+          "evidence_id": "evidence_29",
+          "captured_at": "2026-05-19T06:00:00Z",
+          "observed_at": "2026-05-19T06:00:00Z",
+          "available_at": "2026-05-19T06:00:00+00:00",
+          "scope": "customer_data_replica_ap_south",
+          "basis": "structured_source_state"
+        },
+        {
+          "system_id": "backup_service",
+          "resource_id": "backup_4917",
+          "category": "BACKUP_ARCHIVE",
+          "state": "BLOCKED",
+          "evidence_id": "evidence_29",
+          "captured_at": "2026-05-19T06:00:00Z",
+          "observed_at": "2026-05-19T06:00:00Z",
+          "available_at": "2026-05-19T06:00:00+00:00",
+          "scope": "customer_data_replica_eu_west",
+          "basis": "structured_source_state"
+        },
+        {
+          "system_id": "integration_service",
+          "resource_id": "data_flow_8933",
+          "category": "DATA_FLOW",
+          "state": "DISABLED",
+          "evidence_id": "evidence_29",
+          "captured_at": "2026-05-19T06:00:00Z",
+          "observed_at": "2026-05-19T06:00:00Z",
+          "available_at": "2026-05-19T06:00:00+00:00",
+          "scope": "customer_data_primary",
+          "basis": "structured_source_state"
+        },
+        {
+          "system_id": "integration_service",
+          "resource_id": "data_flow_8933",
+          "category": "DATA_FLOW",
+          "state": "DISABLED",
+          "evidence_id": "evidence_29",
+          "captured_at": "2026-05-19T06:00:00Z",
+          "observed_at": "2026-05-19T06:00:00Z",
+          "available_at": "2026-05-19T06:00:00+00:00",
+          "scope": "customer_data_replica_ap_south",
+          "basis": "structured_source_state"
+        },
+        {
+          "system_id": "integration_service",
+          "resource_id": "data_flow_8933",
+          "category": "DATA_FLOW",
+          "state": "DISABLED",
+          "evidence_id": "evidence_29",
+          "captured_at": "2026-05-19T06:00:00Z",
+          "observed_at": "2026-05-19T06:00:00Z",
+          "available_at": "2026-05-19T06:00:00+00:00",
+          "scope": "customer_data_replica_eu_west",
+          "basis": "structured_source_state"
+        },
+        {
+          "system_id": "security_service",
+          "resource_id": "audit_record_3221",
+          "category": "SECURITY_AUDIT_LOG",
+          "state": "PRESENT",
+          "evidence_id": "evidence_29",
+          "captured_at": "2026-05-19T06:00:00Z",
+          "observed_at": "2026-05-19T06:00:00Z",
+          "available_at": "2026-05-19T06:00:00+00:00",
+          "scope": "customer_data_primary",
+          "basis": "structured_source_state"
+        },
+        {
+          "system_id": "security_service",
+          "resource_id": "audit_record_3221",
+          "category": "SECURITY_AUDIT_LOG",
+          "state": "PRESENT",
+          "evidence_id": "evidence_29",
+          "captured_at": "2026-05-19T06:00:00Z",
+          "observed_at": "2026-05-19T06:00:00Z",
+          "available_at": "2026-05-19T06:00:00+00:00",
+          "scope": "customer_data_replica_ap_south",
+          "basis": "structured_source_state"
+        },
+        {
+          "system_id": "security_service",
+          "resource_id": "audit_record_3221",
+          "category": "SECURITY_AUDIT_LOG",
+          "state": "PRESENT",
+          "evidence_id": "evidence_29",
+          "captured_at": "2026-05-19T06:00:00Z",
+          "observed_at": "2026-05-19T06:00:00Z",
+          "available_at": "2026-05-19T06:00:00+00:00",
+          "scope": "customer_data_replica_eu_west",
+          "basis": "structured_source_state"
+        },
+        {
+          "system_id": "support_platform",
+          "resource_id": "support_6046",
+          "category": "SUPPORT_MESSAGE",
+          "state": "REDACTED",
+          "evidence_id": "evidence_29",
+          "captured_at": "2026-05-19T06:00:00Z",
+          "observed_at": "2026-05-19T06:00:00Z",
+          "available_at": "2026-05-19T06:00:00+00:00",
+          "scope": "customer_data_primary",
+          "basis": "structured_source_state"
+        },
+        {
+          "system_id": "support_platform",
+          "resource_id": "support_6046",
+          "category": "SUPPORT_MESSAGE",
+          "state": "REDACTED",
+          "evidence_id": "evidence_29",
+          "captured_at": "2026-05-19T06:00:00Z",
+          "observed_at": "2026-05-19T06:00:00Z",
+          "available_at": "2026-05-19T06:00:00+00:00",
+          "scope": "customer_data_replica_ap_south",
+          "basis": "structured_source_state"
+        },
+        {
+          "system_id": "support_platform",
+          "resource_id": "support_6046",
+          "category": "SUPPORT_MESSAGE",
+          "state": "REDACTED",
+          "evidence_id": "evidence_29",
+          "captured_at": "2026-05-19T06:00:00Z",
+          "observed_at": "2026-05-19T06:00:00Z",
+          "available_at": "2026-05-19T06:00:00+00:00",
+          "scope": "customer_data_replica_eu_west",
+          "basis": "structured_source_state"
+        }
+      ],
+      "unknowns": [],
+      "strict_group": "negative_scope_without_owned_resource",
+      "missing_proof": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone",
+      "eligible_post_request_primary_scope_count": 2,
+      "source_paths": {
+        "evidence_29": "evidence/databases/customer_data_regional_replicas_20260519.sql"
+      }
+    },
+    {
+      "case_id": "case_46",
+      "cutoff": "2026-03-11T08:00:00Z",
+      "fact_count": 1,
+      "facts": [
+        {
+          "system_id": "account_service",
+          "resource_id": "account_6523",
+          "category": "USER_PROFILE",
+          "state": "ABSENT",
+          "evidence_id": "evidence_67",
+          "captured_at": "2026-03-10T06:18:01Z",
+          "observed_at": "2026-03-10T06:18:01Z",
+          "available_at": "2026-03-10T06:18:01+00:00",
+          "scope": "",
+          "basis": "structured_source_state"
+        }
+      ],
+      "unknowns": [
+        {
+          "system_id": "identity_service",
+          "resource_id": "tombstone_17",
+          "category": "ACCOUNT_TOMBSTONE",
+          "state": "UNKNOWN",
+          "evidence_id": "evidence_42",
+          "captured_at": "2026-03-10T06:00:00Z",
+          "observed_at": "2026-03-10T06:00:00Z",
+          "available_at": "2026-03-10T06:07:01+00:00",
+          "scope": "",
+          "basis": "model_interpreted_media",
+          "reason": "The most recent update timestamp (10 Mar 2026 07:18 UTC) is later than the supplied manifest capture timestamp (2026-03-10T06:00:00Z).; A displayed lifecycle/event timestamp is later than manifest capture; both times are preserved without repair; The reference view does not explicitly establish removal of name, email, phone and email hash; fields not shown are not redaction proof"
+        }
+      ],
+      "strict_group": "media_field_coverage_uncertainty",
+      "missing_proof": "The most recent update timestamp (10 Mar 2026 07:18 UTC) is later than the supplied manifest capture timestamp (2026-03-10T06:00:00Z).; A displayed lifecycle/event timestamp is later than manifest capture; both times are preserved without repair; The reference view does not explicitly establish removal of name, email, phone and email hash; fields not shown are not redaction proof",
+      "eligible_post_request_primary_scope_count": 1,
+      "source_paths": {
+        "evidence_67": "evidence/logs/resource_lookup_trace_20260310_061801.log"
+      }
+    },
+    {
+      "case_id": "case_524",
+      "cutoff": "2026-01-29T12:00:00Z",
+      "fact_count": 1,
+      "facts": [
+        {
+          "system_id": "security_service",
+          "resource_id": "audit_record_5429",
+          "category": "SECURITY_AUDIT_LOG",
+          "state": "PRESENT",
+          "evidence_id": "evidence_62",
+          "captured_at": "2026-01-29T11:44:59Z",
+          "observed_at": "2026-01-29T08:49:08Z",
+          "available_at": "2026-01-29T11:44:59+00:00",
+          "scope": "audit_records",
+          "basis": "structured_source_state"
+        }
+      ],
+      "unknowns": [],
+      "strict_group": "no_primary_evidence_or_scope",
+      "missing_proof": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone",
+      "eligible_post_request_primary_scope_count": 0,
+      "source_paths": {
+        "evidence_62": "evidence/records/service_resource_export_20260129_114459.json"
+      }
+    },
+    {
+      "case_id": "case_69",
+      "cutoff": "2026-09-16T09:00:00Z",
+      "fact_count": 1,
+      "facts": [
+        {
+          "system_id": "security_service",
+          "resource_id": "audit_record_9011",
+          "category": "SECURITY_AUDIT_LOG",
+          "state": "PRESENT",
+          "evidence_id": "evidence_93",
+          "captured_at": "2026-09-16T08:37:39Z",
+          "observed_at": "2026-09-16T08:37:39Z",
+          "available_at": "2026-09-16T08:37:39+00:00",
+          "scope": "security_audit_records",
+          "basis": "structured_source_state"
+        }
+      ],
+      "unknowns": [],
+      "strict_group": "primary_evidence_after_cutoff",
+      "missing_proof": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone",
+      "eligible_post_request_primary_scope_count": 3,
+      "source_paths": {
+        "evidence_93": "evidence/databases/customer_data_inventory_20260916.sql"
+      }
+    }
+  ],
+  "prediction_changes": false
+}

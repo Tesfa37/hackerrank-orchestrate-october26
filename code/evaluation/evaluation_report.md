@@ -1,104 +1,70 @@
-# Public sample evaluation
+# Selected submission evaluation
 
-Generated 2026-10-24T23:48:58.909879+00:00 from `sample_predictions_partial.csv` against `sample_output.csv`.
+**Selected strategy: evidence-based prediction.** The strict auditor is retained as a historical evidence-certification baseline. The blanket INCOMPLETE fallback is rejected because its unsupported fallback rows lack required plans.
 
-The public examples are development data. These measurements do not establish hidden evaluation accuracy.
+Selected file: root `output.csv`; SHA256 `dab79bc63c7a8d5357c3b865e091f34f2cc9a7c49a940aec3e326e85669f64d1`. The checksum-bound `output.assumptions.json` preserves source facts, unresolved obligations and explicit predictions. Public expected answers are consumed only inside evaluation, never by prediction code.
 
-## Prediction coverage
+## Selected full-dataset candidate
 
-Coverage records which requests received a row; it is separate from agreement with expected answers.
-
-| Coverage measure | Result |
+| Measure | Result |
 | --- | ---: |
-| Expected / returned cases | 32 / 23 |
-| Expected cases with a prediction | 23/32 (71.88%) |
-| Missing / unexpected case IDs | 9 / 0 |
-| Exact case-ID coverage | Fail |
-| Output contract | Fail |
+| Predictions / expected cases | 518 / 518 |
+| Structurally valid / invalid rows | 518 / 0 |
+| Reported structural validation failures | 0 |
+| COMPLETE / INCOMPLETE / NOT_APPLICABLE | 153 / 355 / 10 |
+| INCOMPLETE plans with all three ordered phases | 355/355 |
+| Citation-ID/capture availability errors | 0 |
+| Novel unsupported resource references | 0 |
+| Assumption-dependent cases | 99 |
+| Conditional COMPLETE predictions | 98 |
+| Inferred archive-risk cases / directly unsupported factual steps | 1 / 1 |
 
-## Accuracy across every expected request
+All original 518 requested case IDs remain in the candidate, exactly once in lexicographic order. Structural validity means the specified CSV/JSON fields, numbering, phases, operation/state pairs, plan relationships and citation availability pass validation. It does not mean every conditional conclusion is entailed by complete evidence.
 
-All expected requests remain in the primary case-accuracy denominators. A missing prediction is incorrect.
+The 98 conditional COMPLETE predictions assume that eligible discovered records bound the relevant inventory; unknown tombstone field removal remains unresolved. The single inferred archive-risk finding is in `case_55`, which the organizer replies relayed by the user confirm is excluded. The cited archive evidence establishes existence, not current subject-specific restore authorization. Its ACTIVE risk is a disclosed forecast, not a newly established setting or historical event. Original observations are unchanged.
 
-| Accuracy measure | Result |
+Only `case_39` and `case_55` are confirmed exclusions. Excluding them leaves 516/516 predictions, with no directly unsupported factual steps but continued conditional completeness assumptions. No additional exclusion is presumed. Keep all 518 rows pending explicit row-format clarification.
+
+## Public samples: all 32 remain in accuracy denominators
+
+| Measure | Selected prediction |
 | --- | ---: |
-| Deletion-status accuracy | 71.88% (23/32) |
-| Exact case accuracy (status and ordered steps) | 25.00% (8/32) |
-| Exact step-sequence accuracy | 25.00% (8/32) |
-| Step precision / recall / F1 | 97.89% / 72.02% / 82.99% |
-| Exact content-matched / predicted / expected steps | 139 / 142 / 193 |
-| Aligned field accuracy | 68.73% |
+| Coverage | 29/32 (90.625%) |
+| Status accuracy | 29/32 (90.625%) |
+| Exact ordered sequence | 8/32 (25%) |
+| Exact case accuracy (status and sequence) | 8/32 (25%) |
+| Step precision / recall / F1 | 97.53% / 81.87% / 89.01% |
+| Matched / predicted / expected content steps | 158 / 162 / 193 |
+| Aligned field accuracy | 76.87% |
 
-Supplementary returned-row status agreement is 23/23 (100.00%). It excludes missing expected rows and must not replace the primary all-request accuracy.
-
-## Metric definitions
-
-Primary case metrics divide by every expected request; missing rows count as incorrect. Unexpected IDs fail coverage/contract checks and their steps count as false positives. Exact sequence compares the entire ordered step array, including numbering, but scores status separately. Step precision/recall/F1 compare multisets of the six content fields, excluding `step_no`; citations count as content, and recall includes expected steps from every missing request. Fields align by `(phase, system_id, resource_id, operation)`. For duplicate keys, exact steps align first and remaining steps align in input order. Every missing or extra aligned slot is incorrect for all seven fields. Field accuracy divides correct fields by seven times the aligned slot count. Empty-versus-empty step metrics equal 100%, while primary case accuracy still penalizes absent rows.
+The three missing sample predictions are case_01, case_02 and case_04. They lack eligible owned keys for nonempty supported verification plans. They count as errors, rather than disappearing from the accuracy denominator. The full request set has different cases/cutoffs and does have 518 output rows. Public examples are development data; no hidden-test accuracy or probability calibration is claimed.
 
 | Field | Correct / aligned slots | Accuracy |
 | --- | ---: | ---: |
-| step_no | 109/196 | 55.61% |
-| phase | 139/196 | 70.92% |
-| system_id | 139/196 | 70.92% |
-| resource_id | 139/196 | 70.92% |
-| operation | 139/196 | 70.92% |
-| state | 139/196 | 70.92% |
-| evidence_id | 139/196 | 70.92% |
+| step_no | 112/197 | 56.85% |
+| phase | 158/197 | 80.20% |
+| system_id | 158/197 | 80.20% |
+| resource_id | 158/197 | 80.20% |
+| operation | 158/197 | 80.20% |
+| state | 158/197 | 80.20% |
+| evidence_id | 158/197 | 80.20% |
 
-## Failures
+Step precision/recall/F1 compare multisets of six content fields, including citations but excluding step_no. Exact sequence checks full arrays, numbering and order. Fields align by phase/system/resource/operation, with missing/extra slots penalized for all seven fields. Missing case rows count as incorrect in primary metrics.
 
-Missing case IDs: case_01, case_02, case_04, case_17, case_21, case_25, case_26, case_27, case_28.
+## Historical strict baseline and rejected fallback
 
-| Case | Expected status | Predicted status | Expected steps | Predicted steps | Content matches | Sequence match |
-| --- | --- | --- | ---: | ---: | ---: | --- |
-| case_01 | COMPLETE | None | 1 | 0 | 0 | False |
-| case_02 | COMPLETE | None | 1 | 0 | 0 | False |
-| case_03 | COMPLETE | COMPLETE | 3 | 2 | 2 | False |
-| case_04 | COMPLETE | None | 2 | 0 | 0 | False |
-| case_06 | INCOMPLETE | INCOMPLETE | 4 | 3 | 3 | False |
-| case_07 | INCOMPLETE | INCOMPLETE | 4 | 6 | 3 | False |
-| case_08 | INCOMPLETE | INCOMPLETE | 4 | 3 | 3 | False |
-| case_09 | INCOMPLETE | INCOMPLETE | 5 | 3 | 3 | False |
-| case_10 | INCOMPLETE | INCOMPLETE | 4 | 3 | 3 | False |
-| case_17 | INCOMPLETE | None | 5 | 0 | 0 | False |
-| case_18 | INCOMPLETE | INCOMPLETE | 14 | 12 | 12 | False |
-| case_20 | INCOMPLETE | INCOMPLETE | 8 | 6 | 6 | False |
-| case_21 | COMPLETE | None | 3 | 0 | 0 | False |
-| case_22 | INCOMPLETE | INCOMPLETE | 8 | 7 | 7 | False |
-| case_23 | INCOMPLETE | INCOMPLETE | 8 | 6 | 6 | False |
-| case_24 | INCOMPLETE | INCOMPLETE | 7 | 6 | 6 | False |
-| case_25 | COMPLETE | None | 3 | 0 | 0 | False |
-| case_26 | COMPLETE | None | 6 | 0 | 0 | False |
-| case_27 | COMPLETE | None | 6 | 0 | 0 | False |
-| case_28 | COMPLETE | None | 6 | 0 | 0 | False |
-| case_29 | INCOMPLETE | INCOMPLETE | 14 | 12 | 12 | False |
-| case_30 | INCOMPLETE | INCOMPLETE | 14 | 12 | 12 | False |
-| case_31 | COMPLETE | COMPLETE | 3 | 2 | 2 | False |
-| case_32 | INCOMPLETE | INCOMPLETE | 5 | 4 | 4 | False |
+The historical strict auditor returned 419/518 full rows (99 holds), and 23/32 public rows. Its all32 status accuracy was 71.875%, step F1 82.99%, exact sequence 8/32 (25%). These are baseline measurements, not the selected candidate results.
 
-## Confirmed organizer exclusions (evaluation only)
+The blanket fallback returned 518 labels but 99 invalid empty INCOMPLETE plans. Missing confirmation is not automatically a policy violation and does not supply a finding, remediation or verification key. This strategy is not selected.
 
-Organizer replies relayed by the user on 2026-10-24 confirm case_39 and case_55 are excluded. Other invalid cases will be excluded, but no complete list was provided; no additional case is excluded here. Evaluation uses only repository evidence and no dataset change was announced. The existing 518-row output requirement remains pending explicit clarification. See [organizer_guidance.md](organizer_guidance.md) for full-run coverage and provenance.
+## Independent regression cases, failures and improvements
 
-Excluded IDs present in these expected rows: none. The original metrics above retain every original expected row.
+1. Synthetic historical/future evidence fixtures ensure that future capture or catalog availability cannot establish an earlier audit state.
+2. Synthetic stable-reference tombstones distinguish permitted user_id from prohibited direct identifiers; unshown fields do not become proof of removal.
+3. A synthetic archive with attested existence and unknown permission remains UNKNOWN in the source store; only the named prediction policy can forecast ACTIVE risk, and the independent support checker flags the claim.
+4. Synthetic missing-account-confirmation fixtures distinguish strict abstention, invalid conservative fallback and conditional prediction without inventing a resource key.
+5. Wrong citations, missing cases, reordered arrays, retention failures and report-destination protection exercise evaluation/serialization independently of sample labels.
 
-| View | Coverage | Status accuracy | Exact sequence |
-| --- | ---: | ---: | ---: |
-| Original | 23/32 | 71.88% | 25.00% |
-| Excluding confirmed cases | 23/32 | 71.88% | 25.00% |
+Earlier general fixes corrected finance-register retention constraints, uploaded-document versus live-ticket scope, cutoff-aware aliases and negative-scope handling. The final bounded investigation is recorded in [finalization_investigation.md](finalization_investigation.md). No change is accepted merely to match an expected sample resource or operation. See [approach_comparison.md](approach_comparison.md) for all policy comparisons and affected case IDs.
 
-## Independent evaluator regression cases
-
-These fixtures test scoring behavior; reasoning-specific synthetic audits and improvements are documented separately.
-
-1. A missing expected row counts as incorrect in all-request accuracy; an extra prediction separately fails coverage and contributes false-positive steps.
-2. A wrong citation keeps resource alignment but lowers evidence-field accuracy and exact-step precision/recall.
-3. Reordered steps keep content precision/recall but fail sequence accuracy and canonical-order validation.
-
-## Implementation review and remaining proof gaps
-
-See [sample_mismatch_review.md](sample_mismatch_review.md) for every missing/extra step across all 32 public samples, [case_07_attachment_review.md](case_07_attachment_review.md) for the uploaded-document versus live-ticket correction, [case_01_mre.md](case_01_mre.md) for the participant-file-only account-key reproduction, and [blocker_report.md](blocker_report.md) for full-run missing proofs.
-
-Earlier finance-register fixes preserve explicitly retained business records as constraints without inventing privacy-resource categories or active legal holds. Known privacy resources and uncertain primary account state still undergo policy and uncertainty checks. The conservative whole-account completeness guard remains stricter than the literal contract; removing it does not ground missing account keys or their verification evidence.
-
-Regression fixtures also cover historical identifiers, quoted technical keys, exhaustive negative snapshots, future captures, permitted stable-only tombstones, restore configuration, retention date boundaries, source-scope correction, and separate evaluation exclusions. No expected answers are passed to prediction logic. No final 518-row output.csv is claimed.
+The retained prediction is not conclusive certification of uncertain deletions. Strict blockers and the original source/assumption ledgers remain available. Full-set label accuracy is unmeasured; exact-sequence performance remains 25% on the public development samples.

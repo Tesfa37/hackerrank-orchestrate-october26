@@ -1,0 +1,52 @@
+{
+  "expected_cases": 32,
+  "predicted_cases": 29,
+  "scored_cases": 32,
+  "case_id_union": 32,
+  "covered_cases": 29,
+  "coverage_rate": 0.90625,
+  "missing_cases": 3,
+  "extra_cases": 0,
+  "missing_case_ids": [
+    "case_01",
+    "case_02",
+    "case_04"
+  ],
+  "extra_case_ids": [],
+  "coverage_complete": false,
+  "contract_valid": false,
+  "status_correct": 29,
+  "status_accuracy": 0.90625,
+  "expected_case_status_accuracy": 0.90625,
+  "returned_case_status_accuracy": 1.0,
+  "exact_case_correct": 8,
+  "exact_case_accuracy": 0.25,
+  "sequence_correct": 8,
+  "sequence_accuracy": 0.25,
+  "expected_steps": 193,
+  "predicted_steps": 162,
+  "matching_steps": 158,
+  "step_precision": 0.9753086419753086,
+  "step_recall": 0.8186528497409327,
+  "step_f1": 0.8901408450704226,
+  "aligned_step_slots": 197,
+  "field_accuracy": 0.7686729514140682,
+  "field_accuracy_by_name": {
+    "step_no": 0.5685279187817259,
+    "phase": 0.8020304568527918,
+    "system_id": 0.8020304568527918,
+    "resource_id": 0.8020304568527918,
+    "operation": 0.8020304568527918,
+    "state": 0.8020304568527918,
+    "evidence_id": 0.8020304568527918
+  },
+  "field_correct_by_name": {
+    "step_no": 112,
+    "phase": 158,
+    "system_id": 158,
+    "resource_id": 158,
+    "operation": 158,
+    "state": 158,
+    "evidence_id": 158
+  }
+}
