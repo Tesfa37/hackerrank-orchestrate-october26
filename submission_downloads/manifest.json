@@ -1,0 +1,18 @@
+{
+  "verified_submission_source_commit": "ee45cc03b9f508e0f3be6a8c30a7ca6a66ada334",
+  "files": {
+    "code.zip": {
+      "bytes": 215422,
+      "sha256": "aa8878c2d050fc2e62b1061a7fe156d3875968a85e14d6809b8430770fca4bb7"
+    },
+    "output.csv": {
+      "bytes": 539544,
+      "sha256": "dab79bc63c7a8d5357c3b865e091f34f2cc9a7c49a940aec3e326e85669f64d1"
+    },
+    "log.txt": {
+      "bytes": 41456,
+      "sha256": "cd50dee0d3211854baf4999e502d44b9de8b8cb1858103f96a633c162fb0aa62"
+    }
+  },
+  "bundle_sha256": "30b4207b7fa8654bdee48d152fb99659776307da53fd39ab2bb022d74356b0de"
+}

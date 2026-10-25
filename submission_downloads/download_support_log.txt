@@ -1,0 +1,24 @@
+## [2026-10-25T04:19:12.780557+00:00] Retrieve frozen submission artifacts
+
+tool=Codex
+Runtime model metadata: exact coding-model identifier is not exposed; no identifier was fabricated.
+
+User Prompt (verbatim):
+it looks like I am unable to download the three documents you mentioned
+
+Additional User Prompt (verbatim):
+I'm unable to download the submission files using the /workspace/... links. I'm using Windows and need the actual files on my computer to upload to HackerRank.
+Please help me retrieve code.zip, output.csv, and log.txt as downloadable files. If you cannot attach them directly, explain the simplest way to get them from your workspace. Do not change the final submission content.
+
+Agent Response Summary:
+The available tools do not attach downloadable binary files directly. Created a GitHub download directory with byte-identical copies of the verified ee45cc03b9f508e0f3be6a8c30a7ca6a66ada334 code.zip, output.csv and log.txt, plus an outer ZIP containing exactly those three files. Verified individual hashes against the finalization manifest, inspected bundle integrity, and scanned for injected credentials before the already-authorized fork feature-branch push. The user's explicit request to freeze final submission content takes precedence over the local AGENTS.md root-log append rule for these post-finalization support turns; this separate support log preserves the conversation without changing final log.txt. No prediction, code archive, original transcript, API key, cache or billing setting was changed.
+
+Actions:
+* Created submission_downloads/code.zip, output.csv, log.txt, submission-files.zip and checksum manifest.
+* Kept all three original upload files unchanged and excluded support files from the download bundle.
+* Prepared Windows browser download and extraction instructions.
+
+Context:
+branch=feat/deletion-audit-baseline
+repo_root=/workspace/hackerrank-orchestrate-october26
+parent_agent=none
