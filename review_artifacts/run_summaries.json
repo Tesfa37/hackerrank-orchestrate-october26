@@ -1,0 +1,592 @@
+{
+  "full": {
+    "created_at": "2026-10-24T23:48:38.813560+00:00",
+    "requests": 518,
+    "completed": 419,
+    "errors": [
+      {
+        "stage": "reasoning",
+        "case_id": "case_45",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_46",
+        "error": "The most recent update timestamp (10 Mar 2026 07:18 UTC) is later than the supplied manifest capture timestamp (2026-03-10T06:00:00Z).; A displayed lifecycle/event timestamp is later than manifest capture; both times are preserved without repair; The reference view does not explicitly establish removal of name, email, phone and email hash; fields not shown are not redaction proof"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_55",
+        "error": "Archive existence, health, retention or past restore events do not establish current restore authorization for this subject"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_57",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_58",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_59",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_60",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_64",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_69",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_70",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_97",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_103",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_107",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_108",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_111",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_112",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_126",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_127",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_150",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_151",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_152",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_155",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_157",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_162",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_175",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_178",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_183",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_190",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_191",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_204",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_206",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_213",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_215",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_218",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_219",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_221",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_225",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_226",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_231",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_243",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_244",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_253",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_257",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_260",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_274",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_276",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_277",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_294",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_295",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_297",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_299",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_304",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_308",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_309",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_313",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_314",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_319",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_322",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_335",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_336",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_339",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_343",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_345",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_346",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_351",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_354",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_362",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_393",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_395",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_398",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_403",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_408",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_409",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_411",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_412",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_423",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_424",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_427",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_430",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_448",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_452",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_456",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_457",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_458",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_462",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_463",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_464",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_467",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_470",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_480",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_493",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_494",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_497",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_502",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_506",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_512",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_524",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_530",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_532",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      }
+    ],
+    "observations": 2927,
+    "media_extracted": 15,
+    "media_reinspected": 15,
+    "usage": {
+      "provider": "Google Gemini Developer API",
+      "model": "gemini-3.5-flash-lite",
+      "referenced_calls": 44,
+      "new_calls_this_process": 0,
+      "cached_results_reused": 44,
+      "production_attempts": 51,
+      "attempts_with_unavailable_usage": 5,
+      "input_tokens": 77429,
+      "output_tokens": 68176,
+      "thinking_tokens": 0,
+      "total_tokens": 145605,
+      "cost_mode": "Free Tier project, billing disabled as configured by participant; provider billing not independently inspected",
+      "billed_cost_usd": 0
+    }
+  },
+  "samples": {
+    "created_at": "2026-10-24T23:48:34.393093+00:00",
+    "requests": 32,
+    "completed": 23,
+    "errors": [
+      {
+        "stage": "reasoning",
+        "case_id": "case_01",
+        "error": "No eligible evidence links this subject to a resource"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_02",
+        "error": "No eligible evidence links this subject to a resource"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_04",
+        "error": "No eligible evidence links this subject to a resource"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_17",
+        "error": "The most recent update timestamp (10 Mar 2026 07:18 UTC) is later than the supplied manifest capture timestamp (2026-03-10T06:00:00Z).; A displayed lifecycle/event timestamp is later than manifest capture; both times are preserved without repair; The reference view does not explicitly establish removal of name, email, phone and email hash; fields not shown are not redaction proof"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_21",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_25",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_26",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_27",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      },
+      {
+        "stage": "reasoning",
+        "case_id": "case_28",
+        "error": "Complete subject audit lacks evidence of deleted primary account or compliant deletion tombstone"
+      }
+    ],
+    "observations": 2927,
+    "media_extracted": 15,
+    "media_reinspected": 15,
+    "usage": {
+      "provider": "Google Gemini Developer API",
+      "model": "gemini-3.5-flash-lite",
+      "referenced_calls": 32,
+      "new_calls_this_process": 0,
+      "cached_results_reused": 32,
+      "production_attempts": 36,
+      "attempts_with_unavailable_usage": 2,
+      "input_tokens": 48957,
+      "output_tokens": 55453,
+      "thinking_tokens": 0,
+      "total_tokens": 104410,
+      "cost_mode": "Free Tier project, billing disabled as configured by participant; provider billing not independently inspected",
+      "billed_cost_usd": 0
+    }
+  }
+}

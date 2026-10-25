@@ -1,6 +1,6 @@
 # Free model access for the deletion-audit agent
 
-The selected budget is $0 in billed API usage. The proposed provider is the Gemini Developer API Free Tier. Keep project billing disabled; no paid fallback is planned.
+The selected budget is $0 in billed API usage. The implemented provider is the Gemini Developer API Free Tier. Keep project billing disabled; no paid fallback is implemented. The organizer screenshot recommends an agent and scalability/robustness, but does not establish a mandatory API requirement.
 
 1. Open https://aistudio.google.com/apikey and sign in to your Google account.
 2. Complete any first-use terms yourself. Create or select a personal project that is on the Free Tier and has billing disabled. A new AI Studio account may create a default project and key during onboarding.
@@ -12,7 +12,9 @@ The user configured the local key. On October 24 the coding agent verified that 
 
 The restricted terminal could not resolve Google's API host, but the available Node runtime reached the API successfully. The submitted program must use ordinary documented Gemini API requests and must not depend on the coding-agent runtime. Model access and one generation are verified; account-specific remaining quota and end-to-end throughput are not yet measured. No key, account, project, or billing setting was created or changed by the coding agent.
 
-The implementation will group short requests into ordinary synchronous calls, extract image evidence once, cache repeat work, and record real token usage. Free-tier exhaustion pauses the affected stage; it does not enable billing or switch to a paid model.
+The implementation groups short requests into ordinary synchronous calls, extracts media evidence once per request signature, caches repeat work, and records real token usage. Free-tier exhaustion stops the affected stage; it does not enable billing or switch to a paid model. The program does not inspect account billing and cannot enforce a dollar cap on an already billed project. The existing billing-disabled project must remain unchanged.
+
+The earlier local `.env` verification above is historical. The cloud environment uses the existing injected credential. Fresh archive installation, no-cache preparation and offline replay are documented in [code/FRESH_ENVIRONMENT.md](../code/FRESH_ENVIRONMENT.md), with actual tests separated from live procedures in [archive_verification.md](../code/evaluation/archive_verification.md). Numeric quotas and current remaining availability were not rechecked during finalization; they depend on the project/model. No live no-cache regeneration was performed in that work.
 
 Official references checked October 24, 2026:
 

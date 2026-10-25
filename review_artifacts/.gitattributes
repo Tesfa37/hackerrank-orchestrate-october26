@@ -1,0 +1,2 @@
+# Preserve the csv writer's CRLF bytes and the recorded artifact checksums.
+*_predictions_partial.csv -text whitespace=cr-at-eol

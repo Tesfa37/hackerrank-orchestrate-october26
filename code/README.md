@@ -6,6 +6,14 @@ serializes the required findings, remediation, and verification steps. It never
 reads sample answers while making predictions. The evaluator reads those answers
 separately.
 
+AI interprets requests and media. Deterministic code reconstructs eligible
+evidence, applies policy, and orders proposed remediation. The program does not
+execute those actions. See [ARCHITECTURE.md](ARCHITECTURE.md) for responsibilities,
+scalability limits and design tradeoffs, and [INTERVIEW_NOTES.md](INTERVIEW_NOTES.md)
+for the current results and interview preparation. The organizer screenshot
+recommends an agent and scalability/robustness; it does not establish a mandatory
+API requirement.
+
 This is a development baseline. Source-fact reinspection is enabled by default for every PDF and image; it separates stored identifiers, stable references, visible field coverage, and observation versus lifecycle times. Missing ownership or state evidence produces a
 diagnostic error, not a guessed verdict. Public-sample results and remaining gaps
 are recorded in `evaluation/evaluation_report.md`.
@@ -24,6 +32,12 @@ The only third-party runtime dependency is pypdf for document text. CSV, JSON,
 SQLite, hashing, HTTP requests, policy reasoning, and evaluation use the standard
 library. No service, database server, GPU, or local model is needed.
 
+For an extracted archive, supply the original `dataset/` alongside `code/`.
+[FRESH_ENVIRONMENT.md](FRESH_ENVIRONMENT.md) documents the complete empty-cache
+workflow, quota limits, failure handling and offline analysis commands.
+[evaluation/archive_verification.md](evaluation/archive_verification.md) separates
+actual extracted-archive checks from documented live regeneration procedures.
+
 ## Model access and budget
 
 Use the existing `GEMINI_API_KEY` environment binding or an ignored root `.env`
@@ -35,6 +49,9 @@ The selected provider is the Gemini Developer API Free Tier, model
 disabled. The program does not enable billing, change credentials, or switch
 providers/models when quota is exhausted. Quota/network failures stop missing
 extraction. Availability and quota depend on the participant's account.
+The program does not inspect project billing or enforce a spending cap on a
+billed account. Preserve the existing billing-disabled free project. Live
+no-cache regeneration was not performed during finalization.
 
 ## Run
 
@@ -69,6 +86,9 @@ uses the same pipeline and writes root `output.csv`:
 python3 code/main.py
 python3 code/main.py --offline --usage-report code/evaluation/usage_report.md
 ```
+
+Those success paths are conditional. Current participant evidence leaves
+unresolved cases, so a complete final output has not been produced.
 
 The full dataset requires 518 unique rows sorted by case ID. If any requested case
 cannot be grounded, the program exits 2 and preserves any existing output.

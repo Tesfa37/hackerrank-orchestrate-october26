@@ -1,0 +1,343 @@
+{
+  "work_dir": "/tmp/deletion-archive-install-goq02q12",
+  "archive_sha256": "90264c3d5099d541f3a651487e9a7a521909389f9467193b067c470108c06c58",
+  "commands": [
+    {
+      "name": "create_fresh_virtualenv",
+      "command": [
+        "/workspace/hackerrank-orchestrate-october26/.venv/bin/python",
+        "-m",
+        "venv",
+        "/tmp/deletion-archive-install-goq02q12/bundle/.venv"
+      ],
+      "cwd": "/tmp/deletion-archive-install-goq02q12/bundle",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 2.224
+    },
+    {
+      "name": "install_pinned_dependency",
+      "command": [
+        "/tmp/deletion-archive-install-goq02q12/bundle/.venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--no-cache-dir",
+        "--disable-pip-version-check",
+        "--index-url",
+        "https://pypi.org/simple",
+        "-r",
+        "/tmp/deletion-archive-install-goq02q12/bundle/code/requirements.txt"
+      ],
+      "cwd": "/tmp/deletion-archive-install-goq02q12/bundle",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 1.112
+    },
+    {
+      "name": "dependency_consistency",
+      "command": [
+        "/tmp/deletion-archive-install-goq02q12/bundle/.venv/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "cwd": "/tmp/deletion-archive-install-goq02q12/bundle",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.242
+    },
+    {
+      "name": "runtime_versions",
+      "command": [
+        "/tmp/deletion-archive-install-goq02q12/bundle/.venv/bin/python",
+        "-c",
+        "import sys,pypdf;print(sys.version);print(pypdf.__version__)"
+      ],
+      "cwd": "/tmp/deletion-archive-install-goq02q12/bundle",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.121
+    },
+    {
+      "name": "unit_tests",
+      "command": [
+        "/tmp/deletion-archive-install-goq02q12/bundle/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "code/tests",
+        "-v"
+      ],
+      "cwd": "/tmp/deletion-archive-install-goq02q12/bundle",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 1.163
+    },
+    {
+      "name": "node_syntax",
+      "command": [
+        "node",
+        "--check",
+        "/tmp/deletion-archive-install-goq02q12/bundle/code/process_model_jobs.mjs"
+      ],
+      "cwd": "/tmp/deletion-archive-install-goq02q12/bundle",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.035
+    },
+    {
+      "name": "help_main.py",
+      "command": [
+        "/tmp/deletion-archive-install-goq02q12/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-goq02q12/bundle/code/main.py",
+        "--help"
+      ],
+      "cwd": "/tmp/deletion-archive-install-goq02q12",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.203
+    },
+    {
+      "name": "help_evaluation/main.py",
+      "command": [
+        "/tmp/deletion-archive-install-goq02q12/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-goq02q12/bundle/code/evaluation/main.py",
+        "--help"
+      ],
+      "cwd": "/tmp/deletion-archive-install-goq02q12",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.077
+    },
+    {
+      "name": "help_investigate.py",
+      "command": [
+        "/tmp/deletion-archive-install-goq02q12/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-goq02q12/bundle/code/investigate.py",
+        "--help"
+      ],
+      "cwd": "/tmp/deletion-archive-install-goq02q12",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.092
+    },
+    {
+      "name": "help_evaluation/review_mismatches.py",
+      "command": [
+        "/tmp/deletion-archive-install-goq02q12/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-goq02q12/bundle/code/evaluation/review_mismatches.py",
+        "--help"
+      ],
+      "cwd": "/tmp/deletion-archive-install-goq02q12",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.105
+    },
+    {
+      "name": "help_evaluation/coverage_report.py",
+      "command": [
+        "/tmp/deletion-archive-install-goq02q12/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-goq02q12/bundle/code/evaluation/coverage_report.py",
+        "--help"
+      ],
+      "cwd": "/tmp/deletion-archive-install-goq02q12",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.066
+    },
+    {
+      "name": "fresh_full_prepare",
+      "command": [
+        "/tmp/deletion-archive-install-goq02q12/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-goq02q12/bundle/code/main.py",
+        "--prepare"
+      ],
+      "cwd": "/tmp/deletion-archive-install-goq02q12",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 1.405
+    },
+    {
+      "name": "fresh_offline_no_output",
+      "command": [
+        "/tmp/deletion-archive-install-goq02q12/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-goq02q12/bundle/code/main.py",
+        "--offline"
+      ],
+      "cwd": "/tmp/deletion-archive-install-goq02q12",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "seconds": 0.565
+    },
+    {
+      "name": "fresh_online_missing_key",
+      "command": [
+        "/tmp/deletion-archive-install-goq02q12/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-goq02q12/bundle/code/main.py"
+      ],
+      "cwd": "/tmp/deletion-archive-install-goq02q12",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "seconds": 0.423
+    },
+    {
+      "name": "replay_sample_partial",
+      "command": [
+        "/tmp/deletion-archive-install-goq02q12/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-goq02q12/bundle/code/main.py",
+        "--samples",
+        "--offline",
+        "--partial",
+        "--output",
+        "/tmp/deletion-archive-install-goq02q12/bundle/.cache/sample_predictions_partial.csv"
+      ],
+      "cwd": "/tmp/deletion-archive-install-goq02q12",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "seconds": 1.201
+    },
+    {
+      "name": "replay_full_partial",
+      "command": [
+        "/tmp/deletion-archive-install-goq02q12/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-goq02q12/bundle/code/main.py",
+        "--offline",
+        "--partial",
+        "--output",
+        "/tmp/deletion-archive-install-goq02q12/bundle/.cache/full_predictions_partial.csv"
+      ],
+      "cwd": "/tmp/deletion-archive-install-goq02q12",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "seconds": 7.158
+    },
+    {
+      "name": "replay_sample_evaluation",
+      "command": [
+        "/tmp/deletion-archive-install-goq02q12/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-goq02q12/bundle/code/evaluation/main.py",
+        "--predictions",
+        "/tmp/deletion-archive-install-goq02q12/bundle/.cache/sample_predictions_partial.csv",
+        "--report",
+        "/tmp/deletion-archive-install-goq02q12/bundle/.cache/evaluation_summary.md",
+        "--json",
+        "/tmp/deletion-archive-install-goq02q12/bundle/.cache/sample_metrics.json"
+      ],
+      "cwd": "/tmp/deletion-archive-install-goq02q12",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "seconds": 0.16
+    },
+    {
+      "name": "replay_blocker_diagnostics",
+      "command": [
+        "/tmp/deletion-archive-install-goq02q12/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-goq02q12/bundle/code/investigate.py",
+        "--reinspect-media",
+        "--report",
+        "/tmp/deletion-archive-install-goq02q12/bundle/.cache/blocker_report.md",
+        "--json",
+        "/tmp/deletion-archive-install-goq02q12/bundle/.cache/blocker_report.json"
+      ],
+      "cwd": "/tmp/deletion-archive-install-goq02q12",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 19.263
+    },
+    {
+      "name": "replay_exclusion_coverage",
+      "command": [
+        "/tmp/deletion-archive-install-goq02q12/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-goq02q12/bundle/code/evaluation/coverage_report.py",
+        "--report",
+        "/tmp/deletion-archive-install-goq02q12/bundle/.cache/organizer_guidance.md"
+      ],
+      "cwd": "/tmp/deletion-archive-install-goq02q12",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.064
+    },
+    {
+      "name": "replay_mismatch_review",
+      "command": [
+        "/tmp/deletion-archive-install-goq02q12/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-goq02q12/bundle/code/evaluation/review_mismatches.py",
+        "--report",
+        "/tmp/deletion-archive-install-goq02q12/bundle/.cache/sample_mismatch_review.md"
+      ],
+      "cwd": "/tmp/deletion-archive-install-goq02q12",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 1.167
+    },
+    {
+      "name": "case01_no_network_mre",
+      "command": [
+        "/tmp/deletion-archive-install-goq02q12/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-goq02q12/bundle/code/evaluation/review_mismatches.py",
+        "--mre-case01",
+        "--report",
+        "/tmp/deletion-archive-install-goq02q12/bundle/.cache/case01_mre.md"
+      ],
+      "cwd": "/tmp/deletion-archive-install-goq02q12",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "seconds": 0.104
+    },
+    {
+      "name": "replay_partial_usage",
+      "command": [
+        "/tmp/deletion-archive-install-goq02q12/bundle/.venv/bin/python",
+        "/tmp/deletion-archive-install-goq02q12/bundle/code/main.py",
+        "--offline",
+        "--partial",
+        "--output",
+        "/tmp/deletion-archive-install-goq02q12/bundle/.cache/full_predictions_partial.csv",
+        "--usage-report",
+        "/tmp/deletion-archive-install-goq02q12/bundle/.cache/full_usage.md"
+      ],
+      "cwd": "/tmp/deletion-archive-install-goq02q12",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "seconds": 6.728
+    }
+  ],
+  "python_and_pypdf_versions": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]\n6.10.0",
+  "fresh_jobs": 43,
+  "fresh_job_tasks": {
+    "request-intent": 13,
+    "business-artifact-extraction": 15,
+    "business-artifact-semantic-reinspection-v1": 15
+  },
+  "fresh_offline": {
+    "completed": 0,
+    "requests": 518,
+    "new_calls": 0
+  },
+  "missing_key": {
+    "completed": 0,
+    "new_calls": 0
+  },
+  "samples": {
+    "requests": 32,
+    "completed": 23,
+    "errors": 9,
+    "new_calls": 0,
+    "known_tokens": 104410
+  },
+  "full": {
+    "requests": 518,
+    "completed": 419,
+    "errors": 99,
+    "new_calls": 0,
+    "known_tokens": 145605
+  },
+  "predictions_byte_identical": true,
+  "final_output_exists": false,
+  "dataset_byte_identical": true,
+  "suite_tests_passed": 186,
+  "fresh_live_generation_tested": false,
+  "new_model_calls": 0
+}

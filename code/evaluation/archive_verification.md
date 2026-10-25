@@ -1,0 +1,40 @@
+# Extracted-archive verification
+
+Verified October 24, 2026 (America/Chicago). The runtime source was extracted from the b242f64 review archive into an empty temporary directory. The finalization archive adds documentation; its extracted runtime is checked again before publication. A machine-readable command/exit-code record and exact archive checksum are preserved separately in review_artifacts/archive_verification.json.
+
+## Actually tested
+
+| Check | Result |
+| --- | --- |
+| Fresh virtual environment | Created with Python 3.12.14; no existing site packages reused |
+| Install requirements | pypdf 6.10.0 installed with pip --no-cache-dir from public PyPI |
+| Dependency consistency | pip check passed |
+| Regression suite | All 186 tests passed from the extracted copy |
+| Optional Node helper | Syntax check passed with Node 24.19.0 |
+| CLI entry points | Main, evaluator, investigator, mismatch reviewer and exclusion reporter --help commands passed from outside the extracted root |
+| Empty-cache full preparation | Exit 0; 43 initial jobs: 13 intent, 15 extraction, 15 source review; no responses or predictions created |
+| Empty-cache offline run | Exit 2; 0/518 supported; zero API calls; no output.csv |
+| Missing-key online mode | Exit 2 before any API attempt; zero supported rows; no output.csv |
+| Genuine-cache sample replay | Exit 2; 23/32 supported; zero new calls |
+| Genuine-cache full replay | Exit 2; 419/518 supported; 99 holds; zero new calls |
+| Public evaluator | Exit 1 for incomplete coverage; status71.875%, sequence25%, precision97.89%, recall72.02%, F1 82.99%, fields68.73% |
+| Full blocker investigation | Exit 0; original groups69/25/3/2 reproduced |
+| Confirmed-exclusion report | Exit 0; 418/516 supported,98holds |
+| Mismatch table and case_01 MRE | Both exit 0; expected answers confined to evaluation |
+| Partial run usage command | Exit 2; usage Markdown written to an explicit diagnostic path |
+| Preservation | Replayed sample/full CSV bytes identical to preserved supported predictions; participant dataset bytes unchanged |
+
+The verification child process had no GEMINI_API_KEY and no .env. No key was changed in the shared environment. Only after the empty-cache checks, original genuine response envelopes, rejection provenance and the attempt ledger were copied into the temporary cache for a separate offline replay. This tests portability of existing results; it is not fresh model generation. The code archive itself contains no caches or dataset. Dependency installation used the network; no generation request was made.
+
+Mock-provider regressions exercise rate/daily quota behavior, retry bounds, authentication/network failures, malformed responses and cache validation. They are not a test of the account's current live quota.
+
+## Documented, not exercised here
+
+- Live cache regeneration from an empty environment using the existing free-tier account, including optional Node live job processing.
+- Current model availability, actual RPM/TPM/daily allowances, remaining quota, or project billing status.
+- Windows installation, Python 3.11 compatibility, large-load throughput, concurrent writers or distributed execution.
+- A successful final518-row CSV. The current schema/exclusion ambiguity and missing participant proof remain unresolved.
+
+The first replay used a freshly installed dependency, not the workspace virtual environment. Later final-archive checks use the same documented procedure in another extracted directory. Individual command timings in the external record are single-machine checks, not a throughput benchmark. Read FRESH_ENVIRONMENT.md for reproducible commands and ARCHITECTURE.md for implemented boundaries.
+
+Paid API budget remains$0. Current production attribution remains145,605 known tokens from reused genuine work; this finalization adds zero model calls. Usage from the partial run is not represented as a completed submission.
