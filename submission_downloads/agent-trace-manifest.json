@@ -1,0 +1,26 @@
+{
+  "created_at_utc": "2026-10-26T00:04:02.847189+00:00",
+  "harness": "Codex",
+  "submission_source_commit": "ee45cc03b9f508e0f3be6a8c30a7ca6a66ada334",
+  "complete_native_trace": false,
+  "limitation": "Original hosted conversation and tool-call exports are unavailable in this workspace. Included logs are authentic summaries, not full native session traces.",
+  "files": {
+    "agent-trace/README.md": {
+      "bytes": 2044,
+      "sha256": "8f401a929db97f638f7dc7124f80f43039f7ccff043a8a4b90c5317843026a75"
+    },
+    "agent-trace/codex/log.txt": {
+      "bytes": 41456,
+      "sha256": "cd50dee0d3211854baf4999e502d44b9de8b8cb1858103f96a633c162fb0aa62"
+    },
+    "agent-trace/codex/download_support_log.txt": {
+      "bytes": 3524,
+      "sha256": "21cf865c25bdffc665b7b7f7a7492508d2a03a6b09b40ffd80888d076e805c48"
+    }
+  },
+  "archive": {
+    "name": "agent-trace.zip",
+    "bytes": 17006,
+    "sha256": "e59f01e194fcb282c97350b3cf25c7e5976626c5976227a6b580dfb8b11e462d"
+  }
+}
